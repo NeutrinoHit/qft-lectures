@@ -2,6 +2,8 @@ project:
   type: website
   output-dir: _site
 
+lang: ru-RU
+
 website:
   title: "Квантовая теория поля"
   site-url: "https://neutrinohit.github.io/qft-lectures/"
@@ -10,11 +12,10 @@ website:
     left:
       - href: index.qmd
         text: Главная
-      - href: ru/slides/index.qmd
+      - href: slides.qmd
         text: Слайды
 
 format:
   html:
     theme: cosmo
     toc: true
-    lang: ru

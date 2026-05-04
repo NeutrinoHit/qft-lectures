@@ -37,7 +37,7 @@ jobs:
         run: |
           ls -la _site
           test -f _site/index.html
-          test -f _site/ru/slides/index.html
+          test -f _site/slides.html
           test -f _site/ru/slides/lecture-01-unruh.html
 
       - name: Upload Pages artifact

@@ -1,8 +1,0 @@
----
-title: "Слайды"
-format: html
----
-
-## Лекции
-
-- [01. Эффект Унру](lecture-01-unruh.qmd)
