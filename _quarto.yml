@@ -1,0 +1,20 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Квантовая теория поля"
+  site-url: "https://neutrinohit.github.io/qft-lectures/"
+  repo-url: "https://github.com/NeutrinoHit/qft-lectures"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Главная
+      - href: ru/slides/index.qmd
+        text: Слайды
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    lang: ru
