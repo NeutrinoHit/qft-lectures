@@ -1,0 +1,9 @@
+format:
+  revealjs:
+    theme: [dark, ../../shared/styles/neutrinohit-reveal.scss]
+    slide-number: true
+    chalkboard: true
+    preview-links: auto
+    lang: ru
+    transition: none
+    background-transition: none

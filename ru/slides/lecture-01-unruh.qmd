@@ -1,13 +1,6 @@
 ---
 title: "Эффект Унру"
 author: "Д. В. Наумов"
-format:
-  revealjs:
-    theme: simple
-    slide-number: true
-    chalkboard: true
-    preview-links: auto
-    lang: ru
 ---
 
 ## Эффект Унру
