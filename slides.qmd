@@ -3,7 +3,8 @@ title: "Слайды"
 ---
 
 ## Лекции
-- [Релятивистское ускорение и координаты Риндлера](ru/slides/Rindler.qmd)
-- [Термодинамика в квантовой теории поля](ru/slides/Thermodynamics.qmd)
-- [Эффект Унру для плоской волны](ru/slides/UnruhEffect-1.qmd)
-- [Эффект Унру для квантового поля](ru/slides/UnruhEffect-2.qmd)
+
+- [Релятивистское ускорение и координаты Риндлера](ru/slides/Rindler.html)
+- [Термодинамика в квантовой теории поля](ru/slides/Thermodynamics.html)
+- [Эффект Унру для плоской волны](ru/slides/UnruhEffect-1.html)
+- [Эффект Унру для квантового поля](ru/slides/UnruhEffect-2.html)
