@@ -8,3 +8,6 @@ format:
     preview-links: auto
     transition: none
     background-transition: none
+    toc: true
+    toc-depth: 1
+    toc-title: "План лекции"

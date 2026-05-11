@@ -1,0 +1,647 @@
+---
+title: "Эффект Унру"
+subtitle: "Часть 2: квантовое поле"
+author: "Д. В. Наумов"
+---
+
+# Квантовое поле и спектральный коррелятор
+
+## Соглашения
+Работаем в $1+1$ и используем
+$$
+c=\hbar=k_B=1.
+$$
+
+Безмассовое вещественное скалярное поле
+$$
+\phi(t,x)
+=
+\int_{-\infty}^{+\infty}
+\frac{dp}{2\pi}\,
+\frac{1}{\sqrt{2\omega_p}}
+\left[
+a_p e^{-i\omega_p t+ipx}
++
+a_p^\dagger e^{+i\omega_p t-ipx}
+\right],
+\qquad
+\omega_p=|p|.
+$$
+
+Коммутационные соотношения:
+$$
+[a_p,a_q^\dagger]
+=
+2\pi\delta(p-q),
+\qquad
+[a_p,a_q]=0.
+$$
+
+## Сигнал наблюдателя
+::: incremental
+- Наблюдатель движется по мировой линии
+$$
+x^\mu=x^\mu(\tau)=(t(\tau),x(\tau)).
+$$
+
+- Он регистрирует поле вдоль своей траектории:
+$$
+\phi(\tau)
+=
+\phi(t(\tau),x(\tau)).
+$$
+
+- Регистрируемые наблюдателем частоты определяются фурье-разложением по его собственному времени:
+$$
+g(\Omega)
+=
+\int_{-\infty}^{+\infty}
+d\tau\,
+e^{i\Omega\tau}
+\phi(\tau).
+$$
+:::
+
+## Сигнал наблюдателя
+- Регистрируемые наблюдателем частоты определяются фурье-разложением по его времени:
+$$
+g(\Omega)
+=
+\int_{-\infty}^{+\infty}
+d\tau\,
+e^{i\Omega\tau}
+\phi(\tau).
+$$
+- Для инерциального наблюдателя $\tau=t$.  
+- Для ускоренного наблюдателя $\tau=\tau$.
+
+## Спектральный коррелятор
+::: incremental
+- Рассмотрим
+$$
+C(\Omega,\Omega')
+=
+\left\langle
+g^\dagger(\Omega)
+g(\Omega')
+\right\rangle,
+\qquad
+\Omega,\Omega'>0.
+$$
+
+- Это корреляция фурье-компонент сигнала поля.
+
+- Если состояние стационарно относительно времени наблюдателя, то разные частоты не коррелируют:
+$$
+C(\Omega,\Omega')
+=
+2\pi\delta(\Omega-\Omega')S(\Omega).
+$$
+
+- $S(\Omega)$ — спектральная плотность мощности сигнала.
+:::
+
+# Инерциальный наблюдатель
+
+## Фурье-компонента в инерциальной системе
+::: incremental
+- Пусть наблюдатель покоится:
+$$
+t=\tau,
+\qquad
+x=0.
+$$
+
+- Тогда
+$$
+\phi(\tau) =\int\frac{dp}{2\pi}\frac{1}{\sqrt{2\omega_p}}\left[
+a_p e^{-i\omega_p\tau}+a_p^\dagger e^{+i\omega_p\tau}\right].
+$$
+
+- Для $\Omega>0$:
+$$
+g(\Omega)
+=
+\int d\tau\,e^{i\Omega\tau}\phi(\tau)
+=
+\frac{a_{\Omega}+a_{-\Omega}}{\sqrt{2\Omega}}.
+$$
+
+:::
+
+## Фурье-компонента в инерциальной системе
+- Для $\Omega>0$:
+$$
+g(\Omega)
+=
+\int d\tau\,e^{i\Omega\tau}\phi(\tau)
+=
+\frac{a_{\Omega}+a_{-\Omega}}{\sqrt{2\Omega}}.
+$$
+-  Положительная частота $\Omega>0$ в инерциальной системе выбирает операторы уничтожения.
+
+
+## Инерциальный вакуум
+::: incremental
+- Вакуум Минковского:
+$$
+a_p|0_M\rangle=0.
+$$
+
+- Поэтому
+$$
+\langle 0_M|
+a_p^\dagger a_q
+|0_M\rangle=0.
+$$
+
+- Следовательно,
+$$
+\boxed{\langle 0_M|g^\dagger(\Omega)g(\Omega') |0_M\rangle=0.
+}
+$$
+
+- Инерциальный наблюдатель не видит частиц в вакууме Минковского.
+:::
+
+## Инерциальное состояние с частицами
+::: incremental
+- Пусть
+$$
+\langle a_p^\dagger a_q\rangle = 2\pi n(\omega_p)\delta(p-q).
+$$
+
+- Тогда
+$$
+\langle g^\dagger(\Omega) g(\Omega') \rangle = 2\pi\delta(\Omega-\Omega')
+\frac{n(\Omega)}{\Omega}.
+$$
+
+- Значит
+$$
+\boxed{
+S(\Omega) = \frac{n(\Omega)}{\Omega}.
+}
+$$
+:::
+
+---
+
+## Инерциальное тепловое состояние
+::: incremental
+- Для теплового состояния:
+$$
+n(\Omega)
+=
+\frac{1}{e^{\beta\Omega}-1},
+\qquad
+\beta=\frac{1}{T}.
+$$
+
+- Тогда
+$$
+\boxed{ S(\Omega) = \frac{1}{\Omega}
+\frac{1}{e^{\beta\Omega}-1}.
+}
+$$
+
+- Это обычный бозе-эйнштейновский спектр.
+:::
+
+
+# Ускоренный наблюдатель
+
+## Мировая линия
+::: incremental
+- Равномерно ускоренный наблюдатель:
+$$
+t(\tau)=\frac{1}{a}\sinh a\tau,
+\qquad
+x(\tau)=\frac{1}{a}\cosh a\tau.
+$$
+
+- Здесь $a$ — собственное ускорение.
+
+- Наблюдатель анализирует поле по своему собственному времени:
+$$
+g(\Omega)
+=
+\int_{-\infty}^{+\infty}
+d\tau\,
+e^{i\Omega\tau}
+\phi(t(\tau),x(\tau)).
+$$
+:::
+
+
+## Фурье-компонента
+::: incremental
+- Подставляем разложение поля:
+$$
+g(\Omega) = \int \frac{dp}{2\pi} \frac{1}{\sqrt{2\omega_p}}
+\left[ a_p I_p(\Omega) + a_p^\dagger J_p(\Omega) \right].
+$$
+
+- Здесь
+$$
+\begin{aligned}
+I_p(\Omega) & = \int d\tau\, e^{i\Omega\tau} e^{-i\omega_p t(\tau)+ipx(\tau)},\\
+J_p(\Omega) & = \int d\tau\, e^{i\Omega\tau} e^{+i\omega_p t(\tau)-ipx(\tau)}.
+\end{aligned}
+$$
+- В отличие от инерциального случая, положительная частота по $\tau$ содержит и $a_p$, и $a_p^\dagger$.
+:::
+
+## Какой интеграл нам понадобится?
+::: incremental
+- В корреляторе
+$$
+\langle 0_M|
+g^\dagger(\Omega) g(\Omega') |0_M\rangle
+$$
+встречаются четыре типа вкладов:
+$$
+\begin{aligned}
+&\propto I_q(\Omega') I_p^*(\Omega)
+\langle 0_M|a_p^\dagger a_q |0_M\rangle = 0,\\
+&\propto J_q(\Omega') J_p^*(\Omega)
+\langle 0_M|a_p a_q^\dagger |0_M\rangle \ne 0,\\
+&\propto I_q(\Omega') J_p^*(\Omega)
+\langle 0_M|a_p a_q |0_M\rangle = 0,\\
+&\propto J_q(\Omega') I_p^*(\Omega)
+\langle 0_M|a_p^\dagger a_q^\dagger |0_M\rangle = 0.
+\end{aligned}
+$$
+
+- Поэтому нужно вычислить только $J_p(\Omega)$.
+:::
+## Основной интеграл
+::: incremental
+- Запишем
+$$
+p=\epsilon\omega, \qquad \epsilon=\pm1, \qquad \omega>0.
+$$
+
+- Для коэффициента при $a_p^\dagger$:
+$$
+J_\epsilon(\Omega,\omega)
+= \int_{-\infty}^{+\infty} d\tau\,
+e^{i\Omega\tau} e^{-i\epsilon\frac{\omega}{a}e^{-\epsilon a\tau}}
+$$
+
+- Этот интеграл равен
+$$
+\boxed{
+J_\epsilon(\Omega,\omega)
+=
+\frac{1}{a}
+\Gamma\left(-i\epsilon\frac{\Omega}{a}\right)
+\left(\frac{\omega}{a}\right)^{i\epsilon\Omega/a}
+e^{-\pi\Omega/(2a)}.
+}
+$$
+:::
+
+## Спектр Минковского вакуума в ускоренной системе
+::: incremental
+- Получаем
+$$
+\langle 0_M|
+g^\dagger(\Omega)
+g(\Omega')
+|0_M\rangle
+=
+2\pi\delta(\Omega-\Omega')S(\Omega).
+$$
+
+- Где
+$$
+S(\Omega)
+=
+\frac{1}{\Omega}
+\frac{1}{e^{2\pi\Omega/a}-1}.
+$$
+
+- Минковский вакуум выглядит как тепловое состояние
+$$
+\boxed{n(\Omega)=\frac{1}{e^{2\pi\Omega/a}-1}.
+}
+$$
+
+:::
+
+
+## Температура Унру
+::: incremental
+- Сравниваем с тепловым инерциальным спектром:
+$$
+S(\Omega) = \frac{1}{\Omega} \frac{1}{e^{\beta\Omega}-1}.
+$$
+
+- У ускоренного наблюдателя:
+$$
+S(\Omega) = \frac{1}{\Omega} \frac{1}{e^{2\pi\Omega/a}-1}.
+$$
+
+- Поэтому
+$$
+\beta=\frac{2\pi}{a},
+\qquad
+T=\frac{a}{2\pi}.
+$$
+:::
+
+
+## Энтропия для ускоренного наблюдателя
+::: incremental
+- Для каждой риндлеровской частоты: $n_U(\Omega)=\frac{1}{e^{2\pi\Omega/a}-1}$.
+
+- Энтропия одной бозонной моды:
+$$
+s_U(\Omega)=(1+n_U)\ln(1+n_U)-n_U\ln n_U.
+$$
+
+- Подставляя $n_U(\Omega)$, получаем:
+$$
+\boxed{s_U(\Omega) = \frac{2\pi\Omega/a}{e^{2\pi\Omega/a}-1}-\ln\left(1-e^{-2\pi\Omega/a} \right)}
+$$
+- При $a\to 0$ энтропия исчезает: $\boxed{s_U(\Omega) \to 0}$.
+:::
+
+## Почему появляется температура?
+
+::: incremental
+- Пространство Минковского можно разделить на два клина Риндлера:
+$$
+R: x>|t|,
+\qquad
+L: x<-|t|.
+$$
+
+- Равномерно ускоренный наблюдатель в правом клине не имеет доступа к левому клину:
+$$
+\rho_R
+=
+\mathrm{Tr}_L\, |0_M\rangle\langle 0_M|.
+$$
+
+- Минковский вакуум не факторизуется:
+$$
+|0_M\rangle
+\ne
+|0_R\rangle\otimes |0_L\rangle.
+$$
+:::
+
+## Почему появляется температура?
+
+::: incremental
+- Для каждой риндлеровской частоты он имеет вид запутанного состояния:
+$$
+|0_M\rangle_\Omega
+=
+\sqrt{1-e^{-2\pi\Omega/a}}
+\sum_{n=0}^{\infty}
+e^{-\pi\Omega n/a}
+|n_\Omega^R\rangle |n_\Omega^L\rangle.
+$$
+
+- Если левый клин недоступен, правый клин описывается смешанным состоянием:
+$$
+\rho_R^\Omega
+=
+(1-e^{-2\pi\Omega/a})
+\sum_{n=0}^{\infty}
+e^{-2\pi\Omega n/a}
+|n_\Omega^R\rangle\langle n_\Omega^R|.
+$$
+
+:::
+
+## Тепловой вид редуцированного состояния
+
+::: incremental
+- Последняя формула имеет канонический вид:
+$$
+\rho_R^\Omega
+=
+\frac{1}{Z_\Omega}
+e^{-\beta_U \Omega N_\Omega^R}.
+$$
+
+- Сравнивая с
+$$
+\rho_\beta
+=
+(1-e^{-\beta\Omega})
+\sum_{n=0}^{\infty}
+e^{-\beta\Omega n}
+|n\rangle\langle n|,
+$$
+:::
+
+## Тепловой вид редуцированного состояния
+
+::: incremental
+получаем
+$$
+\beta_U=\frac{2\pi}{a}.
+$$
+
+- Значит
+$$
+\boxed{
+T_U=\frac{a}{2\pi}
+}
+$$
+- Тепловой шум возникает потому, что ускоренный наблюдатель видит только часть запутанного вакуума Минковского.
+:::
+
+## Важно
+
+::: incremental
+- Это не означает, что в вакууме Минковского есть обычный поток частиц.
+
+- Полное состояние остаётся чистым:
+$$
+\rho_M=|0_M\rangle\langle 0_M|,
+\qquad
+S_M=0.
+$$
+
+- Смешанным становится только редуцированное состояние правого клина:
+$$
+\rho_R=\mathrm{Tr}_L\,\rho_M.
+$$
+
+- Поэтому энтропия ускоренного наблюдателя — это энтропия запутанности между клиньями Риндлера.
+:::
+
+# Вывод формул 
+## Связь операторов Унру и Риндлера
+
+::: incremental
+- Для одной риндлеровской частоты вводим оператор Унру:
+$$
+d_\Omega^R=u_\Omega b_\Omega^R-v_\Omega b_\Omega^{L\dagger}.
+$$
+
+- Коэффициенты Боголюбова:
+$$
+u_\Omega
+=
+\frac{1}{\sqrt{1-e^{-2\pi\Omega/a}}},
+\qquad
+v_\Omega
+=
+\frac{e^{-\pi\Omega/a}}{\sqrt{1-e^{-2\pi\Omega/a}}}.
+$$
+
+- Главное отношение:
+$$
+\frac{v_\Omega}{u_\Omega}
+=
+e^{-\pi\Omega/a}.
+$$
+:::
+
+## Почему это вакуумное условие?
+
+::: incremental
+- Оператор Унру уничтожает вакуум Минковского:
+$$
+d_\Omega^R |0_M\rangle=0.
+$$
+
+- Подставляем связь с риндлеровскими операторами:
+$$
+\left(u_\Omega b_\Omega^R-v_\Omega b_\Omega^{L\dagger}\right)|0_M\rangle=0.
+$$
+
+- Поэтому:
+$$
+b_\Omega^R |0_M\rangle
+=
+\frac{v_\Omega}{u_\Omega}
+b_\Omega^{L\dagger}|0_M\rangle
+=
+e^{-\pi\Omega/a}
+b_\Omega^{L\dagger}|0_M\rangle.
+$$
+:::
+
+## Ищем вакуум в риндлеровском базисе
+
+::: incremental
+- Для одной частоты пишем анзац:
+$$
+|0_M\rangle_\Omega
+=
+\sum_{n=0}^{\infty}
+C_n
+|n_\Omega^L\rangle |n_\Omega^R\rangle.
+$$
+
+- Оператор в правом клине:
+$$
+b_\Omega^R
+|n_\Omega^L\rangle |n_\Omega^R\rangle
+=
+\sqrt n
+|n_\Omega^L\rangle |n-1_\Omega^R\rangle.
+$$
+
+- Оператор рождения в левом клине:
+$$
+b_\Omega^{L\dagger}
+|n_\Omega^L\rangle |n_\Omega^R\rangle
+=
+\sqrt{n+1}
+|n+1_\Omega^L\rangle |n_\Omega^R\rangle.
+$$
+:::
+
+## Рекуррентное соотношение
+
+::: incremental
+- Подставляем анзац:
+$$
+b_\Omega^R |0_M\rangle_\Omega
+=
+e^{-\pi\Omega/a}
+b_\Omega^{L\dagger}|0_M\rangle_\Omega.
+$$
+
+- Получаем:
+$$
+\sum_{n=1}^{\infty}
+C_n\sqrt n
+|n_\Omega^L\rangle |n-1_\Omega^R\rangle
+=
+e^{-\pi\Omega/a}
+\sum_{n=0}^{\infty}
+C_n\sqrt{n+1}
+|n+1_\Omega^L\rangle |n_\Omega^R\rangle.
+$$
+
+- Сравнение коэффициентов даёт:
+$$
+C_n
+=
+e^{-\pi\Omega/a} C_{n-1},
+\qquad
+C_n
+=
+e^{-n\pi\Omega/a}C_0.
+$$
+:::
+
+## Нормировка
+
+::: incremental
+- Нормировка состояния:
+$$
+\langle 0_M|0_M\rangle_\Omega=\sum_{n=0}^{\infty}|C_n|^2=1.
+$$
+
+- Подставляем найденные коэффициенты:
+$$
+|C_0|^2\sum_{n=0}^{\infty}e^{-2\pi\Omega n/a}=\frac{|C_0|^2}{1-e^{-2\pi\Omega/a}}=1.
+$$
+
+- Поэтому:
+$$
+C_0
+=
+\sqrt{1-e^{-2\pi\Omega/a}}.
+$$
+:::
+
+## Вакуум Минковского в базисе Риндлера
+
+::: incremental
+- Для одной частоты:
+$$
+\boxed{
+|0_M\rangle_\Omega
+=
+\sqrt{1-e^{-2\pi\Omega/a}}
+\sum_{n=0}^{\infty}
+e^{-\pi\Omega n/a}
+|n_\Omega^L\rangle |n_\Omega^R\rangle
+}
+$$
+
+- Это двухмодовое запутанное состояние:
+$$
+n_L=n_R.
+$$
+
+- Полный вакуум — произведение по частотам:
+$$
+|0_M\rangle
+=
+\prod_{\Omega}
+|0_M\rangle_\Omega.
+$$
+:::

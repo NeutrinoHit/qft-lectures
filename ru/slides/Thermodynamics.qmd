@@ -1,0 +1,686 @@
+---
+title: " Введение в квантовую статистическую механику"
+subtitle: "Матрица плотности, статистическая сумма и энтропия"
+author: "Д. В. Наумов"
+---
+# Система единиц
+## Система единиц
+- Удобно использовать систему единиц, в которой
+$$
+c=\hslash=k_B=1
+$$
+
+# Введение
+## О чем эта лекция
+
+::: incremental
+- При обсуждении эффекта Унру нужно уметь говорить о температуре, энтропии и тепловом спектре в КТП.
+- Для этого нам нужно ввести понятия матрицы плотности, статистической суммы и энтропии.
+- Возможно, вам это будет полезно и в других контекстах, например, при обсуждении черных дыр.
+:::
+
+
+# Основы термодинамики
+
+## Основы термодинамики
+
+::: incremental
+- Термодинамика описывает макроскопическое состояние системы небольшим числом величин (средняя и свободная энергия, температура, энтропия и т.д.)
+
+- Микроскопических состояний может быть много, но в равновесии нам обычно нужны не все детали, а средние величины.
+
+- Основная задача статистической физики:
+$$
+\text{микросостояния и их вероятности}
+\,\Longrightarrow\,
+\text{термодинамические функции}.
+$$
+
+- В квантовой теории вероятности микросостояний удобно собирать в матрицу плотности $\rho$
+:::
+
+## Канонический ансамбль
+
+::: incremental
+- Рассмотрим систему в тепловом равновесии с термостатом температуры $T$.
+
+- Вероятность состояния с энергией $E_i$ имеет вид
+$$
+p_i=\frac{e^{-\beta E_i}}{Z},
+\qquad
+\beta=\frac{1}{T}.
+$$
+
+- Нормировка $\left(\sum\limits_i p_i=1\right)$ задаёт статистическую сумму:
+$$
+\boxed{
+Z=\sum_i e^{-\beta E_i}
+}
+$$
+:::
+
+## Канонический ансамбль
+- В квантовой форме:
+$$
+\boxed{
+\rho=\frac{e^{-\beta H}}{Z},
+\qquad
+Z=\mathrm{Tr}\,e^{-\beta H}.
+}
+$$
+
+
+## Статистическая сумма как источник термодинамики
+
+::: incremental
+- Средняя энергия:
+$$
+\boxed{
+E\equiv \langle H\rangle
+=
+-\frac{\partial}{\partial\beta}\ln Z.
+}
+$$
+
+- Свободная энергия Гельмгольца:
+$$
+\boxed{
+F=E-TS
+}
+$$
+
+- Через статистическую сумму:
+$$
+\boxed{
+F=-T\ln Z.
+}
+$$
+
+:::
+
+## Статистическая сумма как источник термодинамики
+
+::: incremental
+- Энтропия:
+$$
+\boxed{
+S=-\frac{\partial F}{\partial T}
+}
+$$
+
+- Эквивалентно:
+$$
+\boxed{
+S=\beta E+\ln Z.
+}
+$$
+:::
+
+
+# Выводы формул
+
+## Каноническое распределение
+::: incremental
+- Найдём распределение вероятностей $p_i$ при условиях
+$$
+\sum_i p_i=1,
+\qquad
+\sum_i p_i E_i = \langle E\rangle.
+$$
+- Энтропия распределения:
+$$
+S[p]=-\sum_i p_i\ln p_i.
+$$
+
+- Принцип максимума энтропии: в термодинамическом равновесии $S[p]$ максимальна при заданных макроскопических условиях.
+:::
+
+## Каноническое распределение
+::: incremental
+- Введём функцию Лагранжа:
+$$
+L=-\sum_i p_i\ln p_i-\alpha\left(\sum_i p_i-1\right)
+-\beta\left(\sum_i p_i E_i-\langle E\rangle\right).
+$$
+
+- Условие экстремума:
+$$
+\frac{\partial L}{\partial p_i}=0.
+$$
+- Получаем:
+$$
+-\ln p_i-1-\alpha-\beta E_i=0 \quad\Longrightarrow\quad \boxed{p_i=C e^{-\beta E_i}}
+$$
+
+:::
+
+## Каноническое распределение
+::: incremental
+
+- Итак, 
+$$
+\boxed{p_i=C e^{-\beta E_i}}
+$$
+- Нормировка
+$$
+\sum_i p_i=1 \rightarrow C=\frac{1}{\sum_i e^{-\beta E_i}} 
+\rightarrow \boxed{Z=\sum_i e^{-\beta E_i}}
+$$
+:::
+
+## Почему $F=-T\ln Z$?
+
+::: incremental
+
+- Каноническая матрица плотности:
+$$
+\rho=\frac{e^{-\beta H}}{Z},
+\qquad
+Z=\mathrm{Tr}\,e^{-\beta H},
+\qquad
+\beta=\frac{1}{T}.
+$$
+
+- Логарифм матрицы плотности:
+$$
+\ln\rho
+=
+\ln\left(\frac{e^{-\beta H}}{Z}\right)
+=
+-\beta H-\ln Z.
+$$
+
+- Энтропия фон Неймана:
+$$
+S=-\mathrm{Tr}\,\rho\ln\rho =-\sum_i p_i\ln p_i.
+$$
+
+:::
+
+## Почему $F=-T\ln Z$?
+
+::: incremental
+
+- Подставляем $\ln\rho=-\beta H-\ln Z$:
+$$
+S
+=
+-\mathrm{Tr}\,\rho(-\beta H-\ln Z).
+$$
+
+- Получаем:
+$$
+S=\beta\,\mathrm{Tr}(\rho H)+\ln Z\,\mathrm{Tr}\rho.
+$$
+
+- Так как $E=\langle H\rangle=\mathrm{Tr}(\rho H)$ и $\mathrm{Tr}\rho=1$, то
+$$
+\boxed{
+S=\beta E+\ln Z.
+}
+$$
+
+:::
+
+## Почему $F=-T\ln Z$?
+
+::: incremental
+
+- Свободная энергия Гельмгольца:
+$$
+F=E-TS.
+$$
+
+- Используем
+$$
+S=\beta E+\ln Z,
+\qquad
+T=\frac{1}{\beta}.
+$$
+
+- Тогда
+$$
+F=E-\frac{1}{\beta}(\beta E+\ln Z) =-\frac{1}{\beta}\ln Z = -T\ln Z.
+$$
+:::
+
+## Еще раз самое важное
+:::: {.columns}
+
+::: {.column width="50%"}
+::: incremental
+
+- Вероятность состояния:
+$$
+\boxed{p_i = e^{-\beta E_i}/Z}
+$$
+- Статистическая сумма:
+$$
+\boxed{Z=\sum_i e^{-\beta E_i}}
+$$
+:::
+
+:::
+
+::: {.column width="50%"}
+::: incremental
+
+- Средняя энергия:
+$$
+\boxed{E\equiv \langle H\rangle =-\frac{\partial}{\partial\beta}\ln Z.
+}
+$$
+
+- Свободная энергия Гельмгольца:
+$$
+\boxed{
+F=-T\ln Z.
+}
+$$
+- Энтропия:
+$$
+\boxed{
+S=\beta E+\ln Z.
+}
+$$
+:::
+
+:::
+
+::::
+
+# Квантовая статистическая механика
+# Матрица плотности
+
+## Чистое состояние
+
+::: incremental
+- Чистое состояние задаётся вектором состояния $|\psi\rangle$
+
+- Соответствующая матрица плотности:
+$$
+\rho = |\psi\rangle\langle \psi|.
+$$
+
+- Свойства:
+$$
+\rho^2=\rho,
+\qquad
+\mathrm{Tr}\,\rho =\mathrm{Tr}\left(|\psi\rangle\langle\psi|\right)
+=\langle\psi|\psi\rangle=1.
+$$
+- Среднее значение оператора:
+$$
+\langle A\rangle
+=
+\langle\psi|A|\psi\rangle = \mathrm{Tr}\left(\rho A\right).
+$$
+:::
+
+## Смешанное состояние
+
+::: incremental
+- Если система находится в состояниях $|\psi_i\rangle$ с вероятностями $p_i$, то
+$$
+\rho=\sum_i p_i |\psi_i\rangle\langle\psi_i|,
+\qquad
+p_i\ge 0,
+\qquad
+\sum_i p_i=1.
+$$
+
+- В собственном базисе матрицы плотности:
+$$
+\rho=\sum_i p_i |i\rangle\langle i|.
+$$
+
+- Среднее значение оператора:
+$$
+\boxed{
+\langle A\rangle=\mathrm{Tr}(\rho A).
+}
+$$
+:::
+
+# Энтропия
+
+## Квантовая энтропия фон Неймана
+:::: {.columns}
+
+::: {.column width="70%"}
+::: incremental
+- Квантовая энтропия фон Неймана:
+$$
+\boxed{
+S[\rho]=-\mathrm{Tr}\,\left(\rho\ln\rho\right)
+}
+$$
+
+- Для чистого состояния:
+$$
+\rho=|\psi\rangle\langle\psi|,
+\qquad p=1, \qquad
+\boxed{S[\rho]=0}
+$$
+
+- Смешивание состояний обычно даёт ненулевую энтропию.
+:::
+
+:::
+
+::: {.column width="20%"}
+
+![](images/JohnvonNeumann-LosAlamos.gif){fig-align="center" width="80%"}
+
+::: {.small}
+Джон фон Нейман (1903--1957)
+:::
+
+:::
+
+::::
+
+## Что рассматриваем дальше?
+::: incremental
+- Одна бозонная мода. Для нее вычисляем:
+  - термальную матрицу плотности,
+  - энтропию.
+:::
+
+## Матрица плотности
+
+::: incremental
+
+- Для одной моды поле эквивалентно гармоническому осциллятору:
+$$
+H=\omega\left(N+\frac12\right),
+\qquad
+N=a^\dagger a.
+$$
+
+- Постоянная энергия $\omega/2$ сокращается в нормированной матрице плотности, поэтому далее используем
+$$
+H=\omega N.
+$$
+:::
+
+## Матрица плотности
+
+::: incremental
+
+- Каноническая матрица плотности:
+$$
+\rho
+=
+\frac{e^{-\beta\omega N}}{Z}, \qquad Z=\mathrm{Tr}\,e^{-\beta\omega N}=\sum\limits_{m=0}^{\infty}\langle m|e^{-\beta\omega N}|m\rangle.
+$$
+- $Z$ --- статистическая сумма, $\beta=1/T$.
+
+:::
+
+## Матрица плотности
+
+::: incremental
+- В базисе чисел заполнения
+$$
+N|m\rangle=m|m\rangle, \qquad m=0,1,2,\ldots
+$$
+- Спектральное разложение в этом базисе $N = \sum_{m=0}^{\infty} m |m\rangle\langle m|$
+
+- Тогда, 
+$$
+Z= \sum\limits_{m=0}^{\infty}\langle m|e^{-\beta\omega N}|m\rangle = \sum_{m=0}^{\infty}e^{-\beta\omega m}= \frac{1}{1-e^{-\beta\omega}}.
+$$
+:::
+
+## Матрица плотности
+
+::: incremental
+- Поэтому (с учетом $Z=\frac{1}{1-e^{-\beta\omega}}$)
+$$
+\boxed{
+\rho= (1-e^{-\beta\omega}) \sum_{m=0}^{\infty} e^{-\beta\omega m} |m\rangle\langle m|}
+$$
+
+:::
+
+## Матрица плотности через $n$
+::: incremental
+
+- Среднее число частиц в термальной бозонной моде:
+$$
+n \equiv \langle N\rangle = \mathrm{Tr}\left(\rho N\right)=
+\frac{1}{e^{\beta\omega}-1}.
+$$
+
+- Отсюда
+$$
+e^{-\beta\omega}
+=
+\frac{n}{1+n},
+\qquad
+1-e^{-\beta\omega}
+=
+\frac{1}{1+n}.
+$$
+
+- Откуда
+$$
+\boxed{
+\rho
+=
+\frac{1}{1+n}
+\sum_{m=0}^{\infty}
+\left(
+\frac{n}{1+n}
+\right)^m
+|m\rangle\langle m|
+}
+$$
+:::
+
+## Энтропия 
+::: incremental
+- Квантовая энтропия состояния:
+$$
+S[\rho]=-\mathrm{Tr}\,\rho\ln\rho .
+$$
+
+- Для одной термальной бозонной моды со средним числом частиц $n$:
+$$
+\rho_{n} =\frac{1}{1+n} \sum_{m=0}^{\infty}
+\left(\frac{n}{1+n}\right)^m |m\rangle\langle m|.
+$$
+
+- Её энтропия:
+$$
+\boxed{s(n)=-\mathrm{Tr}\,\rho_{n}\ln\rho_{n}=(1+n)\ln(1+n)-n\ln n}
+$$
+:::
+
+## Энтропия  вакуума
+::: incremental
+- Энтропия состояния со средним числом частиц $n$:
+$$
+\boxed{s(n)=(1+n)\ln(1+n)-n\ln n}
+$$
+
+- Для вакуума ($n=0$):
+$$
+n=0
+\quad\Longrightarrow\quad
+\boxed{s(0)=0}.
+$$
+
+- Вакуум — чистое состояние:
+$$
+\rho=|0\rangle\langle 0|,
+\qquad
+S=-\mathrm{Tr}\,\rho\ln\rho=0.
+$$
+:::
+
+## Температура вакуума
+
+::: incremental
+
+- Среднее число частиц в вакууме:
+$$
+n = \langle 0|N|0\rangle=0.
+$$
+
+- Температура вакуума равна нулю:
+$$
+T = \frac{1}{\beta} \to 0,
+\qquad
+\beta \to \infty\qquad\Longrightarrow\quad n=\frac{1}{e^{\beta\omega}-1}\to0,
+$$
+:::
+
+
+# Выводы формул
+
+
+## Вывод формулы для энтропии
+::: incremental
+- Матрица плотности диагональна в базисе чисел заполнения:
+$$
+\rho_n
+=
+\sum_{m=0}^{\infty} P_m |m\rangle\langle m|,
+\qquad
+P_m=
+\frac{1}{1+n}
+\left(\frac{n}{1+n}\right)^m.
+$$
+
+- Поэтому логарифм тоже диагонален:
+$$
+\ln\rho_n
+=
+\sum_{m=0}^{\infty}
+\ln P_m\, |m\rangle\langle m|.
+$$
+:::
+
+## Вывод формулы для энтропии
+::: incremental
+
+- Энтропия:
+$$
+s(n)
+=
+-\mathrm{Tr}\,\rho_n\ln\rho_n
+=
+-\sum_{m=0}^{\infty} P_m\ln P_m.
+$$
+
+- Обозначим
+$$
+r=\frac{n}{1+n},
+\qquad
+P_m=(1-r)r^m.
+$$
+
+- Тогда
+$$
+\ln P_m=\ln(1-r)+m\ln r.
+$$
+:::
+
+## Вывод формулы для энтропии
+
+::: incremental
+- Подставляем:
+$$
+s(n)
+=
+-\sum_{m=0}^{\infty}P_m
+\left[
+\ln(1-r)+m\ln r
+\right].
+$$
+
+- Используем нормировку и среднее число частиц:
+$$
+\sum_{m=0}^{\infty}P_m=1,
+\qquad
+\sum_{m=0}^{\infty}mP_m=n.
+$$
+
+- Получаем:
+$$
+s(n)
+=
+-\ln(1-r)-n\ln r.
+$$
+:::
+
+## Вывод формулы для энтропии
+::: incremental
+
+- Так как
+$$
+1-r=\frac{1}{1+n},
+\qquad
+r=\frac{n}{1+n},
+$$
+
+- окончательно:
+$$
+\boxed{
+s(n)
+=
+(1+n)\ln(1+n)-n\ln n
+}
+$$
+:::
+
+# Что важно запомнить
+## Важные формулы
+
+::: incremental
+
+- Термальная матрица плотности одной бозонной моды:
+$$
+\rho =\frac{e^{-\beta\omega N}}{Z}, \qquad Z=\mathrm{Tr}\,e^{-\beta\omega N}
+=\frac{1}{1-e^{-\beta\omega}}.
+$$
+
+- Среднее число частиц:
+$$
+n(\omega) = \langle N\rangle = \frac{1}{e^{\beta\omega}-1}.
+$$
+
+- Та же матрица плотности через $n$:
+$$
+\rho_n
+= \frac{1}{1+n} \sum_{m=0}^{\infty}
+\left( \frac{n}{1+n} \right)^m |m\rangle\langle m|.
+$$
+:::
+
+## Важные формулы
+
+::: incremental
+
+- Энтропия одной термальной моды:
+$$
+s(n) = -\mathrm{Tr}\,\rho_n\ln\rho_n = (1+n)\ln(1+n)-n\ln n.
+$$
+
+- Вакуум:
+$$
+n=0, \qquad T=0, \qquad s(0)=0.
+$$
+:::
+
+# Что изменится для ускоренного наблюдателя?
+## Что изменится для ускоренного наблюдателя?
+
+::: incremental
+- Ускоренный наблюдатель имеет доступ не ко всем степеням свободы (лекция "Релятивистское ускорение и координаты Риндлера").
+
+- Вакуум Минковского ему виден не весь.
+- Поэтому появляется энтропия и температура. 
+:::

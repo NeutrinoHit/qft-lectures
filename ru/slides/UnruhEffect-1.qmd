@@ -1,0 +1,735 @@
+---
+title: "Эффект Унру: как ускорение меняет понятие частицы"
+subtitle: "Часть 1: Плоская волна и спектр ускоренного детектора"
+author: "Д. В. Наумов"
+---
+
+# Система единиц
+## Система единиц
+- Удобно использовать систему единиц, в которой
+$$
+c=\hslash=k_B=1
+$$
+
+# Суть эффекта Унру
+## Вакуум в квантовой теории поля
+::: incremental
+- Вакуум - состояние с нулевым числом частиц
+- Во всех инерциальных системах вакуум - это одно и то же состояние
+- А что если наблюдатель неинерциальный?
+- Мы придём к удивительному результату: для ускоренного наблюдателя вакуум будет выглядеть как тепловое состояние с определённой температурой.
+- Рассмотрим это шаг за шагом, начиная с простейшей модели.
+
+:::
+
+---
+
+## К чему мы придём?
+
+::: incremental
+- Равномерно ускоряемый наблюдатель видит частицы из  вакуума Минковского
+- Распределение частиц по энергиями даётся спектром
+  - Бозе-Эйнштейна (для бозонов),
+  - Ферми-Дирака (для фермионов),
+- Температура частиц, которую видит ускоренный наблюдатель:
+$$
+T_U=\frac{\hbar a}{2\pi k_B c} = \frac{a}{2\pi}.
+$$
+
+- где $a$ — собственное ускорение детектора, $k_B$ — постоянная Больцмана, $c$ — скорость света.
+
+:::
+
+---
+
+## Что это?
+::: incremental
+- Этот эффект называется эффектом Унру по имени Вильяма Унру (1976).
+- Он показывает, что понятие частицы в квантовой теории поля зависит от наблюдателя.
+- Годом ранее в 1975 году он был обнаружен независимо Полом Дэвисом.
+:::
+
+## Насколько велик эффект Унру?
+::: incremental
+- Температура Унру 
+$$
+ T_U \approx 4.06 \times 10^{-21} \, \text{К}\times\frac{a}{\text{m}/\text{s}^2}
+$$
+:::
+
+## На что это похоже?
+::: incremental
+- Это похоже на температуру излучения Хокинга: 
+$$
+ T_H=\frac{\hbar g}{2\pi k_B c}=\frac{g}{2\pi},
+$$
+где $g$ — ускорение свободного падения на горизонте черной дыры.
+- С учётом принципа эквивалентности эффекты Унру и Хокинга родственные, но не идентичные.
+:::
+
+
+# Плоская волна
+## Рассмотрим плоскую волну
+::: incremental
+- Рассмотрим безмассовую плоскую волну вдоль оси $x$:
+$$
+\phi(t,x)\sim e^{-i\omega_K t+iKx}.
+$$
+- Здесь $\omega_K$ — частота, а $K$ — волновой вектор:
+$$
+K=\pm \omega_K.
+$$
+- В этом педагогическом выводе волна лежит на массовой поверхности.
+:::
+
+## Частота в мгновенно сопутствующей системе
+::: incremental
+- Преобразование Лоренца:
+$$
+\omega'_K(\tau)
+=
+\gamma(\tau)\left(\omega_K-Kv(\tau)\right).
+$$
+- Волна вдоль ускорения: $K=+\omega_K$.
+$$
+\omega'_K(\tau)
+=
+\gamma(\tau)\omega_K\left(1-v(\tau)\right) 
+= \omega_K\frac{1-\tanh{a\tau}}{\sqrt{1-\tanh^2{a\tau}}}
+=\omega_K e^{-a\tau}.
+$$
+- Волна против ускорения: $K=-\omega_K$.
+$$
+\omega'_K(\tau)
+=
+\gamma(\tau)\omega_K\left(1+v(\tau)\right) 
+= \omega_K\frac{1+\tanh{a\tau}}{\sqrt{1-\tanh^2{a\tau}}}
+=\omega_K e^{+a\tau}.
+$$
+:::
+
+## Частота в мгновенно сопутствующей системе
+- Волна вдоль ускорения: $K=+\omega_K$.
+$$
+\boxed{
+\omega'_K(\tau) =
+\omega_K e^{-a\tau}}
+$$
+- Волна против ускорения: $K=-\omega_K$.
+$$
+\boxed{
+\omega'_K(\tau) =
+\omega_K e^{+a\tau}}
+$$
+- Для малых значений $a\tau$ - это обычный эффект Доплера:
+$$
+\omega'_K(\tau)
+\approx
+\omega_K(1\mp a\tau).
+$$
+
+## Эффект Доплера для инерциального наблюдателя
+::: incremental
+- Плоская волна: $\phi(t,x)\sim e^{-i\omega_K t+iKx}$
+- и инерциального наблюдателя:
+$$  
+t(\tau)=\gamma\tau, \quad x(\tau)=\gamma v \tau.
+$$
+- Фаза на мировой линии наблюдателя (скорость $v$):
+$$
+\Phi(\tau)=K x(\tau)-\omega_K t(\tau)=-\gamma\tau(\omega_K-Kv).
+$$
+- Мгновенная частота:
+$$  
+\omega'(\tau)=-\frac{d\Phi}{d\tau}=\gamma(\omega_K-Kv)=\text{const}.
+$$
+:::
+
+## Эффект Доплера для неинерциального наблюдателя
+::: incremental
+- Волна вдоль ускорения: $K=+\omega_K$.
+$$
+\boxed{
+\omega'_K(\tau) =
+\omega_K e^{-a\tau}}
+$$
+- Волна против ускорения: $K=-\omega_K$.
+$$
+\boxed{
+\omega'_K(\tau) =
+\omega_K e^{+a\tau}}
+$$
+- Частота меняется со временем $\tau$!  
+- Наблюдается спектр частот. 
+:::
+
+## Фурье-спектр детектора
+::: incremental
+- Фурье-разложение сигнала детектора:
+$$
+f(\tau)
+=
+\int \frac{d\Omega}{2\pi}\,F(\Omega)\,e^{-i\Omega\tau}.
+$$
+- Амплитуда фурье-компоненты:
+$$
+F(\Omega)
+=
+\int_{-\infty}^{\infty}
+d\tau\,
+f(\tau)\,e^{i\Omega\tau}.
+$$
+- Спектральная интенсивность:
+$$
+S(\Omega)\propto |F(\Omega)|^2.
+$$
+:::
+
+## Сигнал в детекторе
+
+::: {.unruh-widget}
+```{ojs}
+//| echo: false
+viewof unruh_controls = {
+  const control = html`<div class="unruh-controls">
+    <label>
+      <span>a′</span>
+      <input name="aprime" type="range" min="0.2" max="1.5" step="0.05" value="0.7">
+      <output></output>
+    </label>
+    <label>
+      <span>ω</span>
+      <input name="omega0" type="range" min="0.5" max="10.0" step="0.1" value="3.0">
+      <output></output>
+    </label>
+    <label>
+      <span>Δτ</span>
+      <input name="windowWidth" type="range" min="2.0" max="36.0" step="0.2" value="8.0">
+      <output></output>
+    </label>
+  </div>`;
+
+  const aprime = control.querySelector("[name='aprime']");
+  const omega0 = control.querySelector("[name='omega0']");
+  const windowWidth = control.querySelector("[name='windowWidth']");
+  const aprimeOut = aprime.nextElementSibling;
+  const omega0Out = omega0.nextElementSibling;
+  const windowWidthOut = windowWidth.nextElementSibling;
+
+  function update(dispatch = true) {
+    control.value = {
+      aprime: Number(aprime.value),
+      omega0: Number(omega0.value),
+      windowWidth: Number(windowWidth.value)
+    };
+    aprimeOut.textContent = Number(aprime.value).toFixed(2);
+    omega0Out.textContent = Number(omega0.value).toFixed(1);
+    windowWidthOut.textContent = Number(windowWidth.value).toFixed(1);
+    if (dispatch) control.dispatchEvent(new Event("input", {bubbles: true}));
+  }
+
+  aprime.addEventListener("input", () => update());
+  omega0.addEventListener("input", () => update());
+  windowWidth.addEventListener("input", () => update());
+  update(false);
+  return control;
+}
+```
+
+```{ojs}
+//| echo: false
+{
+  const {aprime, omega0, windowWidth} = unruh_controls;
+// Волна, идущая навстречу ускоренному наблюдателю:
+// ω'(τ) = ω exp(a' τ),  Φ(τ) = (ω/a') (exp(a' τ) - 1)
+
+  const tauMin = -windowWidth / 2;
+  const tauMax = windowWidth / 2;
+  const phase = (tau) => (omega0 / aprime) * (Math.exp(aprime * tau) - 1);
+  const instFreq = (tau) => omega0 * Math.exp(aprime * tau);
+  const OmaxRaw = 1.15 * instFreq(tauMax);
+  const Omax = Math.max(8, Math.min(20, OmaxRaw));
+  const maxPhaseRate = instFreq(tauMax) + Omax;
+  const samplesPerPeriod = 14;
+  const estimatedN = Math.ceil(windowWidth * maxPhaseRate * samplesPerPeriod / (2 * Math.PI)) + 1;
+  const N = Math.max(2400, Math.min(30000, estimatedN));
+  const isResolutionCapped = estimatedN > N;
+  const dt = (tauMax - tauMin) / (N - 1);
+  const taus = Array.from({length: N}, (_, i) => tauMin + i * dt);
+  const tukeyAlpha = 0.16;
+  const taper = (i) => {
+    if (tukeyAlpha <= 0) return 1;
+    const u = i / (N - 1);
+    if (u < tukeyAlpha / 2) {
+      return 0.5 * (1 - Math.cos(2 * Math.PI * u / tukeyAlpha));
+    }
+    if (u > 1 - tukeyAlpha / 2) {
+      return 0.5 * (1 - Math.cos(2 * Math.PI * (1 - u) / tukeyAlpha));
+    }
+    return 1;
+  };
+  const weights = Array.from({length: N}, (_, i) => {
+    const edgeWeight = (i === 0 || i === N - 1) ? 0.5 : 1;
+    return edgeWeight * taper(i) * dt;
+  });
+
+  const signalData = taus.map((tau) => ({
+    tau,
+    value: Math.cos(phase(tau))
+  }));
+  const freqData = taus.map((tau) => ({
+    tau,
+    value: instFreq(tau)
+  }));
+
+  const NO = 300;
+  const omegas = Array.from({length: NO}, (_, i) => i * Omax / (NO - 1));
+
+  const spectrumRaw = omegas.map((Omega) => {
+    let re = 0;
+    let im = 0;
+    for (let i = 0; i < N; i++) {
+      const tau = taus[i];
+      const theta = Omega * tau + phase(tau);
+      re += Math.cos(theta) * weights[i];
+      im += Math.sin(theta) * weights[i];
+    }
+    return {
+      Omega,
+      value: re * re + im * im
+    };
+  });
+
+  const Pmax = Math.max(...spectrumRaw.map((d) => d.value), 1e-14);
+
+  const spectrumData = spectrumRaw.map((d) => ({
+    Omega: d.Omega,
+    value: d.value / Pmax
+  }));
+
+  const omegaFloor = Math.max(Omax / (NO - 1), 1e-6);
+  const planckRaw = omegas.map((Omega) => {
+    const Om = Math.max(Omega, omegaFloor);
+    return {
+      Omega,
+      value: 1 / (Math.exp(2 * Math.PI * Om / aprime) - 1)
+    };
+  });
+
+  const PplanckMax = Math.max(...planckRaw.map((d) => d.value), 1e-14);
+
+  const planckData = planckRaw.map((d) => ({
+    Omega: d.Omega,
+    value: d.value / PplanckMax
+  }));
+  const resolutionNote = isResolutionCapped
+    ? `N=${N.toLocaleString("ru-RU")} из требуемых ${estimatedN.toLocaleString("ru-RU")}: правый край окна всё ещё недоразрешён.`
+    : `N=${N.toLocaleString("ru-RU")}, трапецоидальная квадратура и окно Тьюки.`;
+
+  const ns = "http://www.w3.org/2000/svg";
+  const width = 900;
+  const height = 548;
+  const uid = Math.random().toString(36).slice(2);
+  const color = {
+    signal: "#ffb347",
+    freq: "#8ec5ff",
+    spectrum: "#ff6b6b",
+    planck: "#7CFC00",
+    grid: "#1e2a3b",
+    axis: "#d7dde8",
+    text: "#d7dde8",
+    muted: "#9fb0c7",
+    panel: "#0b111b",
+    border: "#303b4f"
+  };
+
+  const wrap = document.createElement("div");
+  wrap.className = "unruh-board";
+
+  const style = document.createElement("style");
+  style.textContent = `
+    .unruh-controls { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; margin: 0 0 0.35rem; }
+    .unruh-controls label { display: grid; grid-template-columns: 1.8rem 10.5rem 3.7rem; align-items: center; gap: 0.5rem; margin: 0; color: #f2f2f2; font-size: 0.46em; }
+    .unruh-controls input[type="range"] { width: 10.5rem; accent-color: #ffb347; }
+    .unruh-controls output { min-width: 3.7rem; padding: 0.08rem 0.25rem; border: 1px solid #334155; border-radius: 6px; background: #101722; color: #f2f2f2; font-variant-numeric: tabular-nums; text-align: right; }
+    .unruh-board { width: min(100%, 900px); margin: 0 auto; }
+    .unruh-board svg { width: 100%; height: auto; display: block; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  `;
+  wrap.append(style);
+
+  const svg = document.createElementNS(ns, "svg");
+  svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
+  svg.setAttribute("role", "img");
+  svg.setAttribute("aria-label", "Экспоненциальный chirp и спектр ускоренного детектора");
+  wrap.append(svg);
+
+  function add(name, attrs = {}, parent = svg) {
+    const node = document.createElementNS(ns, name);
+    for (const [key, value] of Object.entries(attrs)) {
+      if (key === "text") {
+        node.textContent = value;
+      } else if (value !== undefined && value !== null && value !== "") {
+        node.setAttribute(key, value);
+      }
+    }
+    parent.append(node);
+    return node;
+  }
+
+  const fmt = (x) => {
+    if (Math.abs(x) < 1e-9) return "0";
+    if (Math.abs(x) >= 10) return x.toFixed(0);
+    if (Math.abs(x) >= 1) return x.toFixed(1);
+    return x.toFixed(2);
+  };
+  const fmtLog = (x) => {
+    if (x <= 0) return "0";
+    if (x < 0.01) return x.toExponential(0);
+    return fmt(x);
+  };
+  const linePath = (data, xField, yField, sx, sy) => {
+    let d = "";
+    let started = false;
+    for (const point of data) {
+      const x = point[xField];
+      const y = point[yField];
+      if (!Number.isFinite(x) || !Number.isFinite(y)) {
+        started = false;
+        continue;
+      }
+      d += `${started ? "L" : "M"} ${sx(x)} ${sy(y)} `;
+      started = true;
+    }
+    return d;
+  };
+
+  let chartIndex = 0;
+  function drawChart({
+    x,
+    y,
+    w,
+    h,
+    title,
+    xLabel,
+    yLabel,
+    xDomain,
+    yDomain,
+    yLog = false,
+    series
+  }) {
+    const clipId = `${uid}-clip-${chartIndex++}`;
+    const defs = svg.querySelector("defs") || add("defs");
+    const clip = add("clipPath", {id: clipId}, defs);
+    add("rect", {x, y, width: w, height: h}, clip);
+
+    add("rect", {x, y, width: w, height: h, rx: "8", fill: color.panel, stroke: color.border, "stroke-width": "1.2"});
+    const sx = (value) => x + (value - xDomain[0]) / (xDomain[1] - xDomain[0]) * w;
+    const logMin = Math.log(Math.max(yDomain[0], 1e-9));
+    const logMax = Math.log(Math.max(yDomain[1], yDomain[0] + 1e-9));
+    const sy = (value) => {
+      if (yLog) {
+        const safe = Math.max(value, Math.exp(logMin));
+        return y + h - (Math.log(safe) - logMin) / (logMax - logMin) * h;
+      }
+      return y + h - (value - yDomain[0]) / (yDomain[1] - yDomain[0]) * h;
+    };
+
+    for (let i = 0; i <= 4; i++) {
+      const tx = xDomain[0] + (xDomain[1] - xDomain[0]) * i / 4;
+      const ty = yLog
+        ? Math.exp(logMin + (logMax - logMin) * i / 4)
+        : yDomain[0] + (yDomain[1] - yDomain[0]) * i / 4;
+      add("line", {x1: sx(tx), y1: y, x2: sx(tx), y2: y + h, stroke: color.grid, "stroke-width": "1"});
+      add("line", {x1: x, y1: sy(ty), x2: x + w, y2: sy(ty), stroke: color.grid, "stroke-width": "1"});
+      add("text", {x: sx(tx), y: y + h + 18, fill: color.muted, "font-size": "11", "text-anchor": "middle", text: fmt(tx)});
+      add("text", {x: x - 8, y: sy(ty) + 4, fill: color.muted, "font-size": "11", "text-anchor": "end", text: yLog ? fmtLog(ty) : fmt(ty)});
+    }
+
+    add("line", {x1: x, y1: y + h, x2: x + w, y2: y + h, stroke: color.axis, "stroke-width": "1.4"});
+    add("line", {x1: x, y1: y, x2: x, y2: y + h, stroke: color.axis, "stroke-width": "1.4"});
+    add("text", {x, y: y - 9, fill: "#ffffff", "font-size": "16", "font-weight": "700", text: title});
+    add("text", {x: x + w, y: y + h + 35, fill: color.text, "font-size": "13", "text-anchor": "end", text: xLabel});
+    add("text", {x: x + 8, y: y + 15, fill: color.text, "font-size": "13", text: yLabel});
+
+    const layer = add("g", {"clip-path": `url(#${clipId})`});
+    for (const item of series) {
+      add("path", {
+        d: linePath(item.data, item.xField, item.yField, sx, sy),
+        fill: "none",
+        stroke: item.stroke,
+        "stroke-width": item.strokeWidth || "2.8",
+        "stroke-dasharray": item.dash,
+        opacity: item.opacity || "1"
+      }, layer);
+    }
+  }
+
+  add("rect", {x: "0", y: "0", width, height, rx: "12", fill: "#070a0f", stroke: "#243244", "stroke-width": "1"});
+
+  drawChart({
+    x: 58,
+    y: 34,
+    w: 345,
+    h: 150,
+    title: "Сигнал детектора",
+    xLabel: "τ",
+    yLabel: "s(τ)",
+    xDomain: [tauMin, tauMax],
+    yDomain: [-1.1, 1.1],
+    series: [{data: signalData, xField: "tau", yField: "value", stroke: color.signal, strokeWidth: "3"}]
+  });
+
+  drawChart({
+    x: 510,
+    y: 34,
+    w: 332,
+    h: 150,
+    title: "Мгновенная частота",
+    xLabel: "τ",
+    yLabel: "ω′(τ)",
+    xDomain: [tauMin, tauMax],
+    yDomain: [Math.max(omega0 * Math.exp(aprime * tauMin), 1e-4), omega0 * Math.exp(aprime * tauMax)],
+    yLog: true,
+    series: [{data: freqData, xField: "tau", yField: "value", stroke: color.freq, strokeWidth: "3"}]
+  });
+
+  drawChart({
+    x: 58,
+    y: 244,
+    w: 784,
+    h: 178,
+    title: "Оконный спектр",
+    xLabel: "Ω",
+    yLabel: "лог норм.",
+    xDomain: [0, Omax],
+    yDomain: [1e-2, 1.05],
+    yLog: true,
+    series: [
+      {data: planckData, xField: "Omega", yField: "value", stroke: color.planck, strokeWidth: "2.2", dash: "8 6", opacity: "0.9"},
+      {data: spectrumData, xField: "Omega", yField: "value", stroke: color.spectrum, strokeWidth: "3.2"}
+    ]
+  });
+
+  add("line", {x1: "70", y1: "458", x2: "98", y2: "458", stroke: color.signal, "stroke-width": "4"});
+  add("text", {x: "106", y: "463", fill: color.text, "font-size": "14", text: "s(τ) = cos Φ(τ)"});
+  add("line", {x1: "260", y1: "458", x2: "288", y2: "458", stroke: color.freq, "stroke-width": "4"});
+  add("text", {x: "296", y: "463", fill: color.text, "font-size": "14", text: "ω′(τ) = ω exp(a′τ)"});
+  add("line", {x1: "508", y1: "458", x2: "536", y2: "458", stroke: color.spectrum, "stroke-width": "4"});
+  add("text", {x: "544", y: "463", fill: color.text, "font-size": "14", text: "|A(Ω)|²"});
+  add("line", {x1: "650", y1: "458", x2: "686", y2: "458", stroke: color.planck, "stroke-width": "3", "stroke-dasharray": "8 6"});
+  add("text", {x: "694", y: "463", fill: color.text, "font-size": "14", text: "1/(exp(2πΩ/a′) - 1)"});
+
+  add("text", {x: "70", y: "498", fill: color.muted, "font-size": "14", text: "Φ(τ) = (ω/a′)(exp(a′τ) - 1),  AΔτ(Ω) = ∫ dτ exp(iΩτ) exp(iΦ(τ))."});
+  add("text", {x: "70", y: "523", fill: color.muted, "font-size": "13", text: "Красная кривая вычислена на конечном окне Δτ, поэтому она только приближается к тепловой форме."});
+  add("text", {x: "70", y: "541", fill: color.muted, "font-size": "12", text: resolutionNote});
+
+  return wrap;
+}
+```
+:::
+
+
+
+
+
+
+
+
+## Что видит ускоренный детектор?
+::: incremental
+- Плоская волна: $\phi(t,x)\sim e^{-i\omega_K t+iKx}$
+- Фаза на мировой линии наблюдателя:
+$$
+\Phi(\tau)=K x(\tau)-\omega_K t(\tau)=-\gamma\tau(\omega_K-Kv).
+$$
+- Мгновенная частота ($K=-\omega_K$):
+$$  
+-\frac{d\Phi}{d\tau} =\gamma(\omega_K-Kv)=\boxed{\omega'(\tau)=\omega_K e^{+a\tau}}
+$$
+- Накопленная фаза:
+$$
+\boxed{
+\varphi(\tau)
+=
+\int^\tau_{-\infty} \omega'_K(\tau')\,d\tau' = \frac{\omega_K}{a} e^{+a\tau}}
+$$
+:::
+
+## Что видит ускоренный детектор?
+::: incremental
+ - Итак,
+$$
+f(\tau)
+=
+e^{i\varphi(\tau)}
+=
+e^{
+i(\omega_K/a)e^{a\tau}
+}.
+$$
+- Фурье-амплитуда для частоты $\Omega$:
+$$
+F(\Omega)
+=
+\int_{-\infty}^{\infty}
+d\tau\,
+e^{i\Omega\tau}
+e^{
+i(\omega_K/a)e^{a\tau}
+}
+$$
+- В результате (сейчас мы это докажем):
+$$
+\boxed{
+|F(\Omega)|^2 = \frac{2\pi}{a\Omega}\frac{1}{e^{2\pi\Omega/a}-1}.
+}
+$$
+:::
+
+## Что видит ускоренный детектор?
+::: incremental
+- Планковский спектр:
+$$
+\boxed{
+|F(\Omega)|^2 = \frac{2\pi}{a\Omega}\frac{1}{e^{2\pi\Omega/a}-1}.
+}
+$$
+- Температура Унру:
+$$
+T_U=\frac{a}{2\pi k_B} \equiv \frac{\hbar a}{2\pi k_B c} \quad (\hbar=1, \, c=1).
+$$
+- Точно такой же результат получится для ($K=+\omega_K$)
+:::
+
+# Вывод формулы
+## 
+::: incremental
+- Замена переменной в интеграле:
+$$
+y=e^{a\tau}.
+$$
+- Тогда
+$$
+\tau=\frac{1}{a}\ln y,
+\qquad
+d\tau=\frac{1}{a}\frac{dy}{y}.
+$$
+- Пределы:
+$$
+\tau:-\infty\to+\infty
+\quad\Longrightarrow\quad
+y:0\to\infty.
+$$
+- Стало быть:
+$$
+e^{i\Omega\tau}
+=
+e^{i\Omega\frac{1}{a}\ln y} = e^{\ln y^{i\Omega/a}}
+=
+y^{i\Omega/a}.
+$$
+:::
+
+## 
+::: incremental
+- Интеграл ($y=e^{a\tau}$, $d\tau=\frac{1}{a}\frac{dy}{y}$, $e^{i\Omega\tau}=y^{i\Omega/a}$):
+$$
+\begin{aligned}
+F(\Omega)
+&=
+\int_{-\infty}^{\infty}
+d\tau\,
+e^{i\Omega\tau}
+e^{
+i(\omega_K/a)e^{a\tau}
+}\\
+&=
+\frac{1}{a}
+\int_0^\infty
+dy\,
+y^{i\Omega/a-1}
+e^{i\frac{\omega_K}{a}y}
+\end{aligned}
+$$
+- Этот интеграл выражается через гамма-функцию:
+$$
+\int_0^\infty dy\, y^{s-1}e^{-\lambda y}
+=
+\frac{\Gamma(s)}{\lambda^s}.
+$$
+:::
+
+## Фурье-амплитуда
+::: incremental
+- Стало быть, 
+$$
+F(\Omega)
+=
+\frac{1}{a}
+\Gamma\left(i\Omega /a\right)
+\left(\frac{\omega_K}{a}\right)^{-i\Omega/a}
+e^{-\pi\Omega/(2a)}.
+$$
+- Квадрат модуля:
+$$
+|F(\Omega)|^2
+=
+\frac{1}{a^2}
+\left|\Gamma\left(i\Omega/a\right)\right|^2
+e^{-\pi\Omega/a}.
+$$
+- Тождество для гамма-функции
+$$
+|\Gamma(ix)|^2
+=
+\frac{\pi}{x\sinh(\pi x)}.
+$$
+:::
+
+## Фурье-спектр сигнала
+::: incremental
+- Используя тождество для гамма-функции, получаем
+$$
+\boxed{
+|F(\Omega)|^2
+=
+\frac{2\pi}{\Omega a}
+\frac{1}{e^{2\pi\Omega/a}-1}}
+$$
+:::
+
+## Краткое резюме
+::: incremental
+- Главная идея первых шагов:
+$$
+t(\tau)=\frac{1}{a}\sinh a\tau,
+\qquad
+x(\tau)=\frac{1}{a}\cosh a\tau.
+$$
+- Плоская волна вдоль ускоренной траектории становится сигналом
+$$
+f(\tau)
+=
+e^{i(\omega_K/a)e^{a\tau}}
+$$
+- Мощность спектра сигнала:
+$$
+\boxed{
+|F(\Omega)|^2
+=
+\frac{2\pi}{\Omega a}
+\frac{1}{e^{2\pi\Omega/a}-1}}
+$$
+- Температура Унру:
+$$
+T_U=\frac{a}{2\pi k_B}.
+$$
+:::
+
+## Почему этого недостаточно?
+::: incremental
+- Мы рассмотрели плоскую волну с определенной частотой и на массовой поверхности.
+- В квантовом поле нужно учесть все остальные моды.
+:::
+
+

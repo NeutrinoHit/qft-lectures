@@ -1,0 +1,672 @@
+---
+title: "Релятивистское ускорение и координаты Риндлера"
+author: "Д. В. Наумов"
+---
+# Система единиц
+## Система единиц
+- Удобно использовать систему единиц, в которой
+$$
+c=1
+$$
+
+# 4-скорость
+
+## 4-скорость
+::: incremental
+- 4-координата:
+$$
+x^\mu=(t,\mathbf{x}).
+$$
+- Собственное время:
+$$
+d\tau = \frac{dt}{\gamma},
+\qquad
+\gamma=\frac{1}{\sqrt{1-v^2}}.
+$$
+
+- 4-скорость:
+$$
+u^\mu=\frac{dx^\mu}{d\tau}
+=
+\gamma(1,\mathbf{v}), \quad u^\mu u_\mu = 1.
+$$
+:::
+
+# 4-ускорение
+
+## 4-ускорение
+::: incremental
+- Определим 4-ускорение:
+$$
+A^\mu=\frac{d u^\mu}{d\tau}.
+$$
+- 4-ускорение ортогонально 4-скорости:
+$$
+A^\mu u_\mu=0.
+$$
+- Вывод:
+$$
+\frac{d}{d\tau}(u^\mu u_\mu)=2A^\mu u_\mu=0.
+$$
+:::
+
+## 4-ускорение в лабораторной системе
+::: incremental
+- Обозначим обычное ускорение в лабораторной системе как
+$$
+\mathbf{a}=\frac{d\mathbf{v}}{dt}.
+$$
+- Тогда
+$$
+A^\mu
+=
+\frac{d}{dt}\left[\gamma(1,\mathbf{v})\right]
+= \gamma\left(\dot{\gamma},\dot{\gamma}\mathbf{v}+\gamma \mathbf{a}\right)
+$$
+где $\dot{\gamma}=\frac{d\gamma}{dt}$.
+:::
+
+---
+
+## 4-ускорение в системе мгновенно сопутствующей наблюдателю
+::: incremental
+- В системе, мгновенно сопутствующей наблюдателю,
+$$
+v=0
+$$
+- 4-ускорение в этой системе:
+$$
+A'^\mu
+=\left(0,\mathbf{a}'\right), \quad \mathbf{a}' = \frac{d\mathbf{v}'}{d\tau}, \quad\dot{\gamma}(v=0)=0.
+$$
+- $a'=|\mathbf{a}'|$ - собственное ускорение -- это то, что измеряет акселерометр, движущийся вместе с наблюдателем.
+:::
+
+## Связь двух систем
+::: incremental
+- 4-ускорения $A$ и $A'$ связаны преобразованием Лоренца:
+$$
+A = \gamma
+\begin{pmatrix}
+\dot{\gamma}\\
+\dot{\gamma}v+\gamma a
+\end{pmatrix}
+=
+\begin{pmatrix}
+\gamma & \gamma v\\
+\gamma v & \gamma
+\end{pmatrix}
+\begin{pmatrix}
+0\\
+a'
+\end{pmatrix}
+=
+\begin{pmatrix}
+\gamma v a'\\
+\gamma a'
+\end{pmatrix}
+.
+$$
+- Из верхнего выражения следует, что
+$$
+\dot{\gamma} = v a'\implies\frac{v\dot{v}}{\left(1-v^2\right)^{3/2}} = v a'\implies \boxed{a=a'\left(1-v^2\right)^{3/2}}.
+$$
+:::
+
+# Равномерно ускоренное движение
+## Равномерно ускоренное движение
+::: incremental
+- Если собственное ускорение $a'$ постоянно, то
+$$
+\boxed{
+v(t)=\frac{a' t}{\sqrt{1+a'^2 t^2}}
+}
+$$
+- Проинтегрировав, получаем
+$$
+\boxed{
+x(t)=\frac{1}{a'}\sqrt{1+a'^2 t^2}, \quad x(0)=\frac{1}{a'}
+}
+$$
+- Это движение по гиперболе в пространстве Минковского:
+$$
+x^2 - t^2 = \frac{1}{a'^2}
+$$
+:::
+
+## Собственное время и старение
+
+Для равномерно ускоренного наблюдателя
+$$
+\boxed{
+\tau(t)=\int_0^t \frac{dt'}{\gamma(t')}
+=
+\frac{1}{a'}\,\operatorname{arsinh}(a't)
+}
+$$
+
+::: {.aging-widget}
+```{ojs}
+//| echo: false
+viewof aging_controls = {
+  const control = html`<div class="aging-controls">
+    <label>
+      <span>t</span>
+      <input name="time" type="range" min="0" max="5" step="0.05" value="3">
+      <output></output>
+    </label>
+    <label>
+      <span>a′</span>
+      <input name="aprime" type="range" min="0" max="3" step="0.1" value="1">
+      <output></output>
+    </label>
+  </div>`;
+
+  const time = control.querySelector("[name='time']");
+  const aprime = control.querySelector("[name='aprime']");
+  const timeOut = time.nextElementSibling;
+  const aprimeOut = aprime.nextElementSibling;
+
+  function update(dispatch = true) {
+    control.value = {
+      time: Number(time.value),
+      aprime: Number(aprime.value)
+    };
+    timeOut.textContent = `${Number(time.value).toFixed(2)} лет`;
+    aprimeOut.textContent = `${Number(aprime.value).toFixed(1)} год⁻¹`;
+    if (dispatch) control.dispatchEvent(new Event("input", {bubbles: true}));
+  }
+
+  time.addEventListener("input", () => update());
+  aprime.addEventListener("input", () => update());
+  update(false);
+  return control;
+}
+```
+
+```{ojs}
+//| echo: false
+{
+  const {time, aprime} = aging_controls;
+  const tauAt = (u) => aprime === 0 ? u : Math.asinh(aprime * u) / aprime;
+  const gammaAt = (u) => Math.sqrt(1 + (aprime * u) ** 2);
+  const velocityAt = (u) => aprime === 0 ? 0 : aprime * u / gammaAt(u);
+  const tau = tauAt(time);
+  const delta = time - tau;
+  const ratio = time === 0 ? 1 : tau / time;
+  const tMax = 5;
+  const yMax = 5;
+
+  const ns = "http://www.w3.org/2000/svg";
+  const width = 900;
+  const height = 390;
+  const plotLeft = 58;
+  const plotTop = 26;
+  const plotWidth = 500;
+  const plotHeight = 300;
+  const panelLeft = 596;
+
+  const sx = (x) => plotLeft + x / tMax * plotWidth;
+  const sy = (y) => plotTop + (yMax - y) / yMax * plotHeight;
+  const f = (x) => Math.abs(x) < 1e-9 ? "0.00" : x.toFixed(2);
+  const linePath = (fn, steps = 180) => {
+    let d = "";
+    for (let i = 0; i <= steps; i++) {
+      const x = tMax * i / steps;
+      const y = fn(x);
+      d += `${i === 0 ? "M" : "L"} ${sx(x)} ${sy(y)} `;
+    }
+    return d;
+  };
+
+  const wrap = document.createElement("div");
+  wrap.className = "aging-board";
+
+  const style = document.createElement("style");
+  style.textContent = `
+    .aging-controls { display: flex; gap: 1.2rem; align-items: center; flex-wrap: wrap; margin: 0 0 0.3rem; }
+    .aging-controls label { display: grid; grid-template-columns: 1.8rem 12rem 5.2rem; align-items: center; gap: 0.55rem; margin: 0; color: #f2f2f2; font-size: 0.46em; }
+    .aging-controls input[type="range"] { width: 12rem; accent-color: #58a6ff; }
+    .aging-controls output { min-width: 5.2rem; padding: 0.08rem 0.25rem; border: 1px solid #334155; border-radius: 6px; background: #101722; color: #f2f2f2; font-variant-numeric: tabular-nums; text-align: right; }
+    .aging-board { width: min(100%, 900px); margin: 0 auto; }
+    .aging-board svg { width: 100%; height: auto; display: block; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  `;
+  wrap.append(style);
+
+  const svg = document.createElementNS(ns, "svg");
+  svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
+  svg.setAttribute("role", "img");
+  svg.setAttribute("aria-label", "Сравнение лабораторного и собственного времени ускоренного наблюдателя");
+  wrap.append(svg);
+
+  function add(name, attrs = {}, parent = svg) {
+    const node = document.createElementNS(ns, name);
+    for (const [key, value] of Object.entries(attrs)) {
+      if (key === "text") {
+        node.textContent = value;
+      } else {
+        node.setAttribute(key, value);
+      }
+    }
+    parent.append(node);
+    return node;
+  }
+
+  const defs = add("defs");
+  const marker = add("marker", {
+    id: "aging-arrow",
+    markerWidth: "8",
+    markerHeight: "8",
+    refX: "6",
+    refY: "4",
+    orient: "auto",
+    markerUnits: "strokeWidth"
+  }, defs);
+  add("path", {d: "M 0 0 L 8 4 L 0 8 Z", fill: "#d7dde8"}, marker);
+
+  add("rect", {x: "0", y: "0", width, height, rx: "12", fill: "#070a0f", stroke: "#243244"});
+  add("rect", {x: plotLeft, y: plotTop, width: plotWidth, height: plotHeight, fill: "#0b111b", stroke: "#303b4f", "stroke-width": "1.2"});
+
+  for (let tick = 0; tick <= 5; tick++) {
+    add("line", {x1: sx(tick), y1: sy(0), x2: sx(tick), y2: sy(5), stroke: "#1e2a3b", "stroke-width": "1"});
+    add("line", {x1: sx(0), y1: sy(tick), x2: sx(5), y2: sy(tick), stroke: "#1e2a3b", "stroke-width": "1"});
+    add("text", {x: sx(tick), y: sy(0) + 24, fill: "#9fb0c7", "font-size": "13", "text-anchor": "middle", text: `${tick}`});
+    add("text", {x: sx(0) - 12, y: sy(tick) + 5, fill: "#9fb0c7", "font-size": "13", "text-anchor": "end", text: `${tick}`});
+  }
+
+  add("line", {x1: sx(0), y1: sy(0), x2: sx(5.08), y2: sy(0), stroke: "#d7dde8", "stroke-width": "1.6", "marker-end": "url(#aging-arrow)"});
+  add("line", {x1: sx(0), y1: sy(0), x2: sx(0), y2: sy(5.08), stroke: "#d7dde8", "stroke-width": "1.6", "marker-end": "url(#aging-arrow)"});
+  add("text", {x: sx(5.0), y: sy(0) + 46, fill: "#d7dde8", "font-size": "16", "text-anchor": "end", text: "t, годы"});
+  add("text", {x: sx(0) + 10, y: sy(5.0) - 10, fill: "#d7dde8", "font-size": "16", text: "τ, годы"});
+
+  add("path", {
+    d: linePath((u) => u),
+    fill: "none",
+    stroke: "#ffb86c",
+    "stroke-width": "2.5",
+    "stroke-dasharray": "8 7"
+  });
+  add("path", {
+    d: linePath(tauAt),
+    fill: "none",
+    stroke: "#58a6ff",
+    "stroke-width": "4"
+  });
+
+  if (time > 0) {
+    add("line", {
+      x1: sx(time),
+      y1: sy(tau),
+      x2: sx(time),
+      y2: sy(time),
+      stroke: "#ff5d73",
+      "stroke-width": "5",
+      opacity: "0.78"
+    });
+  }
+  add("line", {x1: sx(time), y1: sy(0), x2: sx(time), y2: sy(time), stroke: "#9fb0c7", "stroke-width": "1.4", "stroke-dasharray": "5 6", opacity: "0.8"});
+  add("circle", {cx: sx(time), cy: sy(tau), r: "7", fill: "#58a6ff", stroke: "#ffffff", "stroke-width": "2"});
+  add("circle", {cx: sx(time), cy: sy(time), r: "5.5", fill: "#ffb86c", stroke: "#ffffff", "stroke-width": "1.6"});
+  add("text", {x: sx(2.45), y: sy(tauAt(2.45)) - 14, fill: "#58a6ff", "font-size": "16", text: "τ(t) = arsinh(a′t)/a′"});
+  add("text", {x: sx(3.15), y: sy(3.15) - 10, fill: "#ffb86c", "font-size": "16", text: "τ = t"});
+  add("text", {x: sx(time) + 10, y: sy((time + tau) / 2), fill: "#ff9fb0", "font-size": "16", text: "t − τ"});
+
+  add("rect", {x: panelLeft, y: "34", width: "260", height: "280", rx: "10", fill: "#101722", stroke: "#2b3a50"});
+  add("text", {x: panelLeft + 20, y: "70", fill: "#ffffff", "font-size": "21", "font-weight": "700", text: "Эффект старения"});
+  add("text", {x: panelLeft + 20, y: "110", fill: "#d7dde8", "font-size": "16", text: `лабораторное t = ${f(time)} лет`});
+  add("text", {x: panelLeft + 20, y: "138", fill: "#58a6ff", "font-size": "16", text: `собственное τ = ${f(tau)} лет`});
+  add("text", {x: panelLeft + 20, y: "166", fill: "#ff9fb0", "font-size": "16", text: `отставание t − τ = ${f(delta)} лет`});
+  add("text", {x: panelLeft + 20, y: "204", fill: "#d7dde8", "font-size": "16", text: `τ/t = ${f(ratio)}`});
+  add("text", {x: panelLeft + 20, y: "232", fill: "#d7dde8", "font-size": "16", text: `v(t) = ${f(velocityAt(time))}`});
+  add("text", {x: panelLeft + 20, y: "270", fill: "#9fb0c7", "font-size": "14", text: "При a′ = 0 синяя кривая"});
+  add("text", {x: panelLeft + 20, y: "291", fill: "#9fb0c7", "font-size": "14", text: "совпадает с инерциальной."});
+
+  add("text", {x: plotLeft, y: "372", fill: "#9fb0c7", "font-size": "14", text: "Чем больше a′t, тем медленнее накапливается собственное время ускоренного наблюдателя."});
+
+  return wrap;
+}
+```
+:::
+
+
+# Координаты Риндлера
+
+## Определения 
+::: incremental
+- Рассматриваем **правый клин Риндлера**:
+$$
+x>|t|.
+$$
+
+- В нём вводятся координаты
+$$
+t=\xi\sinh\eta,
+\qquad
+x=\xi\cosh\eta,
+\qquad
+\xi>0.
+$$
+
+- Координата $\xi$ нумерует **гиперболические мировые линии**
+$$
+x^2-t^2=\xi^2\equiv \frac{1}{a'^2}.
+$$
+
+:::
+
+## Определения
+- Координата $\xi$ нумерует **гиперболические мировые линии**
+$$
+x^2-t^2=\xi^2\equiv \frac{1}{a'^2}.
+$$
+
+- Координата $\eta$ нумерует **лучи из начала координат**
+$$
+\frac{t}{x}=\tanh\eta.
+$$
+
+## Физический смысл $\xi$ и $\eta$
+::: incremental
+- Линии
+$$
+\xi=\text{const}=\frac{1}{a'}
+$$
+— это мировые линии равномерно ускоренных наблюдателей.
+
+- Для наблюдателя с фиксированным $\xi$:
+$$
+ds^2=\xi^2 d\eta^2-d\xi^2
+\quad\Longrightarrow\quad
+d\tau=\xi\, d\eta.
+$$
+
+- Поэтому $\eta$ играет роль **времени Риндлера**, а $\xi$ — роль **координаты наблюдателя**.
+:::
+
+## Физический смысл $\xi$ и $\eta$
+::: incremental
+- Собственное ускорение такого наблюдателя равно
+$$
+a'=\frac{1}{\xi}.
+$$
+
+- В частности, ранее найденная мировая линия
+$$
+x^2-t^2=\frac{1}{a'^2}
+$$
+это просто
+$$
+\xi=\frac{1}{a'}.
+$$
+:::
+
+---
+
+## Горизонт Риндлера
+::: incremental
+- Границы клина Риндлера — это световые прямые
+$$
+x=\pm t.
+$$
+
+- Они недостижимы для равномерно ускоренного наблюдателя и играют роль **горизонта**.
+
+- Наблюдатель с фиксированным $\xi$ может получать сигналы только из области
+$$
+x>|t|.
+$$
+
+:::
+
+## Координаты Риндлера и горизонт
+
+::: {.rindler-widget}
+```{ojs}
+//| echo: false
+viewof rindler_controls = {
+  const control = html`<div class="rindler-controls">
+    <label>
+      <span>a′</span>
+      <input name="aprime" type="range" min="0.4" max="2.4" step="0.1" value="1.0">
+      <output></output>
+    </label>
+    <label>
+      <span>η</span>
+      <input name="eta" type="range" min="-1.6" max="1.6" step="0.05" value="0.8">
+      <output></output>
+    </label>
+  </div>`;
+
+  const aprime = control.querySelector("[name='aprime']");
+  const eta = control.querySelector("[name='eta']");
+  const aprimeOut = aprime.nextElementSibling;
+  const etaOut = eta.nextElementSibling;
+
+  function update(dispatch = true) {
+    control.value = {
+      aprime: Number(aprime.value),
+      eta: Number(eta.value)
+    };
+    aprimeOut.textContent = Number(aprime.value).toFixed(1);
+    etaOut.textContent = Number(eta.value).toFixed(2);
+    if (dispatch) control.dispatchEvent(new Event("input", {bubbles: true}));
+  }
+
+  aprime.addEventListener("input", () => update());
+  eta.addEventListener("input", () => update());
+  update(false);
+  return control;
+}
+```
+
+```{ojs}
+//| echo: false
+{
+  const {aprime, eta} = rindler_controls;
+  const xi0 = 1 / aprime;
+  const t0 = xi0 * Math.sinh(eta);
+  const x0 = xi0 * Math.cosh(eta);
+  const v0 = Math.tanh(eta);
+  const etaMax = 1.65;
+  const domain = Math.max(
+    3.2,
+    xi0 * Math.cosh(etaMax) + 0.45,
+    Math.abs(xi0 * Math.sinh(etaMax)) + 0.45
+  );
+
+  const ns = "http://www.w3.org/2000/svg";
+  const width = 900;
+  const height = 430;
+  const plotSize = 390;
+  const plotLeft = 36;
+  const plotTop = 18;
+  const panelLeft = 472;
+
+  const sx = (x) => plotLeft + (x + domain) / (2 * domain) * plotSize;
+  const sy = (t) => plotTop + (domain - t) / (2 * domain) * plotSize;
+  const f = (x) => Math.abs(x) < 1e-9 ? "0.00" : x.toFixed(2);
+  const points = (pts) => pts.map(([x, t]) => `${sx(x)},${sy(t)}`).join(" ");
+
+  const wrap = document.createElement("div");
+  wrap.className = "rindler-board";
+
+  const style = document.createElement("style");
+  style.textContent = `
+    .rindler-controls { display: flex; gap: 1.2rem; align-items: center; flex-wrap: wrap; margin: 0 0 0.35rem; }
+    .rindler-controls label { display: grid; grid-template-columns: 1.8rem 11rem 3.4rem; align-items: center; gap: 0.55rem; margin: 0; color: #f2f2f2; font-size: 0.48em; }
+    .rindler-controls input[type="range"] { width: 11rem; accent-color: #f5a524; }
+    .rindler-controls output { min-width: 3.4rem; padding: 0.08rem 0.25rem; border: 1px solid #334155; border-radius: 6px; background: #101722; color: #f2f2f2; font-variant-numeric: tabular-nums; text-align: right; }
+    .rindler-board { width: min(100%, 900px); margin: 0 auto; }
+    .rindler-board svg { width: 100%; height: auto; display: block; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  `;
+  wrap.append(style);
+
+  const svg = document.createElementNS(ns, "svg");
+  svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
+  svg.setAttribute("role", "img");
+  svg.setAttribute("aria-label", "Диаграмма координат Риндлера и горизонта");
+  wrap.append(svg);
+
+  function add(name, attrs = {}, parent = svg) {
+    const node = document.createElementNS(ns, name);
+    for (const [key, value] of Object.entries(attrs)) {
+      if (key === "text") {
+        node.textContent = value;
+      } else {
+        node.setAttribute(key, value);
+      }
+    }
+    parent.append(node);
+    return node;
+  }
+
+  const defs = add("defs");
+  const clipId = "rindler-plot-clip";
+  const marker = add("marker", {
+    id: "rindler-arrow",
+    markerWidth: "8",
+    markerHeight: "8",
+    refX: "6",
+    refY: "4",
+    orient: "auto",
+    markerUnits: "strokeWidth"
+  }, defs);
+  add("path", {d: "M 0 0 L 8 4 L 0 8 Z", fill: "#d7dde8"}, marker);
+  const clip = add("clipPath", {id: clipId}, defs);
+  add("rect", {x: plotLeft, y: plotTop, width: plotSize, height: plotSize, rx: "6"}, clip);
+
+  add("rect", {
+    x: "0",
+    y: "0",
+    width,
+    height,
+    rx: "12",
+    fill: "#070a0f",
+    stroke: "#243244",
+    "stroke-width": "1"
+  });
+  add("rect", {
+    x: plotLeft,
+    y: plotTop,
+    width: plotSize,
+    height: plotSize,
+    fill: "#0b111b",
+    stroke: "#303b4f",
+    "stroke-width": "1.2"
+  });
+
+  const plotLayer = add("g", {"clip-path": `url(#${clipId})`});
+  add("polygon", {
+    points: points([[0, 0], [domain, domain], [domain, -domain]]),
+    fill: "#1b4d3e",
+    opacity: "0.28"
+  }, plotLayer);
+
+  for (const grid of [-2, -1, 1, 2]) {
+    const value = grid * Math.ceil(domain / 3);
+    if (Math.abs(value) < domain) {
+      add("line", {
+        x1: sx(-domain), y1: sy(value), x2: sx(domain), y2: sy(value),
+        stroke: "#1e2a3b", "stroke-width": "1"
+      }, plotLayer);
+      add("line", {
+        x1: sx(value), y1: sy(-domain), x2: sx(value), y2: sy(domain),
+        stroke: "#1e2a3b", "stroke-width": "1"
+      }, plotLayer);
+    }
+  }
+
+  add("line", {
+    x1: sx(-domain), y1: sy(0), x2: sx(domain * 0.98), y2: sy(0),
+    stroke: "#d7dde8", "stroke-width": "1.6", "marker-end": "url(#rindler-arrow)"
+  });
+  add("line", {
+    x1: sx(0), y1: sy(-domain), x2: sx(0), y2: sy(domain * 0.98),
+    stroke: "#d7dde8", "stroke-width": "1.6", "marker-end": "url(#rindler-arrow)"
+  });
+
+  add("line", {
+    x1: sx(-domain), y1: sy(-domain), x2: sx(domain), y2: sy(domain),
+    stroke: "#f2c94c", "stroke-width": "2.4", "stroke-dasharray": "8 7", opacity: "0.9"
+  }, plotLayer);
+  add("line", {
+    x1: sx(-domain), y1: sy(domain), x2: sx(domain), y2: sy(-domain),
+    stroke: "#f2c94c", "stroke-width": "2.4", "stroke-dasharray": "8 7", opacity: "0.9"
+  }, plotLayer);
+
+  for (const e of [-1.2, -0.8, -0.4, 0, 0.4, 0.8, 1.2]) {
+    add("line", {
+      x1: sx(0), y1: sy(0), x2: sx(domain), y2: sy(domain * Math.tanh(e)),
+      stroke: "#5cc8ff", "stroke-width": "1.2", opacity: "0.32"
+    }, plotLayer);
+  }
+  add("line", {
+    x1: sx(0), y1: sy(0), x2: sx(domain), y2: sy(domain * Math.tanh(eta)),
+    stroke: "#75e6ff", "stroke-width": "3.2", opacity: "0.95"
+  }, plotLayer);
+
+  function hyperbolaPath(xi, steps = 180) {
+    let d = "";
+    for (let i = 0; i <= steps; i++) {
+      const e = -etaMax + 2 * etaMax * i / steps;
+      const x = xi * Math.cosh(e);
+      const t = xi * Math.sinh(e);
+      d += `${i === 0 ? "M" : "L"} ${sx(x)} ${sy(t)} `;
+    }
+    return d;
+  }
+
+  for (const xi of [0.5, 0.8, 1.1, 1.5, 2.0, 2.6, 3.4, 4.4]) {
+    if (xi < domain * 0.92) {
+      add("path", {
+        d: hyperbolaPath(xi),
+        fill: "none",
+        stroke: "#9fb0c7",
+        "stroke-width": "1.25",
+        opacity: "0.45"
+      }, plotLayer);
+    }
+  }
+  add("path", {
+    d: hyperbolaPath(xi0),
+    fill: "none",
+    stroke: "#f5a524",
+    "stroke-width": "4.2"
+  }, plotLayer);
+
+  add("circle", {
+    cx: sx(x0),
+    cy: sy(t0),
+    r: "7.5",
+    fill: "#ff5d73",
+    stroke: "#fff",
+    "stroke-width": "2"
+  }, plotLayer);
+
+  add("text", {x: sx(domain * 0.93), y: sy(0) - 10, fill: "#d7dde8", "font-size": "20", text: "x"});
+  add("text", {x: sx(0) + 10, y: sy(domain * 0.9), fill: "#d7dde8", "font-size": "20", text: "t"});
+  add("text", {x: sx(domain * 0.58), y: sy(domain * 0.62) - 8, fill: "#f2c94c", "font-size": "17", text: "x = t"});
+  add("text", {x: sx(domain * 0.56), y: sy(-domain * 0.54) + 24, fill: "#f2c94c", "font-size": "17", text: "x = −t"});
+  add("text", {x: sx(domain * 0.52), y: sy(domain * 0.08), fill: "#8ae6c1", "font-size": "18", text: "x > |t|"});
+  add("text", {x: sx(x0) + 11, y: sy(t0) - 10, fill: "#ffb3c0", "font-size": "17", text: "событие"});
+  add("text", {x: sx(xi0 * Math.cosh(-1.18)) + 8, y: sy(xi0 * Math.sinh(-1.18)) + 18, fill: "#f5a524", "font-size": "18", text: "ξ = 1/a′"});
+  add("text", {x: sx(domain * 0.72), y: sy(domain * Math.tanh(eta) * 0.72) - 8, fill: "#75e6ff", "font-size": "18", text: "η = const"});
+
+  add("rect", {x: panelLeft, y: "38", width: "386", height: "324", rx: "10", fill: "#101722", stroke: "#2b3a50"});
+  add("text", {x: panelLeft + 22, y: "74", fill: "#ffffff", "font-size": "22", "font-weight": "700", text: "Клин Риндлера"});
+  add("text", {x: panelLeft + 22, y: "112", fill: "#d7dde8", "font-size": "17", text: `a′ = ${f(aprime)}`});
+  add("text", {x: panelLeft + 22, y: "140", fill: "#d7dde8", "font-size": "17", text: `ξ₀ = 1/a′ = ${f(xi0)}`});
+  add("text", {x: panelLeft + 22, y: "168", fill: "#d7dde8", "font-size": "17", text: `η = ${f(eta)}`});
+  add("text", {x: panelLeft + 22, y: "210", fill: "#f5a524", "font-size": "17", text: "ξ = const: гиперболы"});
+  add("text", {x: panelLeft + 22, y: "238", fill: "#75e6ff", "font-size": "17", text: "η = const: лучи"});
+  add("text", {x: panelLeft + 22, y: "280", fill: "#d7dde8", "font-size": "16", text: `t = ξ sinh η = ${f(t0)}`});
+  add("text", {x: panelLeft + 22, y: "306", fill: "#d7dde8", "font-size": "16", text: `x = ξ cosh η = ${f(x0)}`});
+  add("text", {x: panelLeft + 22, y: "332", fill: "#d7dde8", "font-size": "16", text: `v = tanh η = ${f(v0)}`});
+  add("text", {x: plotLeft, y: "422", fill: "#9fb0c7", "font-size": "14", text: "Горизонты x = ±t ограничивают область, доступную равномерно ускоренному наблюдателю."});
+
+  return wrap;
+}
+```
+:::
+
+
