@@ -1,0 +1,702 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Квантовая теория поля",
+    "section": "",
+    "text": "Лекции по квантовой теории поля."
+  },
+  {
+    "objectID": "index.html#разделы",
+    "href": "index.html#разделы",
+    "title": "Квантовая теория поля",
+    "section": "Разделы",
+    "text": "Разделы\n\nСлайды"
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-1.html#система-единиц-1",
+    "href": "ru/slides/UnruhEffect-1.html#система-единиц-1",
+    "title": "Эффект Унру для плоской волны",
+    "section": "Система единиц",
+    "text": "Система единиц\n\nУдобно использовать систему единиц, в которой \\[\nc=\\hslash=k_B=1\n\\]"
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-1.html#вакуум-в-квантовой-теории-поля",
+    "href": "ru/slides/UnruhEffect-1.html#вакуум-в-квантовой-теории-поля",
+    "title": "Эффект Унру для плоской волны",
+    "section": "Вакуум в квантовой теории поля",
+    "text": "Вакуум в квантовой теории поля\n\nВакуум - состояние с нулевым числом частиц\nВо всех инерциальных системах вакуум - это одно и то же состояние\nА что если наблюдатель неинерциальный?\nМы придём к удивительному результату: для ускоренного наблюдателя вакуум будет выглядеть как тепловое состояние с определённой температурой.\nРассмотрим это шаг за шагом, начиная с простейшей модели."
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-1.html#к-чему-мы-придём",
+    "href": "ru/slides/UnruhEffect-1.html#к-чему-мы-придём",
+    "title": "Эффект Унру для плоской волны",
+    "section": "К чему мы придём?",
+    "text": "К чему мы придём?\n\nРавномерно ускоряемый наблюдатель видит частицы из вакуума Минковского\nРаспределение частиц по энергиями даётся спектром\n\nБозе-Эйнштейна (для бозонов),\nФерми-Дирака (для фермионов),\n\nТемпература частиц, которую видит ускоренный наблюдатель: \\[\nT_U=\\frac{\\hbar a}{2\\pi k_B c} = \\frac{a}{2\\pi}.\n\\]\nгде \\(a\\) — собственное ускорение детектора, \\(k_B\\) — постоянная Больцмана, \\(c\\) — скорость света."
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-1.html#что-это",
+    "href": "ru/slides/UnruhEffect-1.html#что-это",
+    "title": "Эффект Унру для плоской волны",
+    "section": "Что это?",
+    "text": "Что это?\n\nЭтот эффект называется эффектом Унру по имени Вильяма Унру (1976).\nОн показывает, что понятие частицы в квантовой теории поля зависит от наблюдателя.\nГодом ранее в 1975 году он был обнаружен независимо Полом Дэвисом."
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-1.html#насколько-велик-эффект-унру",
+    "href": "ru/slides/UnruhEffect-1.html#насколько-велик-эффект-унру",
+    "title": "Эффект Унру для плоской волны",
+    "section": "Насколько велик эффект Унру?",
+    "text": "Насколько велик эффект Унру?\n\nТемпература Унру \\[\nT_U \\approx 4.06 \\times 10^{-21} \\, \\text{К}\\times\\frac{a}{\\text{m}/\\text{s}^2}\n\\]"
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-1.html#на-что-это-похоже",
+    "href": "ru/slides/UnruhEffect-1.html#на-что-это-похоже",
+    "title": "Эффект Унру для плоской волны",
+    "section": "На что это похоже?",
+    "text": "На что это похоже?\n\nЭто похоже на температуру излучения Хокинга: \\[\nT_H=\\frac{\\hbar g}{2\\pi k_B c}=\\frac{g}{2\\pi},\n\\] где \\(g\\) — ускорение свободного падения на горизонте черной дыры.\nС учётом принципа эквивалентности эффекты Унру и Хокинга родственные, но не идентичные."
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-1.html#рассмотрим-плоскую-волну",
+    "href": "ru/slides/UnruhEffect-1.html#рассмотрим-плоскую-волну",
+    "title": "Эффект Унру для плоской волны",
+    "section": "Рассмотрим плоскую волну",
+    "text": "Рассмотрим плоскую волну\n\nРассмотрим безмассовую плоскую волну вдоль оси \\(x\\): \\[\n\\phi(t,x)\\sim e^{-i\\omega_K t+iKx}.\n\\]\nЗдесь \\(\\omega_K\\) — частота, а \\(K\\) — волновой вектор: \\[\nK=\\pm \\omega_K.\n\\]\nВ этом педагогическом выводе волна лежит на массовой поверхности."
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-1.html#частота-в-мгновенно-сопутствующей-системе",
+    "href": "ru/slides/UnruhEffect-1.html#частота-в-мгновенно-сопутствующей-системе",
+    "title": "Эффект Унру для плоской волны",
+    "section": "Частота в мгновенно сопутствующей системе",
+    "text": "Частота в мгновенно сопутствующей системе\n\nПреобразование Лоренца: \\[\n\\omega'_K(\\tau)\n=\n\\gamma(\\tau)\\left(\\omega_K-Kv(\\tau)\\right).\n\\]\nВолна вдоль ускорения: \\(K=+\\omega_K\\). \\[\n\\omega'_K(\\tau)\n=\n\\gamma(\\tau)\\omega_K\\left(1-v(\\tau)\\right)\n= \\omega_K\\frac{1-\\tanh{a\\tau}}{\\sqrt{1-\\tanh^2{a\\tau}}}\n=\\omega_K e^{-a\\tau}.\n\\]\nВолна против ускорения: \\(K=-\\omega_K\\). \\[\n\\omega'_K(\\tau)\n=\n\\gamma(\\tau)\\omega_K\\left(1+v(\\tau)\\right)\n= \\omega_K\\frac{1+\\tanh{a\\tau}}{\\sqrt{1-\\tanh^2{a\\tau}}}\n=\\omega_K e^{+a\\tau}.\n\\]"
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-1.html#частота-в-мгновенно-сопутствующей-системе-1",
+    "href": "ru/slides/UnruhEffect-1.html#частота-в-мгновенно-сопутствующей-системе-1",
+    "title": "Эффект Унру для плоской волны",
+    "section": "Частота в мгновенно сопутствующей системе",
+    "text": "Частота в мгновенно сопутствующей системе\n\nВолна вдоль ускорения: \\(K=+\\omega_K\\). \\[\n\\boxed{\n\\omega'_K(\\tau) =\n\\omega_K e^{-a\\tau}}\n\\]\nВолна против ускорения: \\(K=-\\omega_K\\). \\[\n\\boxed{\n\\omega'_K(\\tau) =\n\\omega_K e^{+a\\tau}}\n\\]\nДля малых значений \\(a\\tau\\) - это обычный эффект Доплера: \\[\n\\omega'_K(\\tau)\n\\approx\n\\omega_K(1\\mp a\\tau).\n\\]"
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-1.html#эффект-доплера-для-инерциального-наблюдателя",
+    "href": "ru/slides/UnruhEffect-1.html#эффект-доплера-для-инерциального-наблюдателя",
+    "title": "Эффект Унру для плоской волны",
+    "section": "Эффект Доплера для инерциального наблюдателя",
+    "text": "Эффект Доплера для инерциального наблюдателя\n\nПлоская волна: \\(\\phi(t,x)\\sim e^{-i\\omega_K t+iKx}\\)\nи инерциального наблюдателя: \\[  \nt(\\tau)=\\gamma\\tau, \\quad x(\\tau)=\\gamma v \\tau.\n\\]\nФаза на мировой линии наблюдателя (скорость \\(v\\)): \\[\n\\Phi(\\tau)=K x(\\tau)-\\omega_K t(\\tau)=-\\gamma\\tau(\\omega_K-Kv).\n\\]\nМгновенная частота: \\[  \n\\omega'(\\tau)=-\\frac{d\\Phi}{d\\tau}=\\gamma(\\omega_K-Kv)=\\text{const}.\n\\]"
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-1.html#эффект-доплера-для-неинерциального-наблюдателя",
+    "href": "ru/slides/UnruhEffect-1.html#эффект-доплера-для-неинерциального-наблюдателя",
+    "title": "Эффект Унру для плоской волны",
+    "section": "Эффект Доплера для неинерциального наблюдателя",
+    "text": "Эффект Доплера для неинерциального наблюдателя\n\nВолна вдоль ускорения: \\(K=+\\omega_K\\). \\[\n\\boxed{\n\\omega'_K(\\tau) =\n\\omega_K e^{-a\\tau}}\n\\]\nВолна против ускорения: \\(K=-\\omega_K\\). \\[\n\\boxed{\n\\omega'_K(\\tau) =\n\\omega_K e^{+a\\tau}}\n\\]\nЧастота меняется со временем \\(\\tau\\)!\n\nНаблюдается спектр частот."
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-1.html#фурье-спектр-детектора",
+    "href": "ru/slides/UnruhEffect-1.html#фурье-спектр-детектора",
+    "title": "Эффект Унру для плоской волны",
+    "section": "Фурье-спектр детектора",
+    "text": "Фурье-спектр детектора\n\nФурье-разложение сигнала детектора: \\[\nf(\\tau)\n=\n\\int \\frac{d\\Omega}{2\\pi}\\,F(\\Omega)\\,e^{-i\\Omega\\tau}.\n\\]\nАмплитуда фурье-компоненты: \\[\nF(\\Omega)\n=\n\\int_{-\\infty}^{\\infty}\nd\\tau\\,\nf(\\tau)\\,e^{i\\Omega\\tau}.\n\\]\nСпектральная интенсивность: \\[\nS(\\Omega)\\propto |F(\\Omega)|^2.\n\\]"
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-1.html#сигнал-в-детекторе",
+    "href": "ru/slides/UnruhEffect-1.html#сигнал-в-детекторе",
+    "title": "Эффект Унру для плоской волны",
+    "section": "Сигнал в детекторе",
+    "text": "Сигнал в детекторе\n\n\nviewof unruh_controls = {\n  const control = html`&lt;div class=\"unruh-controls\"&gt;\n    &lt;label&gt;\n      &lt;span&gt;a′&lt;/span&gt;\n      &lt;input name=\"aprime\" type=\"range\" min=\"0.2\" max=\"1.5\" step=\"0.05\" value=\"0.7\"&gt;\n      &lt;output&gt;&lt;/output&gt;\n    &lt;/label&gt;\n    &lt;label&gt;\n      &lt;span&gt;ω&lt;/span&gt;\n      &lt;input name=\"omega0\" type=\"range\" min=\"0.5\" max=\"10.0\" step=\"0.1\" value=\"3.0\"&gt;\n      &lt;output&gt;&lt;/output&gt;\n    &lt;/label&gt;\n    &lt;label&gt;\n      &lt;span&gt;Δτ&lt;/span&gt;\n      &lt;input name=\"windowWidth\" type=\"range\" min=\"2.0\" max=\"36.0\" step=\"0.2\" value=\"8.0\"&gt;\n      &lt;output&gt;&lt;/output&gt;\n    &lt;/label&gt;\n  &lt;/div&gt;`;\n\n  const aprime = control.querySelector(\"[name='aprime']\");\n  const omega0 = control.querySelector(\"[name='omega0']\");\n  const windowWidth = control.querySelector(\"[name='windowWidth']\");\n  const aprimeOut = aprime.nextElementSibling;\n  const omega0Out = omega0.nextElementSibling;\n  const windowWidthOut = windowWidth.nextElementSibling;\n\n  function update(dispatch = true) {\n    control.value = {\n      aprime: Number(aprime.value),\n      omega0: Number(omega0.value),\n      windowWidth: Number(windowWidth.value)\n    };\n    aprimeOut.textContent = Number(aprime.value).toFixed(2);\n    omega0Out.textContent = Number(omega0.value).toFixed(1);\n    windowWidthOut.textContent = Number(windowWidth.value).toFixed(1);\n    if (dispatch) control.dispatchEvent(new Event(\"input\", {bubbles: true}));\n  }\n\n  aprime.addEventListener(\"input\", () =&gt; update());\n  omega0.addEventListener(\"input\", () =&gt; update());\n  windowWidth.addEventListener(\"input\", () =&gt; update());\n  update(false);\n  return control;\n}\n\n\n\n\n\n\n\n{\n  const {aprime, omega0, windowWidth} = unruh_controls;\n// Волна, идущая навстречу ускоренному наблюдателю:\n// ω'(τ) = ω exp(a' τ),  Φ(τ) = (ω/a') (exp(a' τ) - 1)\n\n  const tauMin = -windowWidth / 2;\n  const tauMax = windowWidth / 2;\n  const phase = (tau) =&gt; (omega0 / aprime) * (Math.exp(aprime * tau) - 1);\n  const instFreq = (tau) =&gt; omega0 * Math.exp(aprime * tau);\n  const OmaxRaw = 1.15 * instFreq(tauMax);\n  const Omax = Math.max(8, Math.min(20, OmaxRaw));\n  const maxPhaseRate = instFreq(tauMax) + Omax;\n  const samplesPerPeriod = 14;\n  const estimatedN = Math.ceil(windowWidth * maxPhaseRate * samplesPerPeriod / (2 * Math.PI)) + 1;\n  const N = Math.max(2400, Math.min(30000, estimatedN));\n  const isResolutionCapped = estimatedN &gt; N;\n  const dt = (tauMax - tauMin) / (N - 1);\n  const taus = Array.from({length: N}, (_, i) =&gt; tauMin + i * dt);\n  const tukeyAlpha = 0.16;\n  const taper = (i) =&gt; {\n    if (tukeyAlpha &lt;= 0) return 1;\n    const u = i / (N - 1);\n    if (u &lt; tukeyAlpha / 2) {\n      return 0.5 * (1 - Math.cos(2 * Math.PI * u / tukeyAlpha));\n    }\n    if (u &gt; 1 - tukeyAlpha / 2) {\n      return 0.5 * (1 - Math.cos(2 * Math.PI * (1 - u) / tukeyAlpha));\n    }\n    return 1;\n  };\n  const weights = Array.from({length: N}, (_, i) =&gt; {\n    const edgeWeight = (i === 0 || i === N - 1) ? 0.5 : 1;\n    return edgeWeight * taper(i) * dt;\n  });\n\n  const signalData = taus.map((tau) =&gt; ({\n    tau,\n    value: Math.cos(phase(tau))\n  }));\n  const freqData = taus.map((tau) =&gt; ({\n    tau,\n    value: instFreq(tau)\n  }));\n\n  const NO = 300;\n  const omegas = Array.from({length: NO}, (_, i) =&gt; i * Omax / (NO - 1));\n\n  const spectrumRaw = omegas.map((Omega) =&gt; {\n    let re = 0;\n    let im = 0;\n    for (let i = 0; i &lt; N; i++) {\n      const tau = taus[i];\n      const theta = Omega * tau + phase(tau);\n      re += Math.cos(theta) * weights[i];\n      im += Math.sin(theta) * weights[i];\n    }\n    return {\n      Omega,\n      value: re * re + im * im\n    };\n  });\n\n  const Pmax = Math.max(...spectrumRaw.map((d) =&gt; d.value), 1e-14);\n\n  const spectrumData = spectrumRaw.map((d) =&gt; ({\n    Omega: d.Omega,\n    value: d.value / Pmax\n  }));\n\n  const omegaFloor = Math.max(Omax / (NO - 1), 1e-6);\n  const planckRaw = omegas.map((Omega) =&gt; {\n    const Om = Math.max(Omega, omegaFloor);\n    return {\n      Omega,\n      value: 1 / (Math.exp(2 * Math.PI * Om / aprime) - 1)\n    };\n  });\n\n  const PplanckMax = Math.max(...planckRaw.map((d) =&gt; d.value), 1e-14);\n\n  const planckData = planckRaw.map((d) =&gt; ({\n    Omega: d.Omega,\n    value: d.value / PplanckMax\n  }));\n  const resolutionNote = isResolutionCapped\n    ? `N=${N.toLocaleString(\"ru-RU\")} из требуемых ${estimatedN.toLocaleString(\"ru-RU\")}: правый край окна всё ещё недоразрешён.`\n    : `N=${N.toLocaleString(\"ru-RU\")}, трапецоидальная квадратура и окно Тьюки.`;\n\n  const ns = \"http://www.w3.org/2000/svg\";\n  const width = 900;\n  const height = 548;\n  const uid = Math.random().toString(36).slice(2);\n  const color = {\n    signal: \"#ffb347\",\n    freq: \"#8ec5ff\",\n    spectrum: \"#ff6b6b\",\n    planck: \"#7CFC00\",\n    grid: \"#1e2a3b\",\n    axis: \"#d7dde8\",\n    text: \"#d7dde8\",\n    muted: \"#9fb0c7\",\n    panel: \"#0b111b\",\n    border: \"#303b4f\"\n  };\n\n  const wrap = document.createElement(\"div\");\n  wrap.className = \"unruh-board\";\n\n  const style = document.createElement(\"style\");\n  style.textContent = `\n    .unruh-controls { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; margin: 0 0 0.35rem; }\n    .unruh-controls label { display: grid; grid-template-columns: 1.8rem 10.5rem 3.7rem; align-items: center; gap: 0.5rem; margin: 0; color: #f2f2f2; font-size: 0.46em; }\n    .unruh-controls input[type=\"range\"] { width: 10.5rem; accent-color: #ffb347; }\n    .unruh-controls output { min-width: 3.7rem; padding: 0.08rem 0.25rem; border: 1px solid #334155; border-radius: 6px; background: #101722; color: #f2f2f2; font-variant-numeric: tabular-nums; text-align: right; }\n    .unruh-board { width: min(100%, 900px); margin: 0 auto; }\n    .unruh-board svg { width: 100%; height: auto; display: block; font-family: system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif; }\n  `;\n  wrap.append(style);\n\n  const svg = document.createElementNS(ns, \"svg\");\n  svg.setAttribute(\"viewBox\", `0 0 ${width} ${height}`);\n  svg.setAttribute(\"role\", \"img\");\n  svg.setAttribute(\"aria-label\", \"Экспоненциальный chirp и спектр ускоренного детектора\");\n  wrap.append(svg);\n\n  function add(name, attrs = {}, parent = svg) {\n    const node = document.createElementNS(ns, name);\n    for (const [key, value] of Object.entries(attrs)) {\n      if (key === \"text\") {\n        node.textContent = value;\n      } else if (value !== undefined && value !== null && value !== \"\") {\n        node.setAttribute(key, value);\n      }\n    }\n    parent.append(node);\n    return node;\n  }\n\n  const fmt = (x) =&gt; {\n    if (Math.abs(x) &lt; 1e-9) return \"0\";\n    if (Math.abs(x) &gt;= 10) return x.toFixed(0);\n    if (Math.abs(x) &gt;= 1) return x.toFixed(1);\n    return x.toFixed(2);\n  };\n  const fmtLog = (x) =&gt; {\n    if (x &lt;= 0) return \"0\";\n    if (x &lt; 0.01) return x.toExponential(0);\n    return fmt(x);\n  };\n  const linePath = (data, xField, yField, sx, sy) =&gt; {\n    let d = \"\";\n    let started = false;\n    for (const point of data) {\n      const x = point[xField];\n      const y = point[yField];\n      if (!Number.isFinite(x) || !Number.isFinite(y)) {\n        started = false;\n        continue;\n      }\n      d += `${started ? \"L\" : \"M\"} ${sx(x)} ${sy(y)} `;\n      started = true;\n    }\n    return d;\n  };\n\n  let chartIndex = 0;\n  function drawChart({\n    x,\n    y,\n    w,\n    h,\n    title,\n    xLabel,\n    yLabel,\n    xDomain,\n    yDomain,\n    yLog = false,\n    series\n  }) {\n    const clipId = `${uid}-clip-${chartIndex++}`;\n    const defs = svg.querySelector(\"defs\") || add(\"defs\");\n    const clip = add(\"clipPath\", {id: clipId}, defs);\n    add(\"rect\", {x, y, width: w, height: h}, clip);\n\n    add(\"rect\", {x, y, width: w, height: h, rx: \"8\", fill: color.panel, stroke: color.border, \"stroke-width\": \"1.2\"});\n    const sx = (value) =&gt; x + (value - xDomain[0]) / (xDomain[1] - xDomain[0]) * w;\n    const logMin = Math.log(Math.max(yDomain[0], 1e-9));\n    const logMax = Math.log(Math.max(yDomain[1], yDomain[0] + 1e-9));\n    const sy = (value) =&gt; {\n      if (yLog) {\n        const safe = Math.max(value, Math.exp(logMin));\n        return y + h - (Math.log(safe) - logMin) / (logMax - logMin) * h;\n      }\n      return y + h - (value - yDomain[0]) / (yDomain[1] - yDomain[0]) * h;\n    };\n\n    for (let i = 0; i &lt;= 4; i++) {\n      const tx = xDomain[0] + (xDomain[1] - xDomain[0]) * i / 4;\n      const ty = yLog\n        ? Math.exp(logMin + (logMax - logMin) * i / 4)\n        : yDomain[0] + (yDomain[1] - yDomain[0]) * i / 4;\n      add(\"line\", {x1: sx(tx), y1: y, x2: sx(tx), y2: y + h, stroke: color.grid, \"stroke-width\": \"1\"});\n      add(\"line\", {x1: x, y1: sy(ty), x2: x + w, y2: sy(ty), stroke: color.grid, \"stroke-width\": \"1\"});\n      add(\"text\", {x: sx(tx), y: y + h + 18, fill: color.muted, \"font-size\": \"11\", \"text-anchor\": \"middle\", text: fmt(tx)});\n      add(\"text\", {x: x - 8, y: sy(ty) + 4, fill: color.muted, \"font-size\": \"11\", \"text-anchor\": \"end\", text: yLog ? fmtLog(ty) : fmt(ty)});\n    }\n\n    add(\"line\", {x1: x, y1: y + h, x2: x + w, y2: y + h, stroke: color.axis, \"stroke-width\": \"1.4\"});\n    add(\"line\", {x1: x, y1: y, x2: x, y2: y + h, stroke: color.axis, \"stroke-width\": \"1.4\"});\n    add(\"text\", {x, y: y - 9, fill: \"#ffffff\", \"font-size\": \"16\", \"font-weight\": \"700\", text: title});\n    add(\"text\", {x: x + w, y: y + h + 35, fill: color.text, \"font-size\": \"13\", \"text-anchor\": \"end\", text: xLabel});\n    add(\"text\", {x: x + 8, y: y + 15, fill: color.text, \"font-size\": \"13\", text: yLabel});\n\n    const layer = add(\"g\", {\"clip-path\": `url(#${clipId})`});\n    for (const item of series) {\n      add(\"path\", {\n        d: linePath(item.data, item.xField, item.yField, sx, sy),\n        fill: \"none\",\n        stroke: item.stroke,\n        \"stroke-width\": item.strokeWidth || \"2.8\",\n        \"stroke-dasharray\": item.dash,\n        opacity: item.opacity || \"1\"\n      }, layer);\n    }\n  }\n\n  add(\"rect\", {x: \"0\", y: \"0\", width, height, rx: \"12\", fill: \"#070a0f\", stroke: \"#243244\", \"stroke-width\": \"1\"});\n\n  drawChart({\n    x: 58,\n    y: 34,\n    w: 345,\n    h: 150,\n    title: \"Сигнал детектора\",\n    xLabel: \"τ\",\n    yLabel: \"s(τ)\",\n    xDomain: [tauMin, tauMax],\n    yDomain: [-1.1, 1.1],\n    series: [{data: signalData, xField: \"tau\", yField: \"value\", stroke: color.signal, strokeWidth: \"3\"}]\n  });\n\n  drawChart({\n    x: 510,\n    y: 34,\n    w: 332,\n    h: 150,\n    title: \"Мгновенная частота\",\n    xLabel: \"τ\",\n    yLabel: \"ω′(τ)\",\n    xDomain: [tauMin, tauMax],\n    yDomain: [Math.max(omega0 * Math.exp(aprime * tauMin), 1e-4), omega0 * Math.exp(aprime * tauMax)],\n    yLog: true,\n    series: [{data: freqData, xField: \"tau\", yField: \"value\", stroke: color.freq, strokeWidth: \"3\"}]\n  });\n\n  drawChart({\n    x: 58,\n    y: 244,\n    w: 784,\n    h: 178,\n    title: \"Оконный спектр\",\n    xLabel: \"Ω\",\n    yLabel: \"лог норм.\",\n    xDomain: [0, Omax],\n    yDomain: [1e-2, 1.05],\n    yLog: true,\n    series: [\n      {data: planckData, xField: \"Omega\", yField: \"value\", stroke: color.planck, strokeWidth: \"2.2\", dash: \"8 6\", opacity: \"0.9\"},\n      {data: spectrumData, xField: \"Omega\", yField: \"value\", stroke: color.spectrum, strokeWidth: \"3.2\"}\n    ]\n  });\n\n  add(\"line\", {x1: \"70\", y1: \"458\", x2: \"98\", y2: \"458\", stroke: color.signal, \"stroke-width\": \"4\"});\n  add(\"text\", {x: \"106\", y: \"463\", fill: color.text, \"font-size\": \"14\", text: \"s(τ) = cos Φ(τ)\"});\n  add(\"line\", {x1: \"260\", y1: \"458\", x2: \"288\", y2: \"458\", stroke: color.freq, \"stroke-width\": \"4\"});\n  add(\"text\", {x: \"296\", y: \"463\", fill: color.text, \"font-size\": \"14\", text: \"ω′(τ) = ω exp(a′τ)\"});\n  add(\"line\", {x1: \"508\", y1: \"458\", x2: \"536\", y2: \"458\", stroke: color.spectrum, \"stroke-width\": \"4\"});\n  add(\"text\", {x: \"544\", y: \"463\", fill: color.text, \"font-size\": \"14\", text: \"|A(Ω)|²\"});\n  add(\"line\", {x1: \"650\", y1: \"458\", x2: \"686\", y2: \"458\", stroke: color.planck, \"stroke-width\": \"3\", \"stroke-dasharray\": \"8 6\"});\n  add(\"text\", {x: \"694\", y: \"463\", fill: color.text, \"font-size\": \"14\", text: \"1/(exp(2πΩ/a′) - 1)\"});\n\n  add(\"text\", {x: \"70\", y: \"498\", fill: color.muted, \"font-size\": \"14\", text: \"Φ(τ) = (ω/a′)(exp(a′τ) - 1),  AΔτ(Ω) = ∫ dτ exp(iΩτ) exp(iΦ(τ)).\"});\n  add(\"text\", {x: \"70\", y: \"523\", fill: color.muted, \"font-size\": \"13\", text: \"Красная кривая вычислена на конечном окне Δτ, поэтому она только приближается к тепловой форме.\"});\n  add(\"text\", {x: \"70\", y: \"541\", fill: color.muted, \"font-size\": \"12\", text: resolutionNote});\n\n  return wrap;\n}"
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-1.html#что-видит-ускоренный-детектор",
+    "href": "ru/slides/UnruhEffect-1.html#что-видит-ускоренный-детектор",
+    "title": "Эффект Унру для плоской волны",
+    "section": "Что видит ускоренный детектор?",
+    "text": "Что видит ускоренный детектор?\n\nПлоская волна: \\(\\phi(t,x)\\sim e^{-i\\omega_K t+iKx}\\)\nФаза на мировой линии наблюдателя: \\[\n\\Phi(\\tau)=K x(\\tau)-\\omega_K t(\\tau)=-\\gamma\\tau(\\omega_K-Kv).\n\\]\nМгновенная частота (\\(K=-\\omega_K\\)): \\[  \n-\\frac{d\\Phi}{d\\tau} =\\gamma(\\omega_K-Kv)=\\boxed{\\omega'(\\tau)=\\omega_K e^{+a\\tau}}\n\\]\nНакопленная фаза: \\[\n\\boxed{\n\\varphi(\\tau)\n=\n\\int^\\tau_{-\\infty} \\omega'_K(\\tau')\\,d\\tau' = \\frac{\\omega_K}{a} e^{+a\\tau}}\n\\]"
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-1.html#что-видит-ускоренный-детектор-1",
+    "href": "ru/slides/UnruhEffect-1.html#что-видит-ускоренный-детектор-1",
+    "title": "Эффект Унру для плоской волны",
+    "section": "Что видит ускоренный детектор?",
+    "text": "Что видит ускоренный детектор?\n\nИтак, \\[\nf(\\tau)\n=\ne^{i\\varphi(\\tau)}\n=\ne^{\ni(\\omega_K/a)e^{a\\tau}\n}.\n\\]\nФурье-амплитуда для частоты \\(\\Omega\\): \\[\nF(\\Omega)\n=\n\\int_{-\\infty}^{\\infty}\nd\\tau\\,\ne^{i\\Omega\\tau}\ne^{\ni(\\omega_K/a)e^{a\\tau}\n}\n\\]\nВ результате (сейчас мы это докажем): \\[\n\\boxed{\n|F(\\Omega)|^2 = \\frac{2\\pi}{a\\Omega}\\frac{1}{e^{2\\pi\\Omega/a}-1}.\n}\n\\]"
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-1.html#что-видит-ускоренный-детектор-2",
+    "href": "ru/slides/UnruhEffect-1.html#что-видит-ускоренный-детектор-2",
+    "title": "Эффект Унру для плоской волны",
+    "section": "Что видит ускоренный детектор?",
+    "text": "Что видит ускоренный детектор?\n\nПланковский спектр: \\[\n\\boxed{\n|F(\\Omega)|^2 = \\frac{2\\pi}{a\\Omega}\\frac{1}{e^{2\\pi\\Omega/a}-1}.\n}\n\\]\nТемпература Унру: \\[\nT_U=\\frac{a}{2\\pi k_B} \\equiv \\frac{\\hbar a}{2\\pi k_B c} \\quad (\\hbar=1, \\, c=1).\n\\]\nТочно такой же результат получится для (\\(K=+\\omega_K\\))"
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-1.html#section",
+    "href": "ru/slides/UnruhEffect-1.html#section",
+    "title": "Эффект Унру для плоской волны",
+    "section": "",
+    "text": "Замена переменной в интеграле: \\[\ny=e^{a\\tau}.\n\\]\nТогда \\[\n\\tau=\\frac{1}{a}\\ln y,\n\\qquad\nd\\tau=\\frac{1}{a}\\frac{dy}{y}.\n\\]\nПределы: \\[\n\\tau:-\\infty\\to+\\infty\n\\quad\\Longrightarrow\\quad\ny:0\\to\\infty.\n\\]\nСтало быть: \\[\ne^{i\\Omega\\tau}\n=\ne^{i\\Omega\\frac{1}{a}\\ln y} = e^{\\ln y^{i\\Omega/a}}\n=\ny^{i\\Omega/a}.\n\\]"
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-1.html#section-1",
+    "href": "ru/slides/UnruhEffect-1.html#section-1",
+    "title": "Эффект Унру для плоской волны",
+    "section": "",
+    "text": "Интеграл (\\(y=e^{a\\tau}\\), \\(d\\tau=\\frac{1}{a}\\frac{dy}{y}\\), \\(e^{i\\Omega\\tau}=y^{i\\Omega/a}\\)): \\[\n\\begin{aligned}\nF(\\Omega)\n&=\n\\int_{-\\infty}^{\\infty}\nd\\tau\\,\ne^{i\\Omega\\tau}\ne^{\ni(\\omega_K/a)e^{a\\tau}\n}\\\\\n&=\n\\frac{1}{a}\n\\int_0^\\infty\ndy\\,\ny^{i\\Omega/a-1}\ne^{i\\frac{\\omega_K}{a}y}\n\\end{aligned}\n\\]\nЭтот интеграл выражается через гамма-функцию: \\[\n\\int_0^\\infty dy\\, y^{s-1}e^{-\\lambda y}\n=\n\\frac{\\Gamma(s)}{\\lambda^s}.\n\\]"
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-1.html#фурье-амплитуда",
+    "href": "ru/slides/UnruhEffect-1.html#фурье-амплитуда",
+    "title": "Эффект Унру для плоской волны",
+    "section": "Фурье-амплитуда",
+    "text": "Фурье-амплитуда\n\nСтало быть, \\[\nF(\\Omega)\n=\n\\frac{1}{a}\n\\Gamma\\left(i\\Omega /a\\right)\n\\left(\\frac{\\omega_K}{a}\\right)^{-i\\Omega/a}\ne^{-\\pi\\Omega/(2a)}.\n\\]\nКвадрат модуля: \\[\n|F(\\Omega)|^2\n=\n\\frac{1}{a^2}\n\\left|\\Gamma\\left(i\\Omega/a\\right)\\right|^2\ne^{-\\pi\\Omega/a}.\n\\]\nТождество для гамма-функции \\[\n|\\Gamma(ix)|^2\n=\n\\frac{\\pi}{x\\sinh(\\pi x)}.\n\\]"
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-1.html#фурье-спектр-сигнала",
+    "href": "ru/slides/UnruhEffect-1.html#фурье-спектр-сигнала",
+    "title": "Эффект Унру для плоской волны",
+    "section": "Фурье-спектр сигнала",
+    "text": "Фурье-спектр сигнала\n\nИспользуя тождество для гамма-функции, получаем \\[\n\\boxed{\n|F(\\Omega)|^2\n=\n\\frac{2\\pi}{\\Omega a}\n\\frac{1}{e^{2\\pi\\Omega/a}-1}}\n\\]"
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-1.html#краткое-резюме",
+    "href": "ru/slides/UnruhEffect-1.html#краткое-резюме",
+    "title": "Эффект Унру для плоской волны",
+    "section": "Краткое резюме",
+    "text": "Краткое резюме\n\nГлавная идея первых шагов: \\[\nt(\\tau)=\\frac{1}{a}\\sinh a\\tau,\n\\qquad\nx(\\tau)=\\frac{1}{a}\\cosh a\\tau.\n\\]\nПлоская волна вдоль ускоренной траектории становится сигналом \\[\nf(\\tau)\n=\ne^{i(\\omega_K/a)e^{a\\tau}}\n\\]\nМощность спектра сигнала: \\[\n\\boxed{\n|F(\\Omega)|^2\n=\n\\frac{2\\pi}{\\Omega a}\n\\frac{1}{e^{2\\pi\\Omega/a}-1}}\n\\]\nТемпература Унру: \\[\nT_U=\\frac{a}{2\\pi k_B}.\n\\]"
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-1.html#почему-этого-недостаточно",
+    "href": "ru/slides/UnruhEffect-1.html#почему-этого-недостаточно",
+    "title": "Эффект Унру для плоской волны",
+    "section": "Почему этого недостаточно?",
+    "text": "Почему этого недостаточно?\n\nМы рассмотрели плоскую волну с определенной частотой и на массовой поверхности.\nВ квантовом поле нужно учесть все остальные моды."
+  },
+  {
+    "objectID": "ru/slides/Thermodynamics.html#система-единиц-1",
+    "href": "ru/slides/Thermodynamics.html#система-единиц-1",
+    "title": "Введение в квантовую статистическую механику",
+    "section": "Система единиц",
+    "text": "Система единиц\n\nУдобно использовать систему единиц, в которой \\[\nc=\\hslash=k_B=1\n\\]"
+  },
+  {
+    "objectID": "ru/slides/Thermodynamics.html#о-чем-эта-лекция",
+    "href": "ru/slides/Thermodynamics.html#о-чем-эта-лекция",
+    "title": "Введение в квантовую статистическую механику",
+    "section": "О чем эта лекция",
+    "text": "О чем эта лекция\n\nПри обсуждении эффекта Унру нужно уметь говорить о температуре, энтропии и тепловом спектре в КТП.\nДля этого нам нужно ввести понятия матрицы плотности, статистической суммы и энтропии.\nВозможно, вам это будет полезно и в других контекстах, например, при обсуждении черных дыр."
+  },
+  {
+    "objectID": "ru/slides/Thermodynamics.html#основы-термодинамики-1",
+    "href": "ru/slides/Thermodynamics.html#основы-термодинамики-1",
+    "title": "Введение в квантовую статистическую механику",
+    "section": "Основы термодинамики",
+    "text": "Основы термодинамики\n\nТермодинамика описывает макроскопическое состояние системы небольшим числом величин (средняя и свободная энергия, температура, энтропия и т.д.)\nМикроскопических состояний может быть много, но в равновесии нам обычно нужны не все детали, а средние величины.\nОсновная задача статистической физики: \\[\n\\text{микросостояния и их вероятности}\n\\,\\Longrightarrow\\,\n\\text{термодинамические функции}.\n\\]\nВ квантовой теории вероятности микросостояний удобно собирать в матрицу плотности \\(\\rho\\)"
+  },
+  {
+    "objectID": "ru/slides/Thermodynamics.html#канонический-ансамбль",
+    "href": "ru/slides/Thermodynamics.html#канонический-ансамбль",
+    "title": "Введение в квантовую статистическую механику",
+    "section": "Канонический ансамбль",
+    "text": "Канонический ансамбль\n\nРассмотрим систему в тепловом равновесии с термостатом температуры \\(T\\).\nВероятность состояния с энергией \\(E_i\\) имеет вид \\[\np_i=\\frac{e^{-\\beta E_i}}{Z},\n\\qquad\n\\beta=\\frac{1}{T}.\n\\]\nНормировка \\(\\left(\\sum\\limits_i p_i=1\\right)\\) задаёт статистическую сумму: \\[\n\\boxed{\nZ=\\sum_i e^{-\\beta E_i}\n}\n\\]"
+  },
+  {
+    "objectID": "ru/slides/Thermodynamics.html#канонический-ансамбль-1",
+    "href": "ru/slides/Thermodynamics.html#канонический-ансамбль-1",
+    "title": "Введение в квантовую статистическую механику",
+    "section": "Канонический ансамбль",
+    "text": "Канонический ансамбль\n\nВ квантовой форме: \\[\n\\boxed{\n\\rho=\\frac{e^{-\\beta H}}{Z},\n\\qquad\nZ=\\mathrm{Tr}\\,e^{-\\beta H}.\n}\n\\]"
+  },
+  {
+    "objectID": "ru/slides/Thermodynamics.html#статистическая-сумма-как-источник-термодинамики",
+    "href": "ru/slides/Thermodynamics.html#статистическая-сумма-как-источник-термодинамики",
+    "title": "Введение в квантовую статистическую механику",
+    "section": "Статистическая сумма как источник термодинамики",
+    "text": "Статистическая сумма как источник термодинамики\n\nСредняя энергия: \\[\n\\boxed{\nE\\equiv \\langle H\\rangle\n=\n-\\frac{\\partial}{\\partial\\beta}\\ln Z.\n}\n\\]\nСвободная энергия Гельмгольца: \\[\n\\boxed{\nF=E-TS\n}\n\\]\nЧерез статистическую сумму: \\[\n\\boxed{\nF=-T\\ln Z.\n}\n\\]"
+  },
+  {
+    "objectID": "ru/slides/Thermodynamics.html#статистическая-сумма-как-источник-термодинамики-1",
+    "href": "ru/slides/Thermodynamics.html#статистическая-сумма-как-источник-термодинамики-1",
+    "title": "Введение в квантовую статистическую механику",
+    "section": "Статистическая сумма как источник термодинамики",
+    "text": "Статистическая сумма как источник термодинамики\n\nЭнтропия: \\[\n\\boxed{\nS=-\\frac{\\partial F}{\\partial T}\n}\n\\]\nЭквивалентно: \\[\n\\boxed{\nS=\\beta E+\\ln Z.\n}\n\\]"
+  },
+  {
+    "objectID": "ru/slides/Thermodynamics.html#каноническое-распределение",
+    "href": "ru/slides/Thermodynamics.html#каноническое-распределение",
+    "title": "Введение в квантовую статистическую механику",
+    "section": "Каноническое распределение",
+    "text": "Каноническое распределение\n\nНайдём распределение вероятностей \\(p_i\\) при условиях \\[\n\\sum_i p_i=1,\n\\qquad\n\\sum_i p_i E_i = \\langle E\\rangle.\n\\]\nЭнтропия распределения: \\[\nS[p]=-\\sum_i p_i\\ln p_i.\n\\]\nПринцип максимума энтропии: в термодинамическом равновесии \\(S[p]\\) максимальна при заданных макроскопических условиях."
+  },
+  {
+    "objectID": "ru/slides/Thermodynamics.html#каноническое-распределение-1",
+    "href": "ru/slides/Thermodynamics.html#каноническое-распределение-1",
+    "title": "Введение в квантовую статистическую механику",
+    "section": "Каноническое распределение",
+    "text": "Каноническое распределение\n\nВведём функцию Лагранжа: \\[\nL=-\\sum_i p_i\\ln p_i-\\alpha\\left(\\sum_i p_i-1\\right)\n-\\beta\\left(\\sum_i p_i E_i-\\langle E\\rangle\\right).\n\\]\nУсловие экстремума: \\[\n\\frac{\\partial L}{\\partial p_i}=0.\n\\]\nПолучаем: \\[\n-\\ln p_i-1-\\alpha-\\beta E_i=0 \\quad\\Longrightarrow\\quad \\boxed{p_i=C e^{-\\beta E_i}}\n\\]"
+  },
+  {
+    "objectID": "ru/slides/Thermodynamics.html#каноническое-распределение-2",
+    "href": "ru/slides/Thermodynamics.html#каноническое-распределение-2",
+    "title": "Введение в квантовую статистическую механику",
+    "section": "Каноническое распределение",
+    "text": "Каноническое распределение\n\nИтак, \\[\n\\boxed{p_i=C e^{-\\beta E_i}}\n\\]\nНормировка \\[\n\\sum_i p_i=1 \\rightarrow C=\\frac{1}{\\sum_i e^{-\\beta E_i}}\n\\rightarrow \\boxed{Z=\\sum_i e^{-\\beta E_i}}\n\\]"
+  },
+  {
+    "objectID": "ru/slides/Thermodynamics.html#почему-f-tln-z",
+    "href": "ru/slides/Thermodynamics.html#почему-f-tln-z",
+    "title": "Введение в квантовую статистическую механику",
+    "section": "Почему \\(F=-T\\ln Z\\)?",
+    "text": "Почему \\(F=-T\\ln Z\\)?\n\nКаноническая матрица плотности: \\[\n\\rho=\\frac{e^{-\\beta H}}{Z},\n\\qquad\nZ=\\mathrm{Tr}\\,e^{-\\beta H},\n\\qquad\n\\beta=\\frac{1}{T}.\n\\]\nЛогарифм матрицы плотности: \\[\n\\ln\\rho\n=\n\\ln\\left(\\frac{e^{-\\beta H}}{Z}\\right)\n=\n-\\beta H-\\ln Z.\n\\]\nЭнтропия фон Неймана: \\[\nS=-\\mathrm{Tr}\\,\\rho\\ln\\rho =-\\sum_i p_i\\ln p_i.\n\\]"
+  },
+  {
+    "objectID": "ru/slides/Thermodynamics.html#почему-f-tln-z-1",
+    "href": "ru/slides/Thermodynamics.html#почему-f-tln-z-1",
+    "title": "Введение в квантовую статистическую механику",
+    "section": "Почему \\(F=-T\\ln Z\\)?",
+    "text": "Почему \\(F=-T\\ln Z\\)?\n\nПодставляем \\(\\ln\\rho=-\\beta H-\\ln Z\\): \\[\nS\n=\n-\\mathrm{Tr}\\,\\rho(-\\beta H-\\ln Z).\n\\]\nПолучаем: \\[\nS=\\beta\\,\\mathrm{Tr}(\\rho H)+\\ln Z\\,\\mathrm{Tr}\\rho.\n\\]\nТак как \\(E=\\langle H\\rangle=\\mathrm{Tr}(\\rho H)\\) и \\(\\mathrm{Tr}\\rho=1\\), то \\[\n\\boxed{\nS=\\beta E+\\ln Z.\n}\n\\]"
+  },
+  {
+    "objectID": "ru/slides/Thermodynamics.html#почему-f-tln-z-2",
+    "href": "ru/slides/Thermodynamics.html#почему-f-tln-z-2",
+    "title": "Введение в квантовую статистическую механику",
+    "section": "Почему \\(F=-T\\ln Z\\)?",
+    "text": "Почему \\(F=-T\\ln Z\\)?\n\nСвободная энергия Гельмгольца: \\[\nF=E-TS.\n\\]\nИспользуем \\[\nS=\\beta E+\\ln Z,\n\\qquad\nT=\\frac{1}{\\beta}.\n\\]\nТогда \\[\nF=E-\\frac{1}{\\beta}(\\beta E+\\ln Z) =-\\frac{1}{\\beta}\\ln Z = -T\\ln Z.\n\\]"
+  },
+  {
+    "objectID": "ru/slides/Thermodynamics.html#еще-раз-самое-важное",
+    "href": "ru/slides/Thermodynamics.html#еще-раз-самое-важное",
+    "title": "Введение в квантовую статистическую механику",
+    "section": "Еще раз самое важное",
+    "text": "Еще раз самое важное\n\n\n\nВероятность состояния: \\[\n\\boxed{p_i = e^{-\\beta E_i}/Z}\n\\]\nСтатистическая сумма: \\[\n\\boxed{Z=\\sum_i e^{-\\beta E_i}}\n\\]\n\n\n\nСредняя энергия: \\[\n\\boxed{E\\equiv \\langle H\\rangle =-\\frac{\\partial}{\\partial\\beta}\\ln Z.\n}\n\\]\nСвободная энергия Гельмгольца: \\[\n\\boxed{\nF=-T\\ln Z.\n}\n\\]\nЭнтропия: \\[\n\\boxed{\nS=\\beta E+\\ln Z.\n}\n\\]"
+  },
+  {
+    "objectID": "ru/slides/Thermodynamics.html#чистое-состояние",
+    "href": "ru/slides/Thermodynamics.html#чистое-состояние",
+    "title": "Введение в квантовую статистическую механику",
+    "section": "Чистое состояние",
+    "text": "Чистое состояние\n\nЧистое состояние задаётся вектором состояния \\(|\\psi\\rangle\\)\nСоответствующая матрица плотности: \\[\n\\rho = |\\psi\\rangle\\langle \\psi|.\n\\]\nСвойства: \\[\n\\rho^2=\\rho,\n\\qquad\n\\mathrm{Tr}\\,\\rho =\\mathrm{Tr}\\left(|\\psi\\rangle\\langle\\psi|\\right)\n=\\langle\\psi|\\psi\\rangle=1.\n\\]\nСреднее значение оператора: \\[\n\\langle A\\rangle\n=\n\\langle\\psi|A|\\psi\\rangle = \\mathrm{Tr}\\left(\\rho A\\right).\n\\]"
+  },
+  {
+    "objectID": "ru/slides/Thermodynamics.html#смешанное-состояние",
+    "href": "ru/slides/Thermodynamics.html#смешанное-состояние",
+    "title": "Введение в квантовую статистическую механику",
+    "section": "Смешанное состояние",
+    "text": "Смешанное состояние\n\nЕсли система находится в состояниях \\(|\\psi_i\\rangle\\) с вероятностями \\(p_i\\), то \\[\n\\rho=\\sum_i p_i |\\psi_i\\rangle\\langle\\psi_i|,\n\\qquad\np_i\\ge 0,\n\\qquad\n\\sum_i p_i=1.\n\\]\nВ собственном базисе матрицы плотности: \\[\n\\rho=\\sum_i p_i |i\\rangle\\langle i|.\n\\]\nСреднее значение оператора: \\[\n\\boxed{\n\\langle A\\rangle=\\mathrm{Tr}(\\rho A).\n}\n\\]"
+  },
+  {
+    "objectID": "ru/slides/Thermodynamics.html#квантовая-энтропия-фон-неймана",
+    "href": "ru/slides/Thermodynamics.html#квантовая-энтропия-фон-неймана",
+    "title": "Введение в квантовую статистическую механику",
+    "section": "Квантовая энтропия фон Неймана",
+    "text": "Квантовая энтропия фон Неймана\n\n\n\nКвантовая энтропия фон Неймана: \\[\n\\boxed{\nS[\\rho]=-\\mathrm{Tr}\\,\\left(\\rho\\ln\\rho\\right)\n}\n\\]\nДля чистого состояния: \\[\n\\rho=|\\psi\\rangle\\langle\\psi|,\n\\qquad p=1, \\qquad\n\\boxed{S[\\rho]=0}\n\\]\nСмешивание состояний обычно даёт ненулевую энтропию.\n\n\n\n\n\n\n\n\nДжон фон Нейман (1903–1957)"
+  },
+  {
+    "objectID": "ru/slides/Thermodynamics.html#что-рассматриваем-дальше",
+    "href": "ru/slides/Thermodynamics.html#что-рассматриваем-дальше",
+    "title": "Введение в квантовую статистическую механику",
+    "section": "Что рассматриваем дальше?",
+    "text": "Что рассматриваем дальше?\n\nОдна бозонная мода. Для нее вычисляем:\n\nтермальную матрицу плотности,\nэнтропию."
+  },
+  {
+    "objectID": "ru/slides/Thermodynamics.html#матрица-плотности-1",
+    "href": "ru/slides/Thermodynamics.html#матрица-плотности-1",
+    "title": "Введение в квантовую статистическую механику",
+    "section": "Матрица плотности",
+    "text": "Матрица плотности\n\nДля одной моды поле эквивалентно гармоническому осциллятору: \\[\nH=\\omega\\left(N+\\frac12\\right),\n\\qquad\nN=a^\\dagger a.\n\\]\nПостоянная энергия \\(\\omega/2\\) сокращается в нормированной матрице плотности, поэтому далее используем \\[\nH=\\omega N.\n\\]"
+  },
+  {
+    "objectID": "ru/slides/Thermodynamics.html#матрица-плотности-2",
+    "href": "ru/slides/Thermodynamics.html#матрица-плотности-2",
+    "title": "Введение в квантовую статистическую механику",
+    "section": "Матрица плотности",
+    "text": "Матрица плотности\n\nКаноническая матрица плотности: \\[\n\\rho\n=\n\\frac{e^{-\\beta\\omega N}}{Z}, \\qquad Z=\\mathrm{Tr}\\,e^{-\\beta\\omega N}=\\sum\\limits_{m=0}^{\\infty}\\langle m|e^{-\\beta\\omega N}|m\\rangle.\n\\]\n\\(Z\\) — статистическая сумма, \\(\\beta=1/T\\)."
+  },
+  {
+    "objectID": "ru/slides/Thermodynamics.html#матрица-плотности-3",
+    "href": "ru/slides/Thermodynamics.html#матрица-плотности-3",
+    "title": "Введение в квантовую статистическую механику",
+    "section": "Матрица плотности",
+    "text": "Матрица плотности\n\nВ базисе чисел заполнения \\[\nN|m\\rangle=m|m\\rangle, \\qquad m=0,1,2,\\ldots\n\\]\nСпектральное разложение в этом базисе \\(N = \\sum_{m=0}^{\\infty} m |m\\rangle\\langle m|\\)\nТогда, \\[\nZ= \\sum\\limits_{m=0}^{\\infty}\\langle m|e^{-\\beta\\omega N}|m\\rangle = \\sum_{m=0}^{\\infty}e^{-\\beta\\omega m}= \\frac{1}{1-e^{-\\beta\\omega}}.\n\\]"
+  },
+  {
+    "objectID": "ru/slides/Thermodynamics.html#матрица-плотности-4",
+    "href": "ru/slides/Thermodynamics.html#матрица-плотности-4",
+    "title": "Введение в квантовую статистическую механику",
+    "section": "Матрица плотности",
+    "text": "Матрица плотности\n\nПоэтому (с учетом \\(Z=\\frac{1}{1-e^{-\\beta\\omega}}\\)) \\[\n\\boxed{\n\\rho= (1-e^{-\\beta\\omega}) \\sum_{m=0}^{\\infty} e^{-\\beta\\omega m} |m\\rangle\\langle m|}\n\\]"
+  },
+  {
+    "objectID": "ru/slides/Thermodynamics.html#матрица-плотности-через-n",
+    "href": "ru/slides/Thermodynamics.html#матрица-плотности-через-n",
+    "title": "Введение в квантовую статистическую механику",
+    "section": "Матрица плотности через \\(n\\)",
+    "text": "Матрица плотности через \\(n\\)\n\nСреднее число частиц в термальной бозонной моде: \\[\nn \\equiv \\langle N\\rangle = \\mathrm{Tr}\\left(\\rho N\\right)=\n\\frac{1}{e^{\\beta\\omega}-1}.\n\\]\nОтсюда \\[\ne^{-\\beta\\omega}\n=\n\\frac{n}{1+n},\n\\qquad\n1-e^{-\\beta\\omega}\n=\n\\frac{1}{1+n}.\n\\]\nОткуда \\[\n\\boxed{\n\\rho\n=\n\\frac{1}{1+n}\n\\sum_{m=0}^{\\infty}\n\\left(\n\\frac{n}{1+n}\n\\right)^m\n|m\\rangle\\langle m|\n}\n\\]"
+  },
+  {
+    "objectID": "ru/slides/Thermodynamics.html#энтропия-1",
+    "href": "ru/slides/Thermodynamics.html#энтропия-1",
+    "title": "Введение в квантовую статистическую механику",
+    "section": "Энтропия",
+    "text": "Энтропия\n\nКвантовая энтропия состояния: \\[\nS[\\rho]=-\\mathrm{Tr}\\,\\rho\\ln\\rho .\n\\]\nДля одной термальной бозонной моды со средним числом частиц \\(n\\): \\[\n\\rho_{n} =\\frac{1}{1+n} \\sum_{m=0}^{\\infty}\n\\left(\\frac{n}{1+n}\\right)^m |m\\rangle\\langle m|.\n\\]\nЕё энтропия: \\[\n\\boxed{s(n)=-\\mathrm{Tr}\\,\\rho_{n}\\ln\\rho_{n}=(1+n)\\ln(1+n)-n\\ln n}\n\\]"
+  },
+  {
+    "objectID": "ru/slides/Thermodynamics.html#энтропия-вакуума",
+    "href": "ru/slides/Thermodynamics.html#энтропия-вакуума",
+    "title": "Введение в квантовую статистическую механику",
+    "section": "Энтропия вакуума",
+    "text": "Энтропия вакуума\n\nЭнтропия состояния со средним числом частиц \\(n\\): \\[\n\\boxed{s(n)=(1+n)\\ln(1+n)-n\\ln n}\n\\]\nДля вакуума (\\(n=0\\)): \\[\nn=0\n\\quad\\Longrightarrow\\quad\n\\boxed{s(0)=0}.\n\\]\nВакуум — чистое состояние: \\[\n\\rho=|0\\rangle\\langle 0|,\n\\qquad\nS=-\\mathrm{Tr}\\,\\rho\\ln\\rho=0.\n\\]"
+  },
+  {
+    "objectID": "ru/slides/Thermodynamics.html#температура-вакуума",
+    "href": "ru/slides/Thermodynamics.html#температура-вакуума",
+    "title": "Введение в квантовую статистическую механику",
+    "section": "Температура вакуума",
+    "text": "Температура вакуума\n\nСреднее число частиц в вакууме: \\[\nn = \\langle 0|N|0\\rangle=0.\n\\]\nТемпература вакуума равна нулю: \\[\nT = \\frac{1}{\\beta} \\to 0,\n\\qquad\n\\beta \\to \\infty\\qquad\\Longrightarrow\\quad n=\\frac{1}{e^{\\beta\\omega}-1}\\to0,\n\\]"
+  },
+  {
+    "objectID": "ru/slides/Thermodynamics.html#вывод-формулы-для-энтропии",
+    "href": "ru/slides/Thermodynamics.html#вывод-формулы-для-энтропии",
+    "title": "Введение в квантовую статистическую механику",
+    "section": "Вывод формулы для энтропии",
+    "text": "Вывод формулы для энтропии\n\nМатрица плотности диагональна в базисе чисел заполнения: \\[\n\\rho_n\n=\n\\sum_{m=0}^{\\infty} P_m |m\\rangle\\langle m|,\n\\qquad\nP_m=\n\\frac{1}{1+n}\n\\left(\\frac{n}{1+n}\\right)^m.\n\\]\nПоэтому логарифм тоже диагонален: \\[\n\\ln\\rho_n\n=\n\\sum_{m=0}^{\\infty}\n\\ln P_m\\, |m\\rangle\\langle m|.\n\\]"
+  },
+  {
+    "objectID": "ru/slides/Thermodynamics.html#вывод-формулы-для-энтропии-1",
+    "href": "ru/slides/Thermodynamics.html#вывод-формулы-для-энтропии-1",
+    "title": "Введение в квантовую статистическую механику",
+    "section": "Вывод формулы для энтропии",
+    "text": "Вывод формулы для энтропии\n\nЭнтропия: \\[\ns(n)\n=\n-\\mathrm{Tr}\\,\\rho_n\\ln\\rho_n\n=\n-\\sum_{m=0}^{\\infty} P_m\\ln P_m.\n\\]\nОбозначим \\[\nr=\\frac{n}{1+n},\n\\qquad\nP_m=(1-r)r^m.\n\\]\nТогда \\[\n\\ln P_m=\\ln(1-r)+m\\ln r.\n\\]"
+  },
+  {
+    "objectID": "ru/slides/Thermodynamics.html#вывод-формулы-для-энтропии-2",
+    "href": "ru/slides/Thermodynamics.html#вывод-формулы-для-энтропии-2",
+    "title": "Введение в квантовую статистическую механику",
+    "section": "Вывод формулы для энтропии",
+    "text": "Вывод формулы для энтропии\n\nПодставляем: \\[\ns(n)\n=\n-\\sum_{m=0}^{\\infty}P_m\n\\left[\n\\ln(1-r)+m\\ln r\n\\right].\n\\]\nИспользуем нормировку и среднее число частиц: \\[\n\\sum_{m=0}^{\\infty}P_m=1,\n\\qquad\n\\sum_{m=0}^{\\infty}mP_m=n.\n\\]\nПолучаем: \\[\ns(n)\n=\n-\\ln(1-r)-n\\ln r.\n\\]"
+  },
+  {
+    "objectID": "ru/slides/Thermodynamics.html#вывод-формулы-для-энтропии-3",
+    "href": "ru/slides/Thermodynamics.html#вывод-формулы-для-энтропии-3",
+    "title": "Введение в квантовую статистическую механику",
+    "section": "Вывод формулы для энтропии",
+    "text": "Вывод формулы для энтропии\n\nТак как \\[\n1-r=\\frac{1}{1+n},\n\\qquad\nr=\\frac{n}{1+n},\n\\]\nокончательно: \\[\n\\boxed{\ns(n)\n=\n(1+n)\\ln(1+n)-n\\ln n\n}\n\\]"
+  },
+  {
+    "objectID": "ru/slides/Thermodynamics.html#важные-формулы",
+    "href": "ru/slides/Thermodynamics.html#важные-формулы",
+    "title": "Введение в квантовую статистическую механику",
+    "section": "Важные формулы",
+    "text": "Важные формулы\n\nТермальная матрица плотности одной бозонной моды: \\[\n\\rho =\\frac{e^{-\\beta\\omega N}}{Z}, \\qquad Z=\\mathrm{Tr}\\,e^{-\\beta\\omega N}\n=\\frac{1}{1-e^{-\\beta\\omega}}.\n\\]\nСреднее число частиц: \\[\nn(\\omega) = \\langle N\\rangle = \\frac{1}{e^{\\beta\\omega}-1}.\n\\]\nТа же матрица плотности через \\(n\\): \\[\n\\rho_n\n= \\frac{1}{1+n} \\sum_{m=0}^{\\infty}\n\\left( \\frac{n}{1+n} \\right)^m |m\\rangle\\langle m|.\n\\]"
+  },
+  {
+    "objectID": "ru/slides/Thermodynamics.html#важные-формулы-1",
+    "href": "ru/slides/Thermodynamics.html#важные-формулы-1",
+    "title": "Введение в квантовую статистическую механику",
+    "section": "Важные формулы",
+    "text": "Важные формулы\n\nЭнтропия одной термальной моды: \\[\ns(n) = -\\mathrm{Tr}\\,\\rho_n\\ln\\rho_n = (1+n)\\ln(1+n)-n\\ln n.\n\\]\nВакуум: \\[\nn=0, \\qquad T=0, \\qquad s(0)=0.\n\\]"
+  },
+  {
+    "objectID": "ru/slides/Thermodynamics.html#что-изменится-для-ускоренного-наблюдателя-1",
+    "href": "ru/slides/Thermodynamics.html#что-изменится-для-ускоренного-наблюдателя-1",
+    "title": "Введение в квантовую статистическую механику",
+    "section": "Что изменится для ускоренного наблюдателя?",
+    "text": "Что изменится для ускоренного наблюдателя?\n\nУскоренный наблюдатель имеет доступ не ко всем степеням свободы (лекция “Релятивистское ускорение и координаты Риндлера”).\nВакуум Минковского ему виден не весь.\nПоэтому появляется энтропия и температура."
+  },
+  {
+    "objectID": "slides.html",
+    "href": "slides.html",
+    "title": "Слайды",
+    "section": "",
+    "text": "Релятивистское ускорение и координаты Риндлера\nТермодинамика в квантовой теории поля\nЭффект Унру для плоской волны\nЭффект Унру для квантового поля"
+  },
+  {
+    "objectID": "slides.html#лекции",
+    "href": "slides.html#лекции",
+    "title": "Слайды",
+    "section": "",
+    "text": "Релятивистское ускорение и координаты Риндлера\nТермодинамика в квантовой теории поля\nЭффект Унру для плоской волны\nЭффект Унру для квантового поля"
+  },
+  {
+    "objectID": "ru/slides/Rindler.html#система-единиц-1",
+    "href": "ru/slides/Rindler.html#система-единиц-1",
+    "title": "Релятивистское ускорение и координаты Риндлера",
+    "section": "Система единиц",
+    "text": "Система единиц\n\nУдобно использовать систему единиц, в которой \\[\nc=1\n\\]"
+  },
+  {
+    "objectID": "ru/slides/Rindler.html#скорость-1",
+    "href": "ru/slides/Rindler.html#скорость-1",
+    "title": "Релятивистское ускорение и координаты Риндлера",
+    "section": "4-скорость",
+    "text": "4-скорость\n\n4-координата: \\[\nx^\\mu=(t,\\mathbf{x}).\n\\]\nСобственное время: \\[\nd\\tau = \\frac{dt}{\\gamma},\n\\qquad\n\\gamma=\\frac{1}{\\sqrt{1-v^2}}.\n\\]\n4-скорость: \\[\nu^\\mu=\\frac{dx^\\mu}{d\\tau}\n=\n\\gamma(1,\\mathbf{v}), \\quad u^\\mu u_\\mu = 1.\n\\]"
+  },
+  {
+    "objectID": "ru/slides/Rindler.html#ускорение-1",
+    "href": "ru/slides/Rindler.html#ускорение-1",
+    "title": "Релятивистское ускорение и координаты Риндлера",
+    "section": "4-ускорение",
+    "text": "4-ускорение\n\nОпределим 4-ускорение: \\[\nA^\\mu=\\frac{d u^\\mu}{d\\tau}.\n\\]\n4-ускорение ортогонально 4-скорости: \\[\nA^\\mu u_\\mu=0.\n\\]\nВывод: \\[\n\\frac{d}{d\\tau}(u^\\mu u_\\mu)=2A^\\mu u_\\mu=0.\n\\]"
+  },
+  {
+    "objectID": "ru/slides/Rindler.html#ускорение-в-лабораторной-системе",
+    "href": "ru/slides/Rindler.html#ускорение-в-лабораторной-системе",
+    "title": "Релятивистское ускорение и координаты Риндлера",
+    "section": "4-ускорение в лабораторной системе",
+    "text": "4-ускорение в лабораторной системе\n\nОбозначим обычное ускорение в лабораторной системе как \\[\n\\mathbf{a}=\\frac{d\\mathbf{v}}{dt}.\n\\]\nТогда \\[\nA^\\mu\n=\n\\frac{d}{dt}\\left[\\gamma(1,\\mathbf{v})\\right]\n= \\gamma\\left(\\dot{\\gamma},\\dot{\\gamma}\\mathbf{v}+\\gamma \\mathbf{a}\\right)\n\\] где \\(\\dot{\\gamma}=\\frac{d\\gamma}{dt}\\)."
+  },
+  {
+    "objectID": "ru/slides/Rindler.html#ускорение-в-системе-мгновенно-сопутствующей-наблюдателю",
+    "href": "ru/slides/Rindler.html#ускорение-в-системе-мгновенно-сопутствующей-наблюдателю",
+    "title": "Релятивистское ускорение и координаты Риндлера",
+    "section": "4-ускорение в системе мгновенно сопутствующей наблюдателю",
+    "text": "4-ускорение в системе мгновенно сопутствующей наблюдателю\n\nВ системе, мгновенно сопутствующей наблюдателю, \\[\nv=0\n\\]\n4-ускорение в этой системе: \\[\nA'^\\mu\n=\\left(0,\\mathbf{a}'\\right), \\quad \\mathbf{a}' = \\frac{d\\mathbf{v}'}{d\\tau}, \\quad\\dot{\\gamma}(v=0)=0.\n\\]\n\\(a'=|\\mathbf{a}'|\\) - собственное ускорение – это то, что измеряет акселерометр, движущийся вместе с наблюдателем."
+  },
+  {
+    "objectID": "ru/slides/Rindler.html#связь-двух-систем",
+    "href": "ru/slides/Rindler.html#связь-двух-систем",
+    "title": "Релятивистское ускорение и координаты Риндлера",
+    "section": "Связь двух систем",
+    "text": "Связь двух систем\n\n4-ускорения \\(A\\) и \\(A'\\) связаны преобразованием Лоренца: \\[\nA = \\gamma\n\\begin{pmatrix}\n\\dot{\\gamma}\\\\\n\\dot{\\gamma}v+\\gamma a\n\\end{pmatrix}\n=\n\\begin{pmatrix}\n\\gamma & \\gamma v\\\\\n\\gamma v & \\gamma\n\\end{pmatrix}\n\\begin{pmatrix}\n0\\\\\na'\n\\end{pmatrix}\n=\n\\begin{pmatrix}\n\\gamma v a'\\\\\n\\gamma a'\n\\end{pmatrix}\n.\n\\]\nИз верхнего выражения следует, что \\[\n\\dot{\\gamma} = v a'\\implies\\frac{v\\dot{v}}{\\left(1-v^2\\right)^{3/2}} = v a'\\implies \\boxed{a=a'\\left(1-v^2\\right)^{3/2}}.\n\\]"
+  },
+  {
+    "objectID": "ru/slides/Rindler.html#равномерно-ускоренное-движение-1",
+    "href": "ru/slides/Rindler.html#равномерно-ускоренное-движение-1",
+    "title": "Релятивистское ускорение и координаты Риндлера",
+    "section": "Равномерно ускоренное движение",
+    "text": "Равномерно ускоренное движение\n\nЕсли собственное ускорение \\(a'\\) постоянно, то \\[\n\\boxed{\nv(t)=\\frac{a' t}{\\sqrt{1+a'^2 t^2}}\n}\n\\]\nПроинтегрировав, получаем \\[\n\\boxed{\nx(t)=\\frac{1}{a'}\\sqrt{1+a'^2 t^2}, \\quad x(0)=\\frac{1}{a'}\n}\n\\]\nЭто движение по гиперболе в пространстве Минковского: \\[\nx^2 - t^2 = \\frac{1}{a'^2}\n\\]"
+  },
+  {
+    "objectID": "ru/slides/Rindler.html#собственное-время-и-старение",
+    "href": "ru/slides/Rindler.html#собственное-время-и-старение",
+    "title": "Релятивистское ускорение и координаты Риндлера",
+    "section": "Собственное время и старение",
+    "text": "Собственное время и старение\nДля равномерно ускоренного наблюдателя \\[\n\\boxed{\n\\tau(t)=\\int_0^t \\frac{dt'}{\\gamma(t')}\n=\n\\frac{1}{a'}\\,\\operatorname{arsinh}(a't)\n}\n\\]\n\n\nviewof aging_controls = {\n  const control = html`&lt;div class=\"aging-controls\"&gt;\n    &lt;label&gt;\n      &lt;span&gt;t&lt;/span&gt;\n      &lt;input name=\"time\" type=\"range\" min=\"0\" max=\"5\" step=\"0.05\" value=\"3\"&gt;\n      &lt;output&gt;&lt;/output&gt;\n    &lt;/label&gt;\n    &lt;label&gt;\n      &lt;span&gt;a′&lt;/span&gt;\n      &lt;input name=\"aprime\" type=\"range\" min=\"0\" max=\"3\" step=\"0.1\" value=\"1\"&gt;\n      &lt;output&gt;&lt;/output&gt;\n    &lt;/label&gt;\n  &lt;/div&gt;`;\n\n  const time = control.querySelector(\"[name='time']\");\n  const aprime = control.querySelector(\"[name='aprime']\");\n  const timeOut = time.nextElementSibling;\n  const aprimeOut = aprime.nextElementSibling;\n\n  function update(dispatch = true) {\n    control.value = {\n      time: Number(time.value),\n      aprime: Number(aprime.value)\n    };\n    timeOut.textContent = `${Number(time.value).toFixed(2)} лет`;\n    aprimeOut.textContent = `${Number(aprime.value).toFixed(1)} год⁻¹`;\n    if (dispatch) control.dispatchEvent(new Event(\"input\", {bubbles: true}));\n  }\n\n  time.addEventListener(\"input\", () =&gt; update());\n  aprime.addEventListener(\"input\", () =&gt; update());\n  update(false);\n  return control;\n}\n\n\n\n\n\n\n\n{\n  const {time, aprime} = aging_controls;\n  const tauAt = (u) =&gt; aprime === 0 ? u : Math.asinh(aprime * u) / aprime;\n  const gammaAt = (u) =&gt; Math.sqrt(1 + (aprime * u) ** 2);\n  const velocityAt = (u) =&gt; aprime === 0 ? 0 : aprime * u / gammaAt(u);\n  const tau = tauAt(time);\n  const delta = time - tau;\n  const ratio = time === 0 ? 1 : tau / time;\n  const tMax = 5;\n  const yMax = 5;\n\n  const ns = \"http://www.w3.org/2000/svg\";\n  const width = 900;\n  const height = 390;\n  const plotLeft = 58;\n  const plotTop = 26;\n  const plotWidth = 500;\n  const plotHeight = 300;\n  const panelLeft = 596;\n\n  const sx = (x) =&gt; plotLeft + x / tMax * plotWidth;\n  const sy = (y) =&gt; plotTop + (yMax - y) / yMax * plotHeight;\n  const f = (x) =&gt; Math.abs(x) &lt; 1e-9 ? \"0.00\" : x.toFixed(2);\n  const linePath = (fn, steps = 180) =&gt; {\n    let d = \"\";\n    for (let i = 0; i &lt;= steps; i++) {\n      const x = tMax * i / steps;\n      const y = fn(x);\n      d += `${i === 0 ? \"M\" : \"L\"} ${sx(x)} ${sy(y)} `;\n    }\n    return d;\n  };\n\n  const wrap = document.createElement(\"div\");\n  wrap.className = \"aging-board\";\n\n  const style = document.createElement(\"style\");\n  style.textContent = `\n    .aging-controls { display: flex; gap: 1.2rem; align-items: center; flex-wrap: wrap; margin: 0 0 0.3rem; }\n    .aging-controls label { display: grid; grid-template-columns: 1.8rem 12rem 5.2rem; align-items: center; gap: 0.55rem; margin: 0; color: #f2f2f2; font-size: 0.46em; }\n    .aging-controls input[type=\"range\"] { width: 12rem; accent-color: #58a6ff; }\n    .aging-controls output { min-width: 5.2rem; padding: 0.08rem 0.25rem; border: 1px solid #334155; border-radius: 6px; background: #101722; color: #f2f2f2; font-variant-numeric: tabular-nums; text-align: right; }\n    .aging-board { width: min(100%, 900px); margin: 0 auto; }\n    .aging-board svg { width: 100%; height: auto; display: block; font-family: system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif; }\n  `;\n  wrap.append(style);\n\n  const svg = document.createElementNS(ns, \"svg\");\n  svg.setAttribute(\"viewBox\", `0 0 ${width} ${height}`);\n  svg.setAttribute(\"role\", \"img\");\n  svg.setAttribute(\"aria-label\", \"Сравнение лабораторного и собственного времени ускоренного наблюдателя\");\n  wrap.append(svg);\n\n  function add(name, attrs = {}, parent = svg) {\n    const node = document.createElementNS(ns, name);\n    for (const [key, value] of Object.entries(attrs)) {\n      if (key === \"text\") {\n        node.textContent = value;\n      } else {\n        node.setAttribute(key, value);\n      }\n    }\n    parent.append(node);\n    return node;\n  }\n\n  const defs = add(\"defs\");\n  const marker = add(\"marker\", {\n    id: \"aging-arrow\",\n    markerWidth: \"8\",\n    markerHeight: \"8\",\n    refX: \"6\",\n    refY: \"4\",\n    orient: \"auto\",\n    markerUnits: \"strokeWidth\"\n  }, defs);\n  add(\"path\", {d: \"M 0 0 L 8 4 L 0 8 Z\", fill: \"#d7dde8\"}, marker);\n\n  add(\"rect\", {x: \"0\", y: \"0\", width, height, rx: \"12\", fill: \"#070a0f\", stroke: \"#243244\"});\n  add(\"rect\", {x: plotLeft, y: plotTop, width: plotWidth, height: plotHeight, fill: \"#0b111b\", stroke: \"#303b4f\", \"stroke-width\": \"1.2\"});\n\n  for (let tick = 0; tick &lt;= 5; tick++) {\n    add(\"line\", {x1: sx(tick), y1: sy(0), x2: sx(tick), y2: sy(5), stroke: \"#1e2a3b\", \"stroke-width\": \"1\"});\n    add(\"line\", {x1: sx(0), y1: sy(tick), x2: sx(5), y2: sy(tick), stroke: \"#1e2a3b\", \"stroke-width\": \"1\"});\n    add(\"text\", {x: sx(tick), y: sy(0) + 24, fill: \"#9fb0c7\", \"font-size\": \"13\", \"text-anchor\": \"middle\", text: `${tick}`});\n    add(\"text\", {x: sx(0) - 12, y: sy(tick) + 5, fill: \"#9fb0c7\", \"font-size\": \"13\", \"text-anchor\": \"end\", text: `${tick}`});\n  }\n\n  add(\"line\", {x1: sx(0), y1: sy(0), x2: sx(5.08), y2: sy(0), stroke: \"#d7dde8\", \"stroke-width\": \"1.6\", \"marker-end\": \"url(#aging-arrow)\"});\n  add(\"line\", {x1: sx(0), y1: sy(0), x2: sx(0), y2: sy(5.08), stroke: \"#d7dde8\", \"stroke-width\": \"1.6\", \"marker-end\": \"url(#aging-arrow)\"});\n  add(\"text\", {x: sx(5.0), y: sy(0) + 46, fill: \"#d7dde8\", \"font-size\": \"16\", \"text-anchor\": \"end\", text: \"t, годы\"});\n  add(\"text\", {x: sx(0) + 10, y: sy(5.0) - 10, fill: \"#d7dde8\", \"font-size\": \"16\", text: \"τ, годы\"});\n\n  add(\"path\", {\n    d: linePath((u) =&gt; u),\n    fill: \"none\",\n    stroke: \"#ffb86c\",\n    \"stroke-width\": \"2.5\",\n    \"stroke-dasharray\": \"8 7\"\n  });\n  add(\"path\", {\n    d: linePath(tauAt),\n    fill: \"none\",\n    stroke: \"#58a6ff\",\n    \"stroke-width\": \"4\"\n  });\n\n  if (time &gt; 0) {\n    add(\"line\", {\n      x1: sx(time),\n      y1: sy(tau),\n      x2: sx(time),\n      y2: sy(time),\n      stroke: \"#ff5d73\",\n      \"stroke-width\": \"5\",\n      opacity: \"0.78\"\n    });\n  }\n  add(\"line\", {x1: sx(time), y1: sy(0), x2: sx(time), y2: sy(time), stroke: \"#9fb0c7\", \"stroke-width\": \"1.4\", \"stroke-dasharray\": \"5 6\", opacity: \"0.8\"});\n  add(\"circle\", {cx: sx(time), cy: sy(tau), r: \"7\", fill: \"#58a6ff\", stroke: \"#ffffff\", \"stroke-width\": \"2\"});\n  add(\"circle\", {cx: sx(time), cy: sy(time), r: \"5.5\", fill: \"#ffb86c\", stroke: \"#ffffff\", \"stroke-width\": \"1.6\"});\n  add(\"text\", {x: sx(2.45), y: sy(tauAt(2.45)) - 14, fill: \"#58a6ff\", \"font-size\": \"16\", text: \"τ(t) = arsinh(a′t)/a′\"});\n  add(\"text\", {x: sx(3.15), y: sy(3.15) - 10, fill: \"#ffb86c\", \"font-size\": \"16\", text: \"τ = t\"});\n  add(\"text\", {x: sx(time) + 10, y: sy((time + tau) / 2), fill: \"#ff9fb0\", \"font-size\": \"16\", text: \"t − τ\"});\n\n  add(\"rect\", {x: panelLeft, y: \"34\", width: \"260\", height: \"280\", rx: \"10\", fill: \"#101722\", stroke: \"#2b3a50\"});\n  add(\"text\", {x: panelLeft + 20, y: \"70\", fill: \"#ffffff\", \"font-size\": \"21\", \"font-weight\": \"700\", text: \"Эффект старения\"});\n  add(\"text\", {x: panelLeft + 20, y: \"110\", fill: \"#d7dde8\", \"font-size\": \"16\", text: `лабораторное t = ${f(time)} лет`});\n  add(\"text\", {x: panelLeft + 20, y: \"138\", fill: \"#58a6ff\", \"font-size\": \"16\", text: `собственное τ = ${f(tau)} лет`});\n  add(\"text\", {x: panelLeft + 20, y: \"166\", fill: \"#ff9fb0\", \"font-size\": \"16\", text: `отставание t − τ = ${f(delta)} лет`});\n  add(\"text\", {x: panelLeft + 20, y: \"204\", fill: \"#d7dde8\", \"font-size\": \"16\", text: `τ/t = ${f(ratio)}`});\n  add(\"text\", {x: panelLeft + 20, y: \"232\", fill: \"#d7dde8\", \"font-size\": \"16\", text: `v(t) = ${f(velocityAt(time))}`});\n  add(\"text\", {x: panelLeft + 20, y: \"270\", fill: \"#9fb0c7\", \"font-size\": \"14\", text: \"При a′ = 0 синяя кривая\"});\n  add(\"text\", {x: panelLeft + 20, y: \"291\", fill: \"#9fb0c7\", \"font-size\": \"14\", text: \"совпадает с инерциальной.\"});\n\n  add(\"text\", {x: plotLeft, y: \"372\", fill: \"#9fb0c7\", \"font-size\": \"14\", text: \"Чем больше a′t, тем медленнее накапливается собственное время ускоренного наблюдателя.\"});\n\n  return wrap;\n}"
+  },
+  {
+    "objectID": "ru/slides/Rindler.html#определения",
+    "href": "ru/slides/Rindler.html#определения",
+    "title": "Релятивистское ускорение и координаты Риндлера",
+    "section": "Определения",
+    "text": "Определения\n\nРассматриваем правый клин Риндлера: \\[\nx&gt;|t|.\n\\]\nВ нём вводятся координаты \\[\nt=\\xi\\sinh\\eta,\n\\qquad\nx=\\xi\\cosh\\eta,\n\\qquad\n\\xi&gt;0.\n\\]\nКоордината \\(\\xi\\) нумерует гиперболические мировые линии \\[\nx^2-t^2=\\xi^2\\equiv \\frac{1}{a'^2}.\n\\]"
+  },
+  {
+    "objectID": "ru/slides/Rindler.html#определения-1",
+    "href": "ru/slides/Rindler.html#определения-1",
+    "title": "Релятивистское ускорение и координаты Риндлера",
+    "section": "Определения",
+    "text": "Определения\n\nКоордината \\(\\xi\\) нумерует гиперболические мировые линии \\[\nx^2-t^2=\\xi^2\\equiv \\frac{1}{a'^2}.\n\\]\nКоордината \\(\\eta\\) нумерует лучи из начала координат \\[\n\\frac{t}{x}=\\tanh\\eta.\n\\]"
+  },
+  {
+    "objectID": "ru/slides/Rindler.html#физический-смысл-xi-и-eta",
+    "href": "ru/slides/Rindler.html#физический-смысл-xi-и-eta",
+    "title": "Релятивистское ускорение и координаты Риндлера",
+    "section": "Физический смысл \\(\\xi\\) и \\(\\eta\\)",
+    "text": "Физический смысл \\(\\xi\\) и \\(\\eta\\)\n\nЛинии \\[\n\\xi=\\text{const}=\\frac{1}{a'}\n\\] — это мировые линии равномерно ускоренных наблюдателей.\nДля наблюдателя с фиксированным \\(\\xi\\): \\[\nds^2=\\xi^2 d\\eta^2-d\\xi^2\n\\quad\\Longrightarrow\\quad\nd\\tau=\\xi\\, d\\eta.\n\\]\nПоэтому \\(\\eta\\) играет роль времени Риндлера, а \\(\\xi\\) — роль координаты наблюдателя."
+  },
+  {
+    "objectID": "ru/slides/Rindler.html#физический-смысл-xi-и-eta-1",
+    "href": "ru/slides/Rindler.html#физический-смысл-xi-и-eta-1",
+    "title": "Релятивистское ускорение и координаты Риндлера",
+    "section": "Физический смысл \\(\\xi\\) и \\(\\eta\\)",
+    "text": "Физический смысл \\(\\xi\\) и \\(\\eta\\)\n\nСобственное ускорение такого наблюдателя равно \\[\na'=\\frac{1}{\\xi}.\n\\]\nВ частности, ранее найденная мировая линия \\[\nx^2-t^2=\\frac{1}{a'^2}\n\\] это просто \\[\n\\xi=\\frac{1}{a'}.\n\\]"
+  },
+  {
+    "objectID": "ru/slides/Rindler.html#горизонт-риндлера",
+    "href": "ru/slides/Rindler.html#горизонт-риндлера",
+    "title": "Релятивистское ускорение и координаты Риндлера",
+    "section": "Горизонт Риндлера",
+    "text": "Горизонт Риндлера\n\nГраницы клина Риндлера — это световые прямые \\[\nx=\\pm t.\n\\]\nОни недостижимы для равномерно ускоренного наблюдателя и играют роль горизонта.\nНаблюдатель с фиксированным \\(\\xi\\) может получать сигналы только из области \\[\nx&gt;|t|.\n\\]"
+  },
+  {
+    "objectID": "ru/slides/Rindler.html#координаты-риндлера-и-горизонт",
+    "href": "ru/slides/Rindler.html#координаты-риндлера-и-горизонт",
+    "title": "Релятивистское ускорение и координаты Риндлера",
+    "section": "Координаты Риндлера и горизонт",
+    "text": "Координаты Риндлера и горизонт\n\n\nviewof rindler_controls = {\n  const control = html`&lt;div class=\"rindler-controls\"&gt;\n    &lt;label&gt;\n      &lt;span&gt;a′&lt;/span&gt;\n      &lt;input name=\"aprime\" type=\"range\" min=\"0.4\" max=\"2.4\" step=\"0.1\" value=\"1.0\"&gt;\n      &lt;output&gt;&lt;/output&gt;\n    &lt;/label&gt;\n    &lt;label&gt;\n      &lt;span&gt;η&lt;/span&gt;\n      &lt;input name=\"eta\" type=\"range\" min=\"-1.6\" max=\"1.6\" step=\"0.05\" value=\"0.8\"&gt;\n      &lt;output&gt;&lt;/output&gt;\n    &lt;/label&gt;\n  &lt;/div&gt;`;\n\n  const aprime = control.querySelector(\"[name='aprime']\");\n  const eta = control.querySelector(\"[name='eta']\");\n  const aprimeOut = aprime.nextElementSibling;\n  const etaOut = eta.nextElementSibling;\n\n  function update(dispatch = true) {\n    control.value = {\n      aprime: Number(aprime.value),\n      eta: Number(eta.value)\n    };\n    aprimeOut.textContent = Number(aprime.value).toFixed(1);\n    etaOut.textContent = Number(eta.value).toFixed(2);\n    if (dispatch) control.dispatchEvent(new Event(\"input\", {bubbles: true}));\n  }\n\n  aprime.addEventListener(\"input\", () =&gt; update());\n  eta.addEventListener(\"input\", () =&gt; update());\n  update(false);\n  return control;\n}\n\n\n\n\n\n\n\n{\n  const {aprime, eta} = rindler_controls;\n  const xi0 = 1 / aprime;\n  const t0 = xi0 * Math.sinh(eta);\n  const x0 = xi0 * Math.cosh(eta);\n  const v0 = Math.tanh(eta);\n  const etaMax = 1.65;\n  const domain = Math.max(\n    3.2,\n    xi0 * Math.cosh(etaMax) + 0.45,\n    Math.abs(xi0 * Math.sinh(etaMax)) + 0.45\n  );\n\n  const ns = \"http://www.w3.org/2000/svg\";\n  const width = 900;\n  const height = 430;\n  const plotSize = 390;\n  const plotLeft = 36;\n  const plotTop = 18;\n  const panelLeft = 472;\n\n  const sx = (x) =&gt; plotLeft + (x + domain) / (2 * domain) * plotSize;\n  const sy = (t) =&gt; plotTop + (domain - t) / (2 * domain) * plotSize;\n  const f = (x) =&gt; Math.abs(x) &lt; 1e-9 ? \"0.00\" : x.toFixed(2);\n  const points = (pts) =&gt; pts.map(([x, t]) =&gt; `${sx(x)},${sy(t)}`).join(\" \");\n\n  const wrap = document.createElement(\"div\");\n  wrap.className = \"rindler-board\";\n\n  const style = document.createElement(\"style\");\n  style.textContent = `\n    .rindler-controls { display: flex; gap: 1.2rem; align-items: center; flex-wrap: wrap; margin: 0 0 0.35rem; }\n    .rindler-controls label { display: grid; grid-template-columns: 1.8rem 11rem 3.4rem; align-items: center; gap: 0.55rem; margin: 0; color: #f2f2f2; font-size: 0.48em; }\n    .rindler-controls input[type=\"range\"] { width: 11rem; accent-color: #f5a524; }\n    .rindler-controls output { min-width: 3.4rem; padding: 0.08rem 0.25rem; border: 1px solid #334155; border-radius: 6px; background: #101722; color: #f2f2f2; font-variant-numeric: tabular-nums; text-align: right; }\n    .rindler-board { width: min(100%, 900px); margin: 0 auto; }\n    .rindler-board svg { width: 100%; height: auto; display: block; font-family: system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif; }\n  `;\n  wrap.append(style);\n\n  const svg = document.createElementNS(ns, \"svg\");\n  svg.setAttribute(\"viewBox\", `0 0 ${width} ${height}`);\n  svg.setAttribute(\"role\", \"img\");\n  svg.setAttribute(\"aria-label\", \"Диаграмма координат Риндлера и горизонта\");\n  wrap.append(svg);\n\n  function add(name, attrs = {}, parent = svg) {\n    const node = document.createElementNS(ns, name);\n    for (const [key, value] of Object.entries(attrs)) {\n      if (key === \"text\") {\n        node.textContent = value;\n      } else {\n        node.setAttribute(key, value);\n      }\n    }\n    parent.append(node);\n    return node;\n  }\n\n  const defs = add(\"defs\");\n  const clipId = \"rindler-plot-clip\";\n  const marker = add(\"marker\", {\n    id: \"rindler-arrow\",\n    markerWidth: \"8\",\n    markerHeight: \"8\",\n    refX: \"6\",\n    refY: \"4\",\n    orient: \"auto\",\n    markerUnits: \"strokeWidth\"\n  }, defs);\n  add(\"path\", {d: \"M 0 0 L 8 4 L 0 8 Z\", fill: \"#d7dde8\"}, marker);\n  const clip = add(\"clipPath\", {id: clipId}, defs);\n  add(\"rect\", {x: plotLeft, y: plotTop, width: plotSize, height: plotSize, rx: \"6\"}, clip);\n\n  add(\"rect\", {\n    x: \"0\",\n    y: \"0\",\n    width,\n    height,\n    rx: \"12\",\n    fill: \"#070a0f\",\n    stroke: \"#243244\",\n    \"stroke-width\": \"1\"\n  });\n  add(\"rect\", {\n    x: plotLeft,\n    y: plotTop,\n    width: plotSize,\n    height: plotSize,\n    fill: \"#0b111b\",\n    stroke: \"#303b4f\",\n    \"stroke-width\": \"1.2\"\n  });\n\n  const plotLayer = add(\"g\", {\"clip-path\": `url(#${clipId})`});\n  add(\"polygon\", {\n    points: points([[0, 0], [domain, domain], [domain, -domain]]),\n    fill: \"#1b4d3e\",\n    opacity: \"0.28\"\n  }, plotLayer);\n\n  for (const grid of [-2, -1, 1, 2]) {\n    const value = grid * Math.ceil(domain / 3);\n    if (Math.abs(value) &lt; domain) {\n      add(\"line\", {\n        x1: sx(-domain), y1: sy(value), x2: sx(domain), y2: sy(value),\n        stroke: \"#1e2a3b\", \"stroke-width\": \"1\"\n      }, plotLayer);\n      add(\"line\", {\n        x1: sx(value), y1: sy(-domain), x2: sx(value), y2: sy(domain),\n        stroke: \"#1e2a3b\", \"stroke-width\": \"1\"\n      }, plotLayer);\n    }\n  }\n\n  add(\"line\", {\n    x1: sx(-domain), y1: sy(0), x2: sx(domain * 0.98), y2: sy(0),\n    stroke: \"#d7dde8\", \"stroke-width\": \"1.6\", \"marker-end\": \"url(#rindler-arrow)\"\n  });\n  add(\"line\", {\n    x1: sx(0), y1: sy(-domain), x2: sx(0), y2: sy(domain * 0.98),\n    stroke: \"#d7dde8\", \"stroke-width\": \"1.6\", \"marker-end\": \"url(#rindler-arrow)\"\n  });\n\n  add(\"line\", {\n    x1: sx(-domain), y1: sy(-domain), x2: sx(domain), y2: sy(domain),\n    stroke: \"#f2c94c\", \"stroke-width\": \"2.4\", \"stroke-dasharray\": \"8 7\", opacity: \"0.9\"\n  }, plotLayer);\n  add(\"line\", {\n    x1: sx(-domain), y1: sy(domain), x2: sx(domain), y2: sy(-domain),\n    stroke: \"#f2c94c\", \"stroke-width\": \"2.4\", \"stroke-dasharray\": \"8 7\", opacity: \"0.9\"\n  }, plotLayer);\n\n  for (const e of [-1.2, -0.8, -0.4, 0, 0.4, 0.8, 1.2]) {\n    add(\"line\", {\n      x1: sx(0), y1: sy(0), x2: sx(domain), y2: sy(domain * Math.tanh(e)),\n      stroke: \"#5cc8ff\", \"stroke-width\": \"1.2\", opacity: \"0.32\"\n    }, plotLayer);\n  }\n  add(\"line\", {\n    x1: sx(0), y1: sy(0), x2: sx(domain), y2: sy(domain * Math.tanh(eta)),\n    stroke: \"#75e6ff\", \"stroke-width\": \"3.2\", opacity: \"0.95\"\n  }, plotLayer);\n\n  function hyperbolaPath(xi, steps = 180) {\n    let d = \"\";\n    for (let i = 0; i &lt;= steps; i++) {\n      const e = -etaMax + 2 * etaMax * i / steps;\n      const x = xi * Math.cosh(e);\n      const t = xi * Math.sinh(e);\n      d += `${i === 0 ? \"M\" : \"L\"} ${sx(x)} ${sy(t)} `;\n    }\n    return d;\n  }\n\n  for (const xi of [0.5, 0.8, 1.1, 1.5, 2.0, 2.6, 3.4, 4.4]) {\n    if (xi &lt; domain * 0.92) {\n      add(\"path\", {\n        d: hyperbolaPath(xi),\n        fill: \"none\",\n        stroke: \"#9fb0c7\",\n        \"stroke-width\": \"1.25\",\n        opacity: \"0.45\"\n      }, plotLayer);\n    }\n  }\n  add(\"path\", {\n    d: hyperbolaPath(xi0),\n    fill: \"none\",\n    stroke: \"#f5a524\",\n    \"stroke-width\": \"4.2\"\n  }, plotLayer);\n\n  add(\"circle\", {\n    cx: sx(x0),\n    cy: sy(t0),\n    r: \"7.5\",\n    fill: \"#ff5d73\",\n    stroke: \"#fff\",\n    \"stroke-width\": \"2\"\n  }, plotLayer);\n\n  add(\"text\", {x: sx(domain * 0.93), y: sy(0) - 10, fill: \"#d7dde8\", \"font-size\": \"20\", text: \"x\"});\n  add(\"text\", {x: sx(0) + 10, y: sy(domain * 0.9), fill: \"#d7dde8\", \"font-size\": \"20\", text: \"t\"});\n  add(\"text\", {x: sx(domain * 0.58), y: sy(domain * 0.62) - 8, fill: \"#f2c94c\", \"font-size\": \"17\", text: \"x = t\"});\n  add(\"text\", {x: sx(domain * 0.56), y: sy(-domain * 0.54) + 24, fill: \"#f2c94c\", \"font-size\": \"17\", text: \"x = −t\"});\n  add(\"text\", {x: sx(domain * 0.52), y: sy(domain * 0.08), fill: \"#8ae6c1\", \"font-size\": \"18\", text: \"x &gt; |t|\"});\n  add(\"text\", {x: sx(x0) + 11, y: sy(t0) - 10, fill: \"#ffb3c0\", \"font-size\": \"17\", text: \"событие\"});\n  add(\"text\", {x: sx(xi0 * Math.cosh(-1.18)) + 8, y: sy(xi0 * Math.sinh(-1.18)) + 18, fill: \"#f5a524\", \"font-size\": \"18\", text: \"ξ = 1/a′\"});\n  add(\"text\", {x: sx(domain * 0.72), y: sy(domain * Math.tanh(eta) * 0.72) - 8, fill: \"#75e6ff\", \"font-size\": \"18\", text: \"η = const\"});\n\n  add(\"rect\", {x: panelLeft, y: \"38\", width: \"386\", height: \"324\", rx: \"10\", fill: \"#101722\", stroke: \"#2b3a50\"});\n  add(\"text\", {x: panelLeft + 22, y: \"74\", fill: \"#ffffff\", \"font-size\": \"22\", \"font-weight\": \"700\", text: \"Клин Риндлера\"});\n  add(\"text\", {x: panelLeft + 22, y: \"112\", fill: \"#d7dde8\", \"font-size\": \"17\", text: `a′ = ${f(aprime)}`});\n  add(\"text\", {x: panelLeft + 22, y: \"140\", fill: \"#d7dde8\", \"font-size\": \"17\", text: `ξ₀ = 1/a′ = ${f(xi0)}`});\n  add(\"text\", {x: panelLeft + 22, y: \"168\", fill: \"#d7dde8\", \"font-size\": \"17\", text: `η = ${f(eta)}`});\n  add(\"text\", {x: panelLeft + 22, y: \"210\", fill: \"#f5a524\", \"font-size\": \"17\", text: \"ξ = const: гиперболы\"});\n  add(\"text\", {x: panelLeft + 22, y: \"238\", fill: \"#75e6ff\", \"font-size\": \"17\", text: \"η = const: лучи\"});\n  add(\"text\", {x: panelLeft + 22, y: \"280\", fill: \"#d7dde8\", \"font-size\": \"16\", text: `t = ξ sinh η = ${f(t0)}`});\n  add(\"text\", {x: panelLeft + 22, y: \"306\", fill: \"#d7dde8\", \"font-size\": \"16\", text: `x = ξ cosh η = ${f(x0)}`});\n  add(\"text\", {x: panelLeft + 22, y: \"332\", fill: \"#d7dde8\", \"font-size\": \"16\", text: `v = tanh η = ${f(v0)}`});\n  add(\"text\", {x: plotLeft, y: \"422\", fill: \"#9fb0c7\", \"font-size\": \"14\", text: \"Горизонты x = ±t ограничивают область, доступную равномерно ускоренному наблюдателю.\"});\n\n  return wrap;\n}"
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-2.html#соглашения",
+    "href": "ru/slides/UnruhEffect-2.html#соглашения",
+    "title": "Эффект Унру для квантового поля",
+    "section": "Соглашения",
+    "text": "Соглашения\nРаботаем в \\(1+1\\) и используем \\[\nc=\\hbar=k_B=1.\n\\]\nБезмассовое вещественное скалярное поле \\[\n\\phi(t,x)\n=\n\\int_{-\\infty}^{+\\infty}\n\\frac{dp}{2\\pi}\\,\n\\frac{1}{\\sqrt{2\\omega_p}}\n\\left[\na_p e^{-i\\omega_p t+ipx}\n+\na_p^\\dagger e^{+i\\omega_p t-ipx}\n\\right],\n\\qquad\n\\omega_p=|p|.\n\\]\nКоммутационные соотношения: \\[\n[a_p,a_q^\\dagger]\n=\n2\\pi\\delta(p-q),\n\\qquad\n[a_p,a_q]=0.\n\\]"
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-2.html#сигнал-наблюдателя",
+    "href": "ru/slides/UnruhEffect-2.html#сигнал-наблюдателя",
+    "title": "Эффект Унру для квантового поля",
+    "section": "Сигнал наблюдателя",
+    "text": "Сигнал наблюдателя\n\nНаблюдатель движется по мировой линии \\[\nx^\\mu=x^\\mu(\\tau)=(t(\\tau),x(\\tau)).\n\\]\nОн регистрирует поле вдоль своей траектории: \\[\n\\phi(\\tau)\n=\n\\phi(t(\\tau),x(\\tau)).\n\\]\nРегистрируемые наблюдателем частоты определяются фурье-разложением по его собственному времени: \\[\ng(\\Omega)\n=\n\\int_{-\\infty}^{+\\infty}\nd\\tau\\,\ne^{i\\Omega\\tau}\n\\phi(\\tau).\n\\]"
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-2.html#сигнал-наблюдателя-1",
+    "href": "ru/slides/UnruhEffect-2.html#сигнал-наблюдателя-1",
+    "title": "Эффект Унру для квантового поля",
+    "section": "Сигнал наблюдателя",
+    "text": "Сигнал наблюдателя\n\nРегистрируемые наблюдателем частоты определяются фурье-разложением по его времени: \\[\ng(\\Omega)\n=\n\\int_{-\\infty}^{+\\infty}\nd\\tau\\,\ne^{i\\Omega\\tau}\n\\phi(\\tau).\n\\]\nДля инерциального наблюдателя \\(\\tau=t\\).\n\nДля ускоренного наблюдателя \\(\\tau=\\tau\\)."
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-2.html#спектральный-коррелятор",
+    "href": "ru/slides/UnruhEffect-2.html#спектральный-коррелятор",
+    "title": "Эффект Унру для квантового поля",
+    "section": "Спектральный коррелятор",
+    "text": "Спектральный коррелятор\n\nРассмотрим \\[\nC(\\Omega,\\Omega')\n=\n\\left\\langle\ng^\\dagger(\\Omega)\ng(\\Omega')\n\\right\\rangle,\n\\qquad\n\\Omega,\\Omega'&gt;0.\n\\]\nЭто корреляция фурье-компонент сигнала поля.\nЕсли состояние стационарно относительно времени наблюдателя, то разные частоты не коррелируют: \\[\nC(\\Omega,\\Omega')\n=\n2\\pi\\delta(\\Omega-\\Omega')S(\\Omega).\n\\]\n\\(S(\\Omega)\\) — спектральная плотность мощности сигнала."
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-2.html#фурье-компонента-в-инерциальной-системе",
+    "href": "ru/slides/UnruhEffect-2.html#фурье-компонента-в-инерциальной-системе",
+    "title": "Эффект Унру для квантового поля",
+    "section": "Фурье-компонента в инерциальной системе",
+    "text": "Фурье-компонента в инерциальной системе\n\nПусть наблюдатель покоится: \\[\nt=\\tau,\n\\qquad\nx=0.\n\\]\nТогда \\[\n\\phi(\\tau) =\\int\\frac{dp}{2\\pi}\\frac{1}{\\sqrt{2\\omega_p}}\\left[\na_p e^{-i\\omega_p\\tau}+a_p^\\dagger e^{+i\\omega_p\\tau}\\right].\n\\]\nДля \\(\\Omega&gt;0\\): \\[\ng(\\Omega)\n=\n\\int d\\tau\\,e^{i\\Omega\\tau}\\phi(\\tau)\n=\n\\frac{a_{\\Omega}+a_{-\\Omega}}{\\sqrt{2\\Omega}}.\n\\]"
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-2.html#фурье-компонента-в-инерциальной-системе-1",
+    "href": "ru/slides/UnruhEffect-2.html#фурье-компонента-в-инерциальной-системе-1",
+    "title": "Эффект Унру для квантового поля",
+    "section": "Фурье-компонента в инерциальной системе",
+    "text": "Фурье-компонента в инерциальной системе\n\nДля \\(\\Omega&gt;0\\): \\[\ng(\\Omega)\n=\n\\int d\\tau\\,e^{i\\Omega\\tau}\\phi(\\tau)\n=\n\\frac{a_{\\Omega}+a_{-\\Omega}}{\\sqrt{2\\Omega}}.\n\\]\nПоложительная частота \\(\\Omega&gt;0\\) в инерциальной системе выбирает операторы уничтожения."
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-2.html#инерциальный-вакуум",
+    "href": "ru/slides/UnruhEffect-2.html#инерциальный-вакуум",
+    "title": "Эффект Унру для квантового поля",
+    "section": "Инерциальный вакуум",
+    "text": "Инерциальный вакуум\n\nВакуум Минковского: \\[\na_p|0_M\\rangle=0.\n\\]\nПоэтому \\[\n\\langle 0_M|\na_p^\\dagger a_q\n|0_M\\rangle=0.\n\\]\nСледовательно, \\[\n\\boxed{\\langle 0_M|g^\\dagger(\\Omega)g(\\Omega') |0_M\\rangle=0.\n}\n\\]\nИнерциальный наблюдатель не видит частиц в вакууме Минковского."
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-2.html#инерциальное-состояние-с-частицами",
+    "href": "ru/slides/UnruhEffect-2.html#инерциальное-состояние-с-частицами",
+    "title": "Эффект Унру для квантового поля",
+    "section": "Инерциальное состояние с частицами",
+    "text": "Инерциальное состояние с частицами\n\nПусть \\[\n\\langle a_p^\\dagger a_q\\rangle = 2\\pi n(\\omega_p)\\delta(p-q).\n\\]\nТогда \\[\n\\langle g^\\dagger(\\Omega) g(\\Omega') \\rangle = 2\\pi\\delta(\\Omega-\\Omega')\n\\frac{n(\\Omega)}{\\Omega}.\n\\]\nЗначит \\[\n\\boxed{\nS(\\Omega) = \\frac{n(\\Omega)}{\\Omega}.\n}\n\\]"
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-2.html#инерциальное-тепловое-состояние",
+    "href": "ru/slides/UnruhEffect-2.html#инерциальное-тепловое-состояние",
+    "title": "Эффект Унру для квантового поля",
+    "section": "Инерциальное тепловое состояние",
+    "text": "Инерциальное тепловое состояние\n\nДля теплового состояния: \\[\nn(\\Omega)\n=\n\\frac{1}{e^{\\beta\\Omega}-1},\n\\qquad\n\\beta=\\frac{1}{T}.\n\\]\nТогда \\[\n\\boxed{ S(\\Omega) = \\frac{1}{\\Omega}\n\\frac{1}{e^{\\beta\\Omega}-1}.\n}\n\\]\nЭто обычный бозе-эйнштейновский спектр."
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-2.html#мировая-линия",
+    "href": "ru/slides/UnruhEffect-2.html#мировая-линия",
+    "title": "Эффект Унру для квантового поля",
+    "section": "Мировая линия",
+    "text": "Мировая линия\n\nРавномерно ускоренный наблюдатель: \\[\nt(\\tau)=\\frac{1}{a}\\sinh a\\tau,\n\\qquad\nx(\\tau)=\\frac{1}{a}\\cosh a\\tau.\n\\]\nЗдесь \\(a\\) — собственное ускорение.\nНаблюдатель анализирует поле по своему собственному времени: \\[\ng(\\Omega)\n=\n\\int_{-\\infty}^{+\\infty}\nd\\tau\\,\ne^{i\\Omega\\tau}\n\\phi(t(\\tau),x(\\tau)).\n\\]"
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-2.html#фурье-компонента",
+    "href": "ru/slides/UnruhEffect-2.html#фурье-компонента",
+    "title": "Эффект Унру для квантового поля",
+    "section": "Фурье-компонента",
+    "text": "Фурье-компонента\n\nПодставляем разложение поля: \\[\ng(\\Omega) = \\int \\frac{dp}{2\\pi} \\frac{1}{\\sqrt{2\\omega_p}}\n\\left[ a_p I_p(\\Omega) + a_p^\\dagger J_p(\\Omega) \\right].\n\\]\nЗдесь \\[\n\\begin{aligned}\nI_p(\\Omega) & = \\int d\\tau\\, e^{i\\Omega\\tau} e^{-i\\omega_p t(\\tau)+ipx(\\tau)},\\\\\nJ_p(\\Omega) & = \\int d\\tau\\, e^{i\\Omega\\tau} e^{+i\\omega_p t(\\tau)-ipx(\\tau)}.\n\\end{aligned}\n\\]\nВ отличие от инерциального случая, положительная частота по \\(\\tau\\) содержит и \\(a_p\\), и \\(a_p^\\dagger\\)."
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-2.html#какой-интеграл-нам-понадобится",
+    "href": "ru/slides/UnruhEffect-2.html#какой-интеграл-нам-понадобится",
+    "title": "Эффект Унру для квантового поля",
+    "section": "Какой интеграл нам понадобится?",
+    "text": "Какой интеграл нам понадобится?\n\nВ корреляторе \\[\n\\langle 0_M|\ng^\\dagger(\\Omega) g(\\Omega') |0_M\\rangle\n\\] встречаются четыре типа вкладов: \\[\n\\begin{aligned}\n&\\propto I_q(\\Omega') I_p^*(\\Omega)\n\\langle 0_M|a_p^\\dagger a_q |0_M\\rangle = 0,\\\\\n&\\propto J_q(\\Omega') J_p^*(\\Omega)\n\\langle 0_M|a_p a_q^\\dagger |0_M\\rangle \\ne 0,\\\\\n&\\propto I_q(\\Omega') J_p^*(\\Omega)\n\\langle 0_M|a_p a_q |0_M\\rangle = 0,\\\\\n&\\propto J_q(\\Omega') I_p^*(\\Omega)\n\\langle 0_M|a_p^\\dagger a_q^\\dagger |0_M\\rangle = 0.\n\\end{aligned}\n\\]\nПоэтому нужно вычислить только \\(J_p(\\Omega)\\)."
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-2.html#основной-интеграл",
+    "href": "ru/slides/UnruhEffect-2.html#основной-интеграл",
+    "title": "Эффект Унру для квантового поля",
+    "section": "Основной интеграл",
+    "text": "Основной интеграл\n\nЗапишем \\[\np=\\epsilon\\omega, \\qquad \\epsilon=\\pm1, \\qquad \\omega&gt;0.\n\\]\nДля коэффициента при \\(a_p^\\dagger\\): \\[\nJ_\\epsilon(\\Omega,\\omega)\n= \\int_{-\\infty}^{+\\infty} d\\tau\\,\ne^{i\\Omega\\tau} e^{-i\\epsilon\\frac{\\omega}{a}e^{-\\epsilon a\\tau}}\n\\]\nЭтот интеграл равен \\[\n\\boxed{\nJ_\\epsilon(\\Omega,\\omega)\n=\n\\frac{1}{a}\n\\Gamma\\left(-i\\epsilon\\frac{\\Omega}{a}\\right)\n\\left(\\frac{\\omega}{a}\\right)^{i\\epsilon\\Omega/a}\ne^{-\\pi\\Omega/(2a)}.\n}\n\\]"
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-2.html#спектр-минковского-вакуума-в-ускоренной-системе",
+    "href": "ru/slides/UnruhEffect-2.html#спектр-минковского-вакуума-в-ускоренной-системе",
+    "title": "Эффект Унру для квантового поля",
+    "section": "Спектр Минковского вакуума в ускоренной системе",
+    "text": "Спектр Минковского вакуума в ускоренной системе\n\nПолучаем \\[\n\\langle 0_M|\ng^\\dagger(\\Omega)\ng(\\Omega')\n|0_M\\rangle\n=\n2\\pi\\delta(\\Omega-\\Omega')S(\\Omega).\n\\]\nГде \\[\nS(\\Omega)\n=\n\\frac{1}{\\Omega}\n\\frac{1}{e^{2\\pi\\Omega/a}-1}.\n\\]\nМинковский вакуум выглядит как тепловое состояние \\[\n\\boxed{n(\\Omega)=\\frac{1}{e^{2\\pi\\Omega/a}-1}.\n}\n\\]"
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-2.html#температура-унру",
+    "href": "ru/slides/UnruhEffect-2.html#температура-унру",
+    "title": "Эффект Унру для квантового поля",
+    "section": "Температура Унру",
+    "text": "Температура Унру\n\nСравниваем с тепловым инерциальным спектром: \\[\nS(\\Omega) = \\frac{1}{\\Omega} \\frac{1}{e^{\\beta\\Omega}-1}.\n\\]\nУ ускоренного наблюдателя: \\[\nS(\\Omega) = \\frac{1}{\\Omega} \\frac{1}{e^{2\\pi\\Omega/a}-1}.\n\\]\nПоэтому \\[\n\\beta=\\frac{2\\pi}{a},\n\\qquad\nT=\\frac{a}{2\\pi}.\n\\]"
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-2.html#энтропия-для-ускоренного-наблюдателя",
+    "href": "ru/slides/UnruhEffect-2.html#энтропия-для-ускоренного-наблюдателя",
+    "title": "Эффект Унру для квантового поля",
+    "section": "Энтропия для ускоренного наблюдателя",
+    "text": "Энтропия для ускоренного наблюдателя\n\nДля каждой риндлеровской частоты: \\(n_U(\\Omega)=\\frac{1}{e^{2\\pi\\Omega/a}-1}\\).\nЭнтропия одной бозонной моды: \\[\ns_U(\\Omega)=(1+n_U)\\ln(1+n_U)-n_U\\ln n_U.\n\\]\nПодставляя \\(n_U(\\Omega)\\), получаем: \\[\n\\boxed{s_U(\\Omega) = \\frac{2\\pi\\Omega/a}{e^{2\\pi\\Omega/a}-1}-\\ln\\left(1-e^{-2\\pi\\Omega/a} \\right)}\n\\]\nПри \\(a\\to 0\\) энтропия исчезает: \\(\\boxed{s_U(\\Omega) \\to 0}\\)."
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-2.html#почему-появляется-температура",
+    "href": "ru/slides/UnruhEffect-2.html#почему-появляется-температура",
+    "title": "Эффект Унру для квантового поля",
+    "section": "Почему появляется температура?",
+    "text": "Почему появляется температура?\n\nПространство Минковского можно разделить на два клина Риндлера: \\[\nR: x&gt;|t|,\n\\qquad\nL: x&lt;-|t|.\n\\]\nРавномерно ускоренный наблюдатель в правом клине не имеет доступа к левому клину: \\[\n\\rho_R\n=\n\\mathrm{Tr}_L\\, |0_M\\rangle\\langle 0_M|.\n\\]\nМинковский вакуум не факторизуется: \\[\n|0_M\\rangle\n\\ne\n|0_R\\rangle\\otimes |0_L\\rangle.\n\\]"
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-2.html#почему-появляется-температура-1",
+    "href": "ru/slides/UnruhEffect-2.html#почему-появляется-температура-1",
+    "title": "Эффект Унру для квантового поля",
+    "section": "Почему появляется температура?",
+    "text": "Почему появляется температура?\n\nДля каждой риндлеровской частоты он имеет вид запутанного состояния: \\[\n|0_M\\rangle_\\Omega\n=\n\\sqrt{1-e^{-2\\pi\\Omega/a}}\n\\sum_{n=0}^{\\infty}\ne^{-\\pi\\Omega n/a}\n|n_\\Omega^R\\rangle |n_\\Omega^L\\rangle.\n\\]\nЕсли левый клин недоступен, правый клин описывается смешанным состоянием: \\[\n\\rho_R^\\Omega\n=\n(1-e^{-2\\pi\\Omega/a})\n\\sum_{n=0}^{\\infty}\ne^{-2\\pi\\Omega n/a}\n|n_\\Omega^R\\rangle\\langle n_\\Omega^R|.\n\\]"
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-2.html#тепловой-вид-редуцированного-состояния",
+    "href": "ru/slides/UnruhEffect-2.html#тепловой-вид-редуцированного-состояния",
+    "title": "Эффект Унру для квантового поля",
+    "section": "Тепловой вид редуцированного состояния",
+    "text": "Тепловой вид редуцированного состояния\n\nПоследняя формула имеет канонический вид: \\[\n\\rho_R^\\Omega\n=\n\\frac{1}{Z_\\Omega}\ne^{-\\beta_U \\Omega N_\\Omega^R}.\n\\]\nСравнивая с \\[\n\\rho_\\beta\n=\n(1-e^{-\\beta\\Omega})\n\\sum_{n=0}^{\\infty}\ne^{-\\beta\\Omega n}\n|n\\rangle\\langle n|,\n\\]"
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-2.html#тепловой-вид-редуцированного-состояния-1",
+    "href": "ru/slides/UnruhEffect-2.html#тепловой-вид-редуцированного-состояния-1",
+    "title": "Эффект Унру для квантового поля",
+    "section": "Тепловой вид редуцированного состояния",
+    "text": "Тепловой вид редуцированного состояния\nполучаем \\[\n\\beta_U=\\frac{2\\pi}{a}.\n\\]\n\nЗначит \\[\n\\boxed{\nT_U=\\frac{a}{2\\pi}\n}\n\\]\nТепловой шум возникает потому, что ускоренный наблюдатель видит только часть запутанного вакуума Минковского."
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-2.html#важно",
+    "href": "ru/slides/UnruhEffect-2.html#важно",
+    "title": "Эффект Унру для квантового поля",
+    "section": "Важно",
+    "text": "Важно\n\nЭто не означает, что в вакууме Минковского есть обычный поток частиц.\nПолное состояние остаётся чистым: \\[\n\\rho_M=|0_M\\rangle\\langle 0_M|,\n\\qquad\nS_M=0.\n\\]\nСмешанным становится только редуцированное состояние правого клина: \\[\n\\rho_R=\\mathrm{Tr}_L\\,\\rho_M.\n\\]\nПоэтому энтропия ускоренного наблюдателя — это энтропия запутанности между клиньями Риндлера."
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-2.html#связь-операторов-унру-и-риндлера",
+    "href": "ru/slides/UnruhEffect-2.html#связь-операторов-унру-и-риндлера",
+    "title": "Эффект Унру для квантового поля",
+    "section": "Связь операторов Унру и Риндлера",
+    "text": "Связь операторов Унру и Риндлера\n\nДля одной риндлеровской частоты вводим оператор Унру: \\[\nd_\\Omega^R=u_\\Omega b_\\Omega^R-v_\\Omega b_\\Omega^{L\\dagger}.\n\\]\nКоэффициенты Боголюбова: \\[\nu_\\Omega\n=\n\\frac{1}{\\sqrt{1-e^{-2\\pi\\Omega/a}}},\n\\qquad\nv_\\Omega\n=\n\\frac{e^{-\\pi\\Omega/a}}{\\sqrt{1-e^{-2\\pi\\Omega/a}}}.\n\\]\nГлавное отношение: \\[\n\\frac{v_\\Omega}{u_\\Omega}\n=\ne^{-\\pi\\Omega/a}.\n\\]"
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-2.html#почему-это-вакуумное-условие",
+    "href": "ru/slides/UnruhEffect-2.html#почему-это-вакуумное-условие",
+    "title": "Эффект Унру для квантового поля",
+    "section": "Почему это вакуумное условие?",
+    "text": "Почему это вакуумное условие?\n\nОператор Унру уничтожает вакуум Минковского: \\[\nd_\\Omega^R |0_M\\rangle=0.\n\\]\nПодставляем связь с риндлеровскими операторами: \\[\n\\left(u_\\Omega b_\\Omega^R-v_\\Omega b_\\Omega^{L\\dagger}\\right)|0_M\\rangle=0.\n\\]\nПоэтому: \\[\nb_\\Omega^R |0_M\\rangle\n=\n\\frac{v_\\Omega}{u_\\Omega}\nb_\\Omega^{L\\dagger}|0_M\\rangle\n=\ne^{-\\pi\\Omega/a}\nb_\\Omega^{L\\dagger}|0_M\\rangle.\n\\]"
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-2.html#ищем-вакуум-в-риндлеровском-базисе",
+    "href": "ru/slides/UnruhEffect-2.html#ищем-вакуум-в-риндлеровском-базисе",
+    "title": "Эффект Унру для квантового поля",
+    "section": "Ищем вакуум в риндлеровском базисе",
+    "text": "Ищем вакуум в риндлеровском базисе\n\nДля одной частоты пишем анзац: \\[\n|0_M\\rangle_\\Omega\n=\n\\sum_{n=0}^{\\infty}\nC_n\n|n_\\Omega^L\\rangle |n_\\Omega^R\\rangle.\n\\]\nОператор в правом клине: \\[\nb_\\Omega^R\n|n_\\Omega^L\\rangle |n_\\Omega^R\\rangle\n=\n\\sqrt n\n|n_\\Omega^L\\rangle |n-1_\\Omega^R\\rangle.\n\\]\nОператор рождения в левом клине: \\[\nb_\\Omega^{L\\dagger}\n|n_\\Omega^L\\rangle |n_\\Omega^R\\rangle\n=\n\\sqrt{n+1}\n|n+1_\\Omega^L\\rangle |n_\\Omega^R\\rangle.\n\\]"
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-2.html#рекуррентное-соотношение",
+    "href": "ru/slides/UnruhEffect-2.html#рекуррентное-соотношение",
+    "title": "Эффект Унру для квантового поля",
+    "section": "Рекуррентное соотношение",
+    "text": "Рекуррентное соотношение\n\nПодставляем анзац: \\[\nb_\\Omega^R |0_M\\rangle_\\Omega\n=\ne^{-\\pi\\Omega/a}\nb_\\Omega^{L\\dagger}|0_M\\rangle_\\Omega.\n\\]\nПолучаем: \\[\n\\sum_{n=1}^{\\infty}\nC_n\\sqrt n\n|n_\\Omega^L\\rangle |n-1_\\Omega^R\\rangle\n=\ne^{-\\pi\\Omega/a}\n\\sum_{n=0}^{\\infty}\nC_n\\sqrt{n+1}\n|n+1_\\Omega^L\\rangle |n_\\Omega^R\\rangle.\n\\]\nСравнение коэффициентов даёт: \\[\nC_n\n=\ne^{-\\pi\\Omega/a} C_{n-1},\n\\qquad\nC_n\n=\ne^{-n\\pi\\Omega/a}C_0.\n\\]"
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-2.html#нормировка",
+    "href": "ru/slides/UnruhEffect-2.html#нормировка",
+    "title": "Эффект Унру для квантового поля",
+    "section": "Нормировка",
+    "text": "Нормировка\n\nНормировка состояния: \\[\n\\langle 0_M|0_M\\rangle_\\Omega=\\sum_{n=0}^{\\infty}|C_n|^2=1.\n\\]\nПодставляем найденные коэффициенты: \\[\n|C_0|^2\\sum_{n=0}^{\\infty}e^{-2\\pi\\Omega n/a}=\\frac{|C_0|^2}{1-e^{-2\\pi\\Omega/a}}=1.\n\\]\nПоэтому: \\[\nC_0\n=\n\\sqrt{1-e^{-2\\pi\\Omega/a}}.\n\\]"
+  },
+  {
+    "objectID": "ru/slides/UnruhEffect-2.html#вакуум-минковского-в-базисе-риндлера",
+    "href": "ru/slides/UnruhEffect-2.html#вакуум-минковского-в-базисе-риндлера",
+    "title": "Эффект Унру для квантового поля",
+    "section": "Вакуум Минковского в базисе Риндлера",
+    "text": "Вакуум Минковского в базисе Риндлера\n\nДля одной частоты: \\[\n\\boxed{\n|0_M\\rangle_\\Omega\n=\n\\sqrt{1-e^{-2\\pi\\Omega/a}}\n\\sum_{n=0}^{\\infty}\ne^{-\\pi\\Omega n/a}\n|n_\\Omega^L\\rangle |n_\\Omega^R\\rangle\n}\n\\]\nЭто двухмодовое запутанное состояние: \\[\nn_L=n_R.\n\\]\nПолный вакуум — произведение по частотам: \\[\n|0_M\\rangle\n=\n\\prod_{\\Omega}\n|0_M\\rangle_\\Omega.\n\\]"
+  }
+]
