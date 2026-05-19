@@ -11,3 +11,9 @@ format:
     toc: true
     toc-depth: 1
     toc-title: "План лекции"
+    include-after-body:
+      text: |
+        <nav class="nh-slide-nav" aria-label="Навигация">
+          <a href="https://neutrinohit.github.io/">NeutrinoHit</a>
+          <a href="../../index.html">КТП</a>
+        </nav>

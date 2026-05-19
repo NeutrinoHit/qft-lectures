@@ -48,3 +48,33 @@ $code-block-font-size: 0.58em;
 .reveal .slide pre code {
   color: #f2f2f2;
 }
+
+.nh-slide-nav {
+  position: fixed;
+  top: 0.7rem;
+  left: 0.7rem;
+  z-index: 40;
+  display: flex;
+  gap: 0.35rem;
+  font: 600 14px/1.2 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.nh-slide-nav a {
+  padding: 0.28rem 0.48rem;
+  border: 1px solid rgba(124, 199, 255, 0.55);
+  border-radius: 8px;
+  color: #eaf6ff;
+  background: rgba(0, 0, 0, 0.52);
+  text-decoration: none;
+}
+
+.nh-slide-nav a:hover {
+  color: #ffffff;
+  background: rgba(18, 92, 130, 0.78);
+}
+
+@media print {
+  .nh-slide-nav {
+    display: none;
+  }
+}
