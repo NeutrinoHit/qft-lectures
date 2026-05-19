@@ -182,7 +182,7 @@ toc: false
       <p>Подборка HTML-слайдов по ускоренным системам отсчета и эффекту Унру.</p>
     </div>
     <div class="qft-links">
-      <a href="slides.html">Открыть слайды</a>
+      <a href="unruh.html">Открыть слайды</a>
     </div>
   </section>
 </div>
