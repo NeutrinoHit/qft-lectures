@@ -1,9 +1,189 @@
 ---
-title: "Квантовая теория поля"
+title: "Лекции по квантовой теории поля"
+toc: false
 ---
 
-Лекции по квантовой теории поля.
+```{=html}
+<style>
+  .qft-lead {
+    max-width: 50rem;
+    margin: 0.25rem 0 1.8rem;
+    color: #4a5561;
+    font-size: 1.05rem;
+  }
 
-## Разделы
+  .qft-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0 2rem;
+  }
 
-- [Слайды](slides.qmd)
+  .qft-card {
+    display: grid;
+    align-content: space-between;
+    min-height: 15rem;
+    padding: 1.15rem;
+    border: 1px solid #d7dde2;
+    border-radius: 8px;
+    background: #ffffff;
+    box-shadow: 0 10px 28px rgba(31, 43, 51, 0.07);
+  }
+
+  .qft-card-book {
+    background:
+      linear-gradient(135deg, rgba(31, 111, 120, 0.16), rgba(255, 255, 255, 0.88) 58%),
+      #ffffff;
+  }
+
+  .qft-card-intro {
+    background:
+      linear-gradient(135deg, rgba(54, 95, 145, 0.15), rgba(255, 255, 255, 0.90) 58%),
+      #ffffff;
+  }
+
+  .qft-card-sm {
+    background:
+      linear-gradient(135deg, rgba(111, 82, 154, 0.15), rgba(255, 255, 255, 0.90) 58%),
+      #ffffff;
+  }
+
+  .qft-card-renorm {
+    background:
+      linear-gradient(135deg, rgba(159, 92, 73, 0.16), rgba(255, 255, 255, 0.90) 58%),
+      #ffffff;
+  }
+
+  .qft-card-unruh {
+    background:
+      linear-gradient(135deg, rgba(191, 139, 44, 0.18), rgba(255, 255, 255, 0.90) 58%),
+      #ffffff;
+  }
+
+  .qft-label {
+    display: inline-flex;
+    width: fit-content;
+    margin-bottom: 0.7rem;
+    padding: 0.18rem 0.55rem;
+    border: 1px solid rgba(37, 49, 58, 0.12);
+    border-radius: 999px;
+    color: #465663;
+    background: rgba(255, 255, 255, 0.58);
+    font-size: 0.78rem;
+    font-weight: 700;
+  }
+
+  .qft-card h2 {
+    margin: 0 0 0.55rem;
+    color: #25313a;
+    font-size: 1.25rem;
+    line-height: 1.25;
+  }
+
+  .qft-card p {
+    margin: 0 0 1rem;
+    color: #4b5964;
+  }
+
+  .qft-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-top: 0.8rem;
+  }
+
+  .qft-links a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.1rem;
+    padding: 0.4rem 0.65rem;
+    border: 1px solid #b8c2cc;
+    border-radius: 8px;
+    color: #25313a;
+    background: rgba(255, 255, 255, 0.72);
+    text-decoration: none;
+    font-weight: 650;
+  }
+
+  .qft-links a:hover {
+    border-color: #1f6f78;
+    color: #16565d;
+    background: #ffffff;
+    text-decoration: none;
+  }
+</style>
+
+<p class="qft-lead">
+  Материалы по квантовой теории поля: учебник, конспекты, видеокурсы и слайды.
+</p>
+
+<div class="qft-grid">
+  <section class="qft-card qft-card-book">
+    <div>
+      <span class="qft-label">Учебник</span>
+      <h2>Квантовая теория для экспериментаторов и не только</h2>
+      <p>Два тома учебника в Google Play Books.</p>
+    </div>
+    <div class="qft-links">
+      <a href="https://play.google.com/store/books/details?id=uLXTEQAAQBAJ&amp;hl=en_US">Том 1</a>
+      <a href="https://play.google.com/store/books/details?id=KrbTEQAAQBAJ&amp;hl=en_US">Том 2</a>
+    </div>
+  </section>
+
+  <section class="qft-card qft-card-intro">
+    <div>
+      <span class="qft-label">Курс лекций</span>
+      <h2>Введение в квантовую теорию поля</h2>
+      <p>Базовый курс: конспект, видеозаписи и страница курса.</p>
+    </div>
+    <div class="qft-links">
+      <a href="https://teach-in.ru/file/synopsis/pdf/quantum-field-theory-naumov-MKv0.pdf">Конспект</a>
+      <a href="https://www.youtube.com/playlist?list=PL28BG43DETPR-fdQGsm0qO2YhMWVsNa29">YouTube</a>
+      <a href="https://rutube.ru/plst/1531108/">RuTube</a>
+      <a href="https://vkvideo.ru/playlist/-235607329_5">VK</a>
+      <a href="https://teach-in.ru/course/quantum-field-theory-naumov">Teach-in</a>
+    </div>
+  </section>
+
+  <section class="qft-card qft-card-sm">
+    <div>
+      <span class="qft-label">Курс лекций</span>
+      <h2>Стандартная модель</h2>
+      <p>Курс по введению в Стандартную модель: конспект и видеоматериалы.</p>
+    </div>
+    <div class="qft-links">
+      <a href="https://teach-in.ru/file/synopsis/pdf/introduction-to-the-standard-model-MKv0.pdf">Конспект</a>
+      <a href="https://www.youtube.com/playlist?list=PL28BG43DETPT6A-H6fUtZvOJl0lv-YPZV">YouTube</a>
+      <a href="https://rutube.ru/plst/1538123">RuTube</a>
+      <a href="https://vkvideo.ru/playlist/-235607329_6">VK</a>
+      <a href="https://teach-in.ru/course/introduction-to-the-standard-model">Teach-in</a>
+    </div>
+  </section>
+
+  <section class="qft-card qft-card-renorm">
+    <div>
+      <span class="qft-label">Курс лекций</span>
+      <h2>Ренормировка в квантовой теории поля</h2>
+      <p>Конспект курса и видеоплейлисты по ренормировке.</p>
+    </div>
+    <div class="qft-links">
+      <a href="https://teach-in.ru/file/synopsis/pdf/renormalization-in-qft-M.pdf">Конспект</a>
+      <a href="https://www.youtube.com/playlist?list=PL28BG43DETPT4L04sUPUNvZC93w4b60wG">YouTube</a>
+      <a href="https://rutube.ru/plst/1530811">RuTube</a>
+      <a href="https://vkvideo.ru/playlist/-235607329_4">VK</a>
+      <a href="https://teach-in.ru/course/renormalization-in-qft">Teach-in</a>
+    </div>
+  </section>
+
+  <section class="qft-card qft-card-unruh">
+    <div>
+      <span class="qft-label">Слайды</span>
+      <h2>Эффект Унру</h2>
+      <p>Подборка HTML-слайдов по ускоренным системам отсчета и эффекту Унру.</p>
+    </div>
+    <div class="qft-links">
+      <a href="slides.html">Открыть слайды</a>
+    </div>
+  </section>
+</div>
+```
