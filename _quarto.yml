@@ -1,6 +1,9 @@
 project:
   type: website
   output-dir: _site
+  resources:
+    - "assets/**"
+    - "shared/reveal/**"
 
 lang: ru-RU
 
@@ -8,20 +11,11 @@ website:
   title: "Квантовая теория поля"
   site-url: "https://neutrinohit.github.io/qft-lectures/"
   repo-url: "https://github.com/NeutrinoHit/qft-lectures"
-  navbar:
-    background: light
-    left:
-      - text: "NeutrinoHit"
-        href: "https://neutrinohit.github.io/"
-      - text: "Главная КТП"
-        href: index.qmd
-      - text: "Эффект Унру"
-        href: unruh.qmd
-    tools:
-      - icon: github
-        href: "https://github.com/NeutrinoHit/qft-lectures"
 
 format:
   html:
     theme: cosmo
-    toc: true
+    css: styles.css
+    toc: false
+    page-layout: full
+    include-after-body: analytics/cloudflare-web-analytics.html

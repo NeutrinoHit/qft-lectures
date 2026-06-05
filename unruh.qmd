@@ -1,10 +1,75 @@
 ---
-title: "Эффект Унру"
+title: "Ускоренные системы отсчета и эффект Унру"
+toc: false
 ---
 
-## Слайды
+```{=html}
+<style>
+  .quarto-title-block {
+    display: none;
+  }
+</style>
 
-- [Релятивистское ускорение и координаты Риндлера](ru/slides/Rindler.html)
-- [Термодинамика в квантовой теории поля](ru/slides/Thermodynamics.html)
-- [Эффект Унру для плоской волны](ru/slides/UnruhEffect-1.html)
-- [Эффект Унру для квантового поля](ru/slides/UnruhEffect-2.html)
+<div class="course-index course-subpage">
+  <a class="course-back-link" href="index.html">← Все материалы по КТП</a>
+
+  <section class="course-intro">
+    <p class="course-kicker">Мини-курс</p>
+    <h1>Ускоренные системы отсчета и эффект Унру</h1>
+    <p>
+      Четыре последовательные лекции: от релятивистского ускорения и координат
+      Риндлера до теплового спектра, который видит ускоренный наблюдатель.
+    </p>
+  </section>
+
+  <section class="course-accordion" aria-label="Лекции мини-курса">
+    <details class="course-row" open>
+      <summary>
+        <span class="course-row-kind">01</span>
+        <span>Релятивистское ускорение и координаты Риндлера</span>
+      </summary>
+      <div class="course-row-body">
+        <div class="course-links">
+          <a href="ru/slides/Rindler.html">Открыть лекцию</a>
+        </div>
+      </div>
+    </details>
+
+    <details class="course-row">
+      <summary>
+        <span class="course-row-kind">02</span>
+        <span>Введение в квантовую статистическую механику</span>
+      </summary>
+      <div class="course-row-body">
+        <div class="course-links">
+          <a href="ru/slides/Thermodynamics.html">Открыть лекцию</a>
+        </div>
+      </div>
+    </details>
+
+    <details class="course-row">
+      <summary>
+        <span class="course-row-kind">03</span>
+        <span>Эффект Унру для плоской волны</span>
+      </summary>
+      <div class="course-row-body">
+        <div class="course-links">
+          <a href="ru/slides/UnruhEffect-1.html">Открыть лекцию</a>
+        </div>
+      </div>
+    </details>
+
+    <details class="course-row">
+      <summary>
+        <span class="course-row-kind">04</span>
+        <span>Эффект Унру для квантового поля</span>
+      </summary>
+      <div class="course-row-body">
+        <div class="course-links">
+          <a href="ru/slides/UnruhEffect-2.html">Открыть лекцию</a>
+        </div>
+      </div>
+    </details>
+  </section>
+</div>
+```
