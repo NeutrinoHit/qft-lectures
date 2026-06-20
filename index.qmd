@@ -106,6 +106,20 @@ toc: false
         </div>
       </div>
     </details>
+
+    <details class="course-row">
+      <summary>
+        <span class="course-row-kind">Отдельная лекция</span>
+        <span>Attraction and Repulsion in Quantum Field Theory</span>
+      </summary>
+      <div class="course-row-body">
+        <p>Wave packets in scalar QED: field-theoretic language for attraction and repulsion.</p>
+        <div class="course-links">
+          <a href="scalar-qed-attraction-repulsion.html">Открыть страницу лекции</a>
+          <a href="en/slides/ScalarQEDAttractionRepulsion.html">Открыть слайды</a>
+        </div>
+      </div>
+    </details>
   </section>
 </div>
 ```

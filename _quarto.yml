@@ -4,6 +4,8 @@ project:
   resources:
     - "assets/**"
     - "shared/reveal/**"
+    - "ru/slides/media/**"
+    - "en/slides/media/**"
 
 lang: ru-RU
 

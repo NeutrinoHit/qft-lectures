@@ -1,0 +1,47 @@
+---
+title: "Attraction and Repulsion in Quantum Field Theory"
+toc: false
+---
+
+```{=html}
+<style>
+  .quarto-title-block {
+    display: none;
+  }
+</style>
+
+<div class="course-index course-subpage">
+  <a class="course-back-link" href="index.html">← Все материалы по КТП</a>
+
+  <section class="course-intro">
+    <p class="course-kicker">Отдельная лекция</p>
+    <h1>Attraction and Repulsion in Quantum Field Theory</h1>
+    <p>
+      Wave-packet lecture in scalar QED: how the sign of the charge product,
+      the field configuration and the eikonal phase encode attraction and
+      repulsion in a field-theoretic language.
+    </p>
+    <div class="course-links">
+      <a href="en/slides/ScalarQEDAttractionRepulsion.html">Открыть слайды</a>
+    </div>
+  </section>
+
+  <section class="course-accordion" aria-label="Материалы лекции">
+    <details class="course-row" open>
+      <summary>
+        <span class="course-row-kind">Slides</span>
+        <span>Wave packets in scalar QED</span>
+      </summary>
+      <div class="course-row-body">
+        <p>
+          One-hour lecture with formulas, Gaussian-packet regularization and
+          two short animations for same-sign and opposite-sign charges.
+        </p>
+        <div class="course-links">
+          <a href="en/slides/ScalarQEDAttractionRepulsion.html">HTML slides</a>
+        </div>
+      </div>
+    </details>
+  </section>
+</div>
+```

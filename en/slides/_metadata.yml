@@ -1,0 +1,17 @@
+lang: en
+
+format:
+  revealjs:
+    theme: [dark, ../../shared/styles/neutrinohit-reveal.scss]
+    slide-number: true
+    chalkboard: true
+    preview-links: auto
+    transition: none
+    background-transition: none
+    toc: true
+    toc-depth: 1
+    toc-title: "Lecture map"
+    include-after-body:
+      - text: |
+          <script data-external="1" data-context-home="../../index.html" data-context-home-label="QFT lectures home" src="../../shared/reveal/neutrinohit-reveal-footer.js"></script>
+      - ../../analytics/cloudflare-web-analytics.html
