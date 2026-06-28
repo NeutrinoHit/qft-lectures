@@ -1,0 +1,58 @@
+```{=html}
+<svg class="story-scattering-animation" viewBox="0 0 920 520" role="img" aria-label="Repulsion and attraction as two signs of one scattering mechanism">
+  <defs>
+    <filter id="story-particle-glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="920" height="520" rx="24" fill="#050505"/>
+  <line x1="460" y1="56" x2="460" y2="464" class="center-line"/>
+
+  <g transform="translate(0 10)">
+    <text x="52" y="48" class="scattering-panel-title">Repulsion</text>
+    <text x="52" y="78" class="scattering-panel-subtitle">like charges bend away</text>
+    <circle cx="230" cy="260" r="118" class="field-ring field-pulse"/>
+    <circle cx="230" cy="260" r="74" class="field-ring field-pulse"/>
+    <path d="M 44 212 C 140 212, 210 198, 338 102" class="trajectory"/>
+    <path d="M 416 308 C 320 308, 250 322, 122 418" class="trajectory"/>
+
+    <g class="charge-orbit" filter="url(#story-particle-glow)">
+      <circle r="18" class="charge-positive"/>
+      <text y="1">+</text>
+      <animateMotion dur="5s" repeatCount="indefinite" rotate="0" path="M 44 212 C 140 212, 210 198, 338 102"/>
+    </g>
+
+    <g class="charge-orbit" filter="url(#story-particle-glow)">
+      <circle r="18" class="charge-positive"/>
+      <text y="1">+</text>
+      <animateMotion dur="5s" repeatCount="indefinite" rotate="0" path="M 416 308 C 320 308, 250 322, 122 418"/>
+    </g>
+  </g>
+
+  <g transform="translate(0 10)">
+    <text x="512" y="48" class="scattering-panel-title">Attraction</text>
+    <text x="512" y="78" class="scattering-panel-subtitle">opposite charges bend toward each other</text>
+    <circle cx="690" cy="260" r="118" class="field-ring field-pulse"/>
+    <circle cx="690" cy="260" r="74" class="field-ring field-pulse"/>
+    <path d="M 520 217 C 650 218, 710 235, 844 340" class="trajectory"/>
+    <path d="M 858 303 C 728 302, 670 285, 536 180" class="trajectory"/>
+
+    <g class="charge-orbit" filter="url(#story-particle-glow)">
+      <circle r="18" class="charge-positive"/>
+      <text y="1">+</text>
+      <animateMotion dur="5s" repeatCount="indefinite" rotate="0" path="M 520 217 C 650 218, 710 235, 844 340"/>
+    </g>
+
+    <g class="charge-orbit" filter="url(#story-particle-glow)">
+      <circle r="18" class="charge-negative"/>
+      <text y="1">-</text>
+      <animateMotion dur="5s" repeatCount="indefinite" rotate="0" path="M 858 303 C 728 302, 670 285, 536 180"/>
+    </g>
+  </g>
+</svg>
+```

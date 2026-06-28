@@ -1,0 +1,463 @@
+## Two waves turning a packet
+
+::: {.wave-plane-equation}
+$$
+\begin{aligned}
+\psi(\mathbf r,t)&=\psi_0(\mathbf r,t)+\Delta\psi(\mathbf r,t),
+\qquad
+\Delta\psi=\psi_{\rm cl}-\psi_0,\\
+\Delta\psi
+&\simeq
+-\delta\mathbf R\cdot\nabla\psi_0
++i\,\delta\mathbf P\cdot(\mathbf r-\mathbf R_0)\psi_0,\\
+m\ddot{\mathbf R}_{\rm cl}
+&=\lambda q_1q_2
+\frac{\mathbf R_{\rm cl}}{(|\mathbf R_{\rm cl}|^2+a^2)^{3/2}} .
+\end{aligned}
+$$
+:::
+
+```{ojs}
+//| echo: false
+{
+  const root = html`<div class="wave-plane-widget">
+    <div class="wave-plane-controls">
+      <label>
+        <span>shown quantity</span>
+        <select name="mode">
+          <option value="result">result density |psi0 + Delta psi|^2</option>
+          <option value="initial">initial density |psi0|^2</option>
+          <option value="delta">interaction wave Re Delta psi</option>
+          <option value="change">density change Delta G</option>
+        </select>
+      </label>
+
+      <label>
+        <span>interaction</span>
+        <select name="interaction">
+          <option value="-1">attraction: q1 q2 &lt; 0</option>
+          <option value="1">repulsion: q1 q2 &gt; 0</option>
+        </select>
+      </label>
+
+      <label>
+        <span>strength</span>
+        <input name="strength" type="range" min="0.12" max="0.72" step="0.03" value="0.39">
+        <output></output>
+      </label>
+
+      <label>
+        <span>time</span>
+        <input name="time" type="range" min="0" max="6.4" step="0.02" value="2.7">
+        <output></output>
+      </label>
+
+      <button type="button" name="play">pause</button>
+    </div>
+
+    <canvas class="wave-plane-canvas" aria-label="Wave packet, interaction-induced wave, and their sum"></canvas>
+
+    <div class="wave-plane-legend">
+      <span><i class="legend-source"></i> source</span>
+      <span><i class="legend-straight"></i> free center</span>
+      <span><i class="legend-classical"></i> classical center</span>
+      <span><i class="legend-density"></i> probability density</span>
+      <span><i class="legend-signed"></i> signed correction</span>
+      <span><i class="legend-phase"></i> phase fronts</span>
+    </div>
+  </div>`;
+
+  const canvas = root.querySelector("canvas");
+  const ctx = canvas.getContext("2d");
+  const mode = root.querySelector("[name='mode']");
+  const interaction = root.querySelector("[name='interaction']");
+  const strength = root.querySelector("[name='strength']");
+  const strengthOut = strength.nextElementSibling;
+  const time = root.querySelector("[name='time']");
+  const timeOut = time.nextElementSibling;
+  const play = root.querySelector("[name='play']");
+
+  const width = 1080;
+  const height = 472;
+  const dpr = window.devicePixelRatio || 1;
+  canvas.width = Math.round(width * dpr);
+  canvas.height = Math.round(height * dpr);
+  canvas.style.width = "100%";
+  canvas.style.height = "auto";
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+  const gridWidth = 320;
+  const gridHeight = 140;
+  const buffer = document.createElement("canvas");
+  buffer.width = gridWidth;
+  buffer.height = gridHeight;
+  const bufferCtx = buffer.getContext("2d");
+  const imageData = bufferCtx.createImageData(gridWidth, gridHeight);
+
+  const domain = {xmin: -4.55, xmax: 4.65, ymin: -2.25, ymax: 2.1};
+  const tMax = 6.4;
+  const dt = 0.01;
+  const sigma = 0.54;
+  const sigma2 = sigma * sigma;
+  const k0 = 13.5;
+  const phaseRate = 5.2;
+  const vFree = 1.05;
+  const yImpact = 0.82;
+  const xStart = -3.55;
+  const softening = 0.26;
+  const forceScale = 0.68;
+
+  let running = true;
+  let lastFrame = performance.now();
+  let frameId = null;
+  let cachedSign = Number(interaction.value);
+  let cachedStrength = Number(strength.value);
+  let trajectory = integrateTrajectory(cachedSign, cachedStrength);
+
+  const xToCanvas = (x) => (x - domain.xmin) / (domain.xmax - domain.xmin) * width;
+  const yToCanvas = (y) => height - (y - domain.ymin) / (domain.ymax - domain.ymin) * height;
+  const canvasToX = (px) => domain.xmin + px / (gridWidth - 1) * (domain.xmax - domain.xmin);
+  const canvasToY = (py) => domain.ymax - py / (gridHeight - 1) * (domain.ymax - domain.ymin);
+  const freeCenter = (t) => ({x: xStart + vFree * t, y: yImpact, vx: vFree, vy: 0});
+
+  function integrateTrajectory(sign, strengthValue) {
+    const n = Math.ceil(tMax / dt) + 1;
+    let x = xStart;
+    let y = yImpact;
+    let vx = vFree;
+    let vy = 0;
+    const points = [];
+
+    for (let i = 0; i < n; i++) {
+      const t = i * dt;
+      points.push({t, x, y, vx, vy});
+
+      const r2 = x * x + y * y + softening * softening;
+      const invR3 = 1 / Math.pow(r2, 1.5);
+      const ax = sign * forceScale * strengthValue * x * invR3;
+      const ay = sign * forceScale * strengthValue * y * invR3;
+
+      vx += ax * dt;
+      vy += ay * dt;
+      x += vx * dt;
+      y += vy * dt;
+    }
+
+    return points;
+  }
+
+  function pointAt(points, t) {
+    const clamped = Math.max(0, Math.min(tMax, t));
+    const raw = clamped / dt;
+    const i = Math.min(points.length - 2, Math.floor(raw));
+    const f = raw - i;
+    const a = points[i];
+    const b = points[i + 1];
+    return {
+      x: a.x + (b.x - a.x) * f,
+      y: a.y + (b.y - a.y) * f,
+      vx: a.vx + (b.vx - a.vx) * f,
+      vy: a.vy + (b.vy - a.vy) * f
+    };
+  }
+
+  function waveAt(x, y, center, velocity, t) {
+    const dx = x - center.x;
+    const dy = y - center.y;
+    const speed = Math.max(0.2, Math.hypot(velocity.vx, velocity.vy));
+    const ux = velocity.vx / speed;
+    const uy = velocity.vy / speed;
+    const k = k0 * speed / vFree;
+    const envelope = Math.exp(-(dx * dx + dy * dy) / (2 * sigma2));
+    const phase = k * (ux * dx + uy * dy) - phaseRate * t;
+
+    return {
+      re: envelope * Math.cos(phase),
+      im: envelope * Math.sin(phase),
+      density: envelope * envelope,
+      phase,
+      envelope
+    };
+  }
+
+  function fieldsAt(x, y, t, free, classical) {
+    const psi0 = waveAt(x, y, free, free, t);
+    const psic = waveAt(x, y, classical, classical, t);
+    const dre = psic.re - psi0.re;
+    const dim = psic.im - psi0.im;
+    const deltaDensity = psic.density - psi0.density;
+    const interference = 2 * (psi0.re * dre + psi0.im * dim);
+
+    return {psi0, psic, dre, dim, deltaDensity, interference};
+  }
+
+  function writeDensity(offset, density, palette) {
+    const a = Math.min(1, Math.sqrt(Math.max(0, density)) * 1.22);
+    const base = 7 + Math.round(14 * a);
+    imageData.data[offset] = base + Math.round(palette[0] * a);
+    imageData.data[offset + 1] = base + Math.round(palette[1] * a);
+    imageData.data[offset + 2] = base + Math.round(palette[2] * a);
+    imageData.data[offset + 3] = 255;
+  }
+
+  function writeSigned(offset, value, scale) {
+    const signed = Math.tanh(scale * value);
+    const a = Math.abs(signed);
+    const base = 9 + Math.round(16 * a);
+
+    if (signed >= 0) {
+      imageData.data[offset] = base + Math.round(70 * a);
+      imageData.data[offset + 1] = base + Math.round(150 * a);
+      imageData.data[offset + 2] = base + Math.round(235 * a);
+    } else {
+      imageData.data[offset] = base + Math.round(235 * a);
+      imageData.data[offset + 1] = base + Math.round(120 * a);
+      imageData.data[offset + 2] = base + Math.round(45 * a);
+    }
+    imageData.data[offset + 3] = 255;
+  }
+
+  function drawPath(points, style) {
+    ctx.save();
+    ctx.beginPath();
+    for (let i = 0; i < points.length; i += 15) {
+      const p = points[i];
+      const x = xToCanvas(p.x);
+      const y = yToCanvas(p.y);
+      if (i === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    }
+    ctx.strokeStyle = style.stroke;
+    ctx.lineWidth = style.width;
+    ctx.globalAlpha = style.alpha ?? 1;
+    if (style.dash) ctx.setLineDash(style.dash);
+    ctx.stroke();
+    ctx.restore();
+  }
+
+  function drawArrow(from, to, color, widthValue = 2.6) {
+    const x1 = xToCanvas(from.x);
+    const y1 = yToCanvas(from.y);
+    const x2 = xToCanvas(to.x);
+    const y2 = yToCanvas(to.y);
+    const angle = Math.atan2(y2 - y1, x2 - x1);
+    ctx.save();
+    ctx.strokeStyle = color;
+    ctx.fillStyle = color;
+    ctx.lineWidth = widthValue;
+    ctx.lineCap = "round";
+    ctx.beginPath();
+    ctx.moveTo(x1, y1);
+    ctx.lineTo(x2, y2);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(x2, y2);
+    ctx.lineTo(x2 - 12 * Math.cos(angle - 0.42), y2 - 12 * Math.sin(angle - 0.42));
+    ctx.lineTo(x2 - 12 * Math.cos(angle + 0.42), y2 - 12 * Math.sin(angle + 0.42));
+    ctx.closePath();
+    ctx.fill();
+    ctx.restore();
+  }
+
+  function roundedRect(context, x, y, w, h, r) {
+    context.beginPath();
+    context.moveTo(x + r, y);
+    context.lineTo(x + w - r, y);
+    context.quadraticCurveTo(x + w, y, x + w, y + r);
+    context.lineTo(x + w, y + h - r);
+    context.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+    context.lineTo(x + r, y + h);
+    context.quadraticCurveTo(x, y + h, x, y + h - r);
+    context.lineTo(x, y + r);
+    context.quadraticCurveTo(x, y, x + r, y);
+    context.closePath();
+  }
+
+  function drawPhaseFronts(center, velocity, color) {
+    const speed = Math.max(0.2, Math.hypot(velocity.vx, velocity.vy));
+    const ux = velocity.vx / speed;
+    const uy = velocity.vy / speed;
+    const nx = -uy;
+    const ny = ux;
+    const spacing = 0.42;
+    const halfLength = 1.28;
+
+    ctx.save();
+    ctx.strokeStyle = color;
+    ctx.lineWidth = 1.55;
+    ctx.lineCap = "round";
+
+    for (let s = -1.9; s <= 1.9; s += spacing) {
+      const alpha = 0.08 + 0.22 * Math.exp(-0.5 * (s / 1.0) ** 2);
+      const cx = center.x + ux * s;
+      const cy = center.y + uy * s;
+      const len = halfLength * Math.sqrt(Math.max(0.08, 1 - (s / 2.05) ** 2));
+
+      ctx.globalAlpha = alpha;
+      ctx.beginPath();
+      ctx.moveTo(xToCanvas(cx - nx * len), yToCanvas(cy - ny * len));
+      ctx.lineTo(xToCanvas(cx + nx * len), yToCanvas(cy + ny * len));
+      ctx.stroke();
+    }
+    ctx.restore();
+  }
+
+  function drawTextPanel(t, modeValue, q12) {
+    const titles = {
+      result: "result density",
+      initial: "initial density",
+      delta: "interaction wave",
+      change: "density redistribution"
+    };
+    const subtitles = {
+      result: "|psi0 + Delta psi|^2 = |psi_cl|^2",
+      initial: "free packet before the interaction",
+      delta: "signed Re Delta psi, not a probability",
+      change: "Delta G = |psi_cl|^2 - |psi0|^2"
+    };
+
+    ctx.save();
+    ctx.fillStyle = "rgba(5, 5, 5, 0.78)";
+    ctx.strokeStyle = "rgba(215, 221, 232, 0.28)";
+    ctx.lineWidth = 1;
+    roundedRect(ctx, 24, 22, 390, 94, 8);
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.fillStyle = "#f2f2f2";
+    ctx.font = "700 20px system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif";
+    ctx.fillText(titles[modeValue], 44, 54);
+    ctx.font = "15px system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif";
+    ctx.fillStyle = "#b8c4d8";
+    ctx.fillText(subtitles[modeValue], 44, 81);
+    ctx.fillText(`t = ${t.toFixed(2)},  q1 q2 ${q12 < 0 ? "< 0" : "> 0"}`, 44, 103);
+    ctx.restore();
+  }
+
+  function drawOverlays(t, free, classical, modeValue, q12) {
+    const freePath = Array.from({length: 140}, (_, i) => {
+      const tt = tMax * i / 139;
+      return freeCenter(tt);
+    });
+
+    drawPath(freePath, {stroke: "#d7dde8", width: 2, alpha: 0.36, dash: [8, 7]});
+    drawPath(trajectory, {stroke: "#ffcc4d", width: 3.2, alpha: 0.84});
+
+    if (modeValue === "initial") {
+      drawPhaseFronts(free, free, "#d7dde8");
+    } else if (modeValue === "result") {
+      drawPhaseFronts(classical, classical, "#fff2a8");
+    }
+
+    const sourceX = xToCanvas(0);
+    const sourceY = yToCanvas(0);
+    ctx.save();
+    ctx.fillStyle = "#ffffff";
+    ctx.strokeStyle = "rgba(255,255,255,0.88)";
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.arc(sourceX, sourceY, 7, 0, 2 * Math.PI);
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.fillStyle = "#d7dde8";
+    ctx.beginPath();
+    ctx.arc(xToCanvas(free.x), yToCanvas(free.y), 4.6, 0, 2 * Math.PI);
+    ctx.fill();
+
+    ctx.fillStyle = "#ffcc4d";
+    ctx.beginPath();
+    ctx.arc(xToCanvas(classical.x), yToCanvas(classical.y), 6, 0, 2 * Math.PI);
+    ctx.fill();
+    ctx.restore();
+
+    const pScale = 0.42;
+    if (modeValue === "initial") {
+      drawArrow(free, {x: free.x + pScale, y: free.y}, "#d7dde8", 2.4);
+    } else {
+      drawArrow(classical, {x: classical.x + pScale * classical.vx, y: classical.y + pScale * classical.vy}, "#ffcc4d", 2.8);
+    }
+
+    const dx = classical.x - free.x;
+    const dy = classical.y - free.y;
+    if (Math.hypot(dx, dy) > 0.08 && modeValue !== "initial") {
+      drawArrow(free, classical, "rgba(255, 204, 77, 0.72)", 2.0);
+    }
+
+    drawTextPanel(t, modeValue, q12);
+  }
+
+  function draw(t) {
+    const q12 = Number(interaction.value);
+    const strengthValue = Number(strength.value);
+    if (q12 !== cachedSign || strengthValue !== cachedStrength) {
+      cachedSign = q12;
+      cachedStrength = strengthValue;
+      trajectory = integrateTrajectory(cachedSign, cachedStrength);
+    }
+
+    const free = freeCenter(t);
+    const classical = pointAt(trajectory, t);
+    const modeValue = mode.value;
+
+    for (let py = 0; py < gridHeight; py++) {
+      const y = canvasToY(py);
+      for (let px = 0; px < gridWidth; px++) {
+        const x = canvasToX(px);
+        const fields = fieldsAt(x, y, t, free, classical);
+        const offset = 4 * (py * gridWidth + px);
+
+        if (modeValue === "initial") {
+          writeDensity(offset, fields.psi0.density, [68, 155, 245]);
+        } else if (modeValue === "result") {
+          writeDensity(offset, fields.psic.density, [245, 188, 64]);
+        } else if (modeValue === "delta") {
+          writeSigned(offset, fields.dre, 2.25);
+        } else {
+          writeSigned(offset, fields.deltaDensity, 3.5);
+        }
+      }
+    }
+
+    bufferCtx.putImageData(imageData, 0, 0);
+    ctx.clearRect(0, 0, width, height);
+    ctx.imageSmoothingEnabled = true;
+    ctx.drawImage(buffer, 0, 0, width, height);
+
+    drawOverlays(t, free, classical, modeValue, q12);
+
+    strengthOut.textContent = strengthValue.toFixed(2);
+    timeOut.textContent = t.toFixed(2);
+  }
+
+  function tick(now) {
+    const elapsed = Math.min(0.06, (now - lastFrame) / 1000);
+    lastFrame = now;
+    if (running) {
+      const next = (Number(time.value) + elapsed * 0.72) % tMax;
+      time.value = next.toFixed(2);
+    }
+    draw(Number(time.value));
+    frameId = requestAnimationFrame(tick);
+  }
+
+  play.addEventListener("click", () => {
+    running = !running;
+    play.textContent = running ? "pause" : "play";
+  });
+  time.addEventListener("input", () => {
+    running = false;
+    play.textContent = "play";
+    draw(Number(time.value));
+  });
+  mode.addEventListener("change", () => draw(Number(time.value)));
+  interaction.addEventListener("change", () => draw(Number(time.value)));
+  strength.addEventListener("input", () => draw(Number(time.value)));
+
+  draw(Number(time.value));
+  frameId = requestAnimationFrame(tick);
+  invalidation.then(() => cancelAnimationFrame(frameId));
+
+  return root;
+}
+```

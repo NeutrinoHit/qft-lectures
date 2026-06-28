@@ -3,6 +3,10 @@ lang: ru-RU
 format:
   revealjs:
     theme: [dark, ../../shared/styles/neutrinohit-reveal.scss]
+    width: 1600
+    height: 900
+    margin: 0.03
+    html-math-method: mathjax
     slide-number: true
     chalkboard: true
     preview-links: auto

@@ -1,224 +1,142 @@
 ---
 title: "Attraction and Repulsion in Quantum Field Theory"
-subtitle: "Wave packets in scalar QED"
+subtitle: "R. Feynman: Not every simple question can be answered simply."
 author: "Dmitry V. Naumov"
 institute: "Joint Institute for Nuclear Research"
-date: "June 2026"
+date: "July 2026"
 lang: en
 format:
   revealjs:
-    toc-title: "Lecture map"
-    include-in-header:
-      text: |
-        <style>
-          .reveal .math.display {
-            font-size: 0.82em;
-          }
-
-          .reveal #title-slide .title {
-            max-width: 1100px;
-            white-space: normal;
-            line-height: 1.12;
-            font-size: 1.72em;
-          }
-
-          .reveal .compact li {
-            margin: 0.16em 0;
-          }
-
-          .reveal .small {
-            font-size: 0.76em;
-          }
-
-          .reveal .tiny {
-            font-size: 0.62em;
-          }
-
-          .reveal .muted {
-            color: #d0d0d0;
-          }
-
-          .reveal .question {
-            color: #8ec5ff;
-            font-weight: 700;
-          }
-
-          .reveal .takeaway {
-            color: #ffcc8a;
-            font-weight: 700;
-          }
-
-          .reveal .timing {
-            display: grid;
-            grid-template-columns: 7rem 1fr;
-            gap: 0.35rem 1rem;
-            align-items: baseline;
-            font-size: 0.78em;
-          }
-
-          .reveal .timing .time {
-            color: #8ec5ff;
-            font-weight: 700;
-            white-space: nowrap;
-          }
-
-          .reveal video.scalar-qed-video {
-            display: block;
-            width: 100%;
-            max-height: 560px;
-            object-fit: contain;
-            background: #000000;
-          }
-
-          .reveal .media-caption {
-            margin-top: 0.45em;
-            color: #d0d0d0;
-            font-size: 0.68em;
-          }
-        </style>
+    toc: false
+    toc-title: ""
+    title-slide: false
+    css: media/scalar-qed-attraction-repulsion/scalar-qed-attraction-repulsion.css
 execute:
   echo: false
   warning: false
   message: false
 ---
 
-# Orientation
+{{< include media/scalar-qed-attraction-repulsion/_title-scattering-slide.qmd >}}
 
-## One-Hour Map
+## What this lecture is based on
 
-::: {.timing}
-::: {.time}
-0-5 min
-:::
-::: {}
-What "force" means in a field theory.
-:::
-::: {.time}
-5-15 min
-:::
-::: {}
-Scalar QED as the clean toy model.
-:::
-::: {.time}
-15-28 min
-:::
-::: {}
-One Gaussian packet and its smoothed Coulomb self-field.
-:::
-::: {.time}
-28-43 min
-:::
-::: {}
-Two packets: charge sign, potential energy, attraction vs repulsion.
-:::
-::: {.time}
-43-55 min
-:::
-::: {}
-Eikonal phase, transverse kick, and numerical animations.
-:::
-::: {.time}
-55-60 min
-:::
-::: {}
-Summary and questions.
-:::
+:::: {.lecture-source-layout}
+
+::: {.lecture-source-text}
+
+- **V. A. Allahverdyan and D. V. Naumov**, notes on attraction and
+  repulsion in scalar QED *(paper to be published)*.
+- **D. V. Naumov**, *Quantum Field Theory for Experimentalists and Not Only*. <https://neutrinohit.github.io/books.html>
+- Slides:
+  <https://neutrinohit.github.io/qft-lectures/en/slides/ScalarQEDAttractionRepulsion.html>
+
+
 :::
 
-::: {.notes}
-Use this as a one-hour blackboard-and-slides lecture. The formulas are the
-spine; the animations are the payoff.
+::: {.lecture-source-cover}
+![](media/scalar-qed-attraction-repulsion/qft-cover-front.jpg){fig-alt="Cover of Quantum Field Theory for Experimentalists and Not Only"}
 :::
 
-## Guiding Question
+::::
 
-::: {.question}
-In QFT, where exactly do attraction and repulsion live?
-:::
+# You always wanted to know but never dared to ask!
+
+## In QFT, where exactly do attraction and repulsion live?
 
 ::: incremental
-- Not primarily in a Newtonian force law.
-- Not only in a static potential.
-- In the phase and field configuration of a quantum state.
-- In a wave-packet language: in the accumulated phase gradient and the resulting momentum transfer.
+- Look for a Newtonian force!
+  - There are no Newtonian forces in QFT
+- For like charges one expects repulsion, for opposite charges attraction. Look for the sign of charges in the cross-section!
+  - But cross-sections $\sigma \propto |A|^2>0$ do not depend on the sign of charges
+- Look at the Feynman diagram - electrons repel because they exchange a photon like a ball!
+  - Really? Let us examine this 'explanation'
 :::
 
-$$
-\nabla_\perp \Theta
-\quad\Longrightarrow\quad
-\Delta \mathbf p_\perp
-$$
+## How does QFT describe attraction and repulsion?
 
-## Working Definition
+```{=html}
+<video class="slide-video"
+style="--media-width: 90%; --media-max-height: 772px;"
+data-autoplay loop muted playsinline controls>
+  <source src="media/scalar-qed-attraction-repulsion/ElectronElectronScattering.mp4" type="video/mp4">
+</video>
+```
 
-For this lecture we call an interaction:
+## Repulsion picture: looks reasonable?
+![](media/boats.jpg){.slide-image-center .nostretch width=80% fig-align="center" fig-alt="A qualitative picture for the repulsion"}
 
-::: incremental
-- **repulsive** if the transverse momentum transfer increases packet separation;
-- **attractive** if it bends the packet centers toward each other;
-- **field-theoretic** if the effect follows from the coupled scalar and electromagnetic fields.
+# How to explain the attraction?
+
+## Attraction picture: looks reasonable too?
+![](media/boats2.jpg){.slide-image-center .nostretch width=80% fig-align="center" fig-alt="A qualitative picture for the attraction"}
+
+## Summary so far
+
+::: {.incremental}
+- QED does not switch from a "ball-like photon" for like charges to a "boomerang-like photon" for opposite charges.
+- The boomerang story is not just incomplete; it uses the wrong mechanism.
+- A real boomerang turns because it interacts with air. Its two wings move differently, aerodynamic forces tilt it, and angular momentum redirects the motion.
+- In empty space, with no air and no gravity, a "photon boomerang" would not curve back toward the second charge.
+- An analogy may be crude, but it must still work in principle. This one does not.
 :::
 
-::: {.takeaway}
-The sign of the charge product decides the direction; the finite wave-packet size decides how singular the answer is.
-:::
+# Key idea: interference between the initial and interaction-generated waves
 
-## Why Scalar QED?
+{{< include media/scalar-qed-attraction-repulsion/_interference-tabs.qmd >}}
 
-::: {.compact}
-- The scalar field removes spin from the story.
-- The electromagnetic field keeps the familiar long-range interaction.
-- Gaussian packets make the link to trajectories and animations transparent.
-- The model is still a genuine local relativistic field theory.
-:::
+{{< include media/scalar-qed-attraction-repulsion/_interference-formulas.qmd >}}
 
-$$
-\text{scalar wave packet}
-\quad+\quad
-\text{dynamical } A_\mu
-\quad\Rightarrow\quad
-\text{attraction or repulsion}
-$$
+{{< include media/scalar-qed-attraction-repulsion/_wave-plane-applet.qmd >}}
 
-::: {.notes}
-Stress that this is a toy model for concepts, not a replacement for full QED
-with spinor matter.
-:::
+# Do you miss equations?
 
-# Scalar QED
+# Scalar Electrodynamics
 
 ## The Lagrangian
 
-The scalar QED Lagrangian is
+::: incremental
 
+- Let us consider a theory with complex field $\varphi$ and electromagnetic potential $A^\mu$.
+- The Lagrangian for free fields reads
 $$
+\mathcal L
+=
+(\partial_\mu \varphi)^*(\partial^\mu \varphi)
+-m^2\varphi^*\varphi
+-\frac{1}{4}F_{\mu\nu}F^{\mu\nu},
+$$
+- **Gauge invariance principle** adds the interaction between fields with:
+$$
+\partial_\mu \to D_\mu=\partial_\mu+iqA_\mu.
+$$
+- Then,
+$$
+\boxed{
 \mathcal L
 =
 (D_\mu \varphi)^*(D^\mu \varphi)
 -m^2\varphi^*\varphi
--\frac{1}{4}F_{\mu\nu}F^{\mu\nu},
+-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}.}
 $$
+:::
 
+::: {.marginnote .absolute .note-right top=110 left=1320 width=280}
+<span class="note-title">Electromagnetic tensor</span>
 $$
-D_\mu=\partial_\mu+iqA_\mu,
-\qquad
 F_{\mu\nu}=\partial_\mu A_\nu-\partial_\nu A_\mu.
 $$
 
-::: {.fragment}
-The sign of the charge enters through the covariant derivative, not by adding a separate force by hand.
 :::
 
 ## Equations of Motion
+::: incremental
 
-In Lorenz gauge,
-
+- In Lorenz gauge,
 $$
 \partial_\mu A^\mu=0,
 $$
-
-the equations become
-
+- the equations become
 $$
 \begin{aligned}
 (\partial^2+m^2)\varphi
@@ -232,17 +150,26 @@ iq(\varphi^*\partial^\mu\varphi-\varphi\partial^\mu\varphi^*)
 -2q^2A^\mu|\varphi|^2 .
 \end{aligned}
 $$
-
-::: {.notes}
-The first equation says that the electromagnetic potential shifts the scalar
-wave. The second says that the scalar wave itself sources the electromagnetic
+- These are **non-linear** equations.
+- The first equation says that the electromagnetic potential shifts the scalar
+wave.
+- The second says that the scalar wave itself sources the electromagnetic
 field.
+- We are going to solve the equations of motion to see how attraction and repulsion appear.
+
 :::
 
-## Weak-Coupling Bookkeeping
+::: {.marginnote .absolute .note-right top=110 left=1220 width=360}
+<span class="note-title">Euler-Lagrange equations</span>
+$$
+\frac{\partial \mathcal L}{\partial \varphi} = \partial_\mu\frac{\partial\mathcal L}{\partial\partial_\mu \varphi}
+$$
+:::
 
-Use the perturbative expansion
+## Weak-Coupling
+::: incremental
 
+- Use the perturbative expansion
 $$
 \varphi
 =
@@ -257,16 +184,13 @@ qA_\mu^{(1)}
 +O(q^5).
 $$
 
-Then
-
+- Then
 $$
 (\partial^2+m^2)\varphi^{(0)}=0,
 \qquad
 \partial^2 A_\mu^{(1)}=J_\mu,
 $$
-
 with
-
 $$
 J_\mu
 =
@@ -276,33 +200,38 @@ i\left(
 \right).
 $$
 
-## What We Need From the Expansion
-
-::: {.compact}
-- First: a free packet \(\varphi^{(0)}\).
-- Second: the electromagnetic field \(A_\mu^{(1)}\) generated by that packet.
-- Third: the \(O(q^2)\) phase correction to the packet.
-- Finally: two packets and the sign of the mutual term.
 :::
 
-$$
-\varphi^{(0)}
-\longrightarrow
-J^\mu
-\longrightarrow
-A^{(1)\mu}
-\longrightarrow
-\varphi^{(2)}
-\longrightarrow
-\Theta,\ \Delta \mathbf p_\perp
-$$
+## What We Need From the Expansion
+
+::: {.incremental}
+- First: a free packet $\varphi^{(0)}$.
+- Second: the electromagnetic field $A_\mu^{(1)}$ generated by that packet.
+- Third: the $O(q^2)$ phase correction to the packet $\varphi^{(0)}$.
+- Finally: two packets and their interaction.
+:::
+
+::: {.marginnote .absolute .note-right top=110 left=1320 width=280}
+<span class="note-title">The plan</span>
+1. $\varphi^{(0)}$.
+
+2. $J^\mu$.
+
+3. $A^{(1)}_\mu$.
+
+4. $\varphi^{(2)}$
+
+5. Enjoy interaction!
+:::
 
 # One Gaussian Packet
+## Zero order for $\varphi$ and first order for $A_\mu$
 
-## Narrow Momentum Packet
+:::: {.panel-tabset}
 
-In the packet rest frame, take
+### Narrow momentum packet
 
+- In the packet rest frame, take
 $$
 \widetilde\psi(\mathbf k)
 =
@@ -311,9 +240,7 @@ $$
 \qquad
 \sigma_p\ll m .
 $$
-
-The exact free solution is
-
+- The exact free solution is
 $$
 \varphi_{\rm rest}^{(0)}(x)
 =
@@ -324,7 +251,7 @@ e^{i\mathbf k\cdot\mathbf x-iE_{\mathbf k}t},
 E_{\mathbf k}=\sqrt{m^2+\mathbf k^2}.
 $$
 
-## Coordinate-Space Form
+### Coordinate-space form
 
 Using
 
@@ -351,7 +278,7 @@ $$
 t_{\rm disp}=\frac{m}{2\sigma_p^2}.
 $$
 
-## Density and Current
+### Density and current
 
 Define
 
@@ -370,7 +297,7 @@ n(t,\mathbf x)=|\varphi_{\rm rest}^{(0)}(x)|^2
 \exp[-2s_p^2(t)\mathbf x^2].
 $$
 
-To leading order in \(\sigma_p/m\),
+To leading order in $\sigma_p/m$,
 
 $$
 J^\mu(t,\mathbf x)
@@ -382,9 +309,9 @@ J^\mu(t,\mathbf x)
 \right).
 $$
 
-## The Self-Field Is Almost Electrostatic
+### Almost electrostatic
 
-The spatial current is suppressed by \(\sigma_p/m\), so
+The spatial current is suppressed by $\sigma_p/m$, so
 
 $$
 A_{\rm rest}^{(1)i}=O\!\left(\frac{\sigma_p}{m}\right),
@@ -401,11 +328,9 @@ A_{\rm rest}^{(1)0}(t,\mathbf x)
 \frac{n(t,\mathbf y)}{4\pi|\mathbf x-\mathbf y|}.
 $$
 
-::: {.takeaway}
 A finite packet replaces the point Coulomb source by a smooth charge cloud.
-:::
 
-## Smoothed Coulomb Kernel
+### Smoothed Coulomb kernel
 
 For a Gaussian packet,
 
@@ -430,22 +355,26 @@ V_s(r)=
 \operatorname{erf}\!\left(\sqrt{2}sr\right).
 $$
 
-::: {.fragment}
 At large distance this is Coulomb. At the center it is finite.
+
+### Profile of the kernel
+
+::::: {.columns}
+
+::: {.column width="60%"}
+![](media/scalar-qed-attraction-repulsion/gaussian_self_potential.png){.slide-image-center .nostretch width=90% fig-align="center" fig-alt="Gaussian self-potential profile compared with the Coulomb limit"}
 :::
 
-## Profile of the Kernel
-
-![](media/scalar-qed-attraction-repulsion/gaussian_self_potential.png){width="72%" .slide-image-center fig-alt="Gaussian self-potential profile compared with the Coulomb limit"}
-
-::: {.media-caption}
-Dimensionless profile \(4\pi V_s(r)/(\sqrt{2}s)\) as a function of
-\(\rho=\sqrt{2}sr\). The dashed curve is the point Coulomb limit \(1/\rho\).
+::: {.column width="40%"}
+Dimensionless profile $4\pi V_s(r)/(\sqrt{2}s)$ as a function of
+$\rho=\sqrt{2}sr$. The dashed curve is the point Coulomb limit $1/\rho$.
 :::
 
-## Boosted Packet Field
+::::
 
-For a moving packet with mean four-momentum \(p_0^\mu=(E_0,\mathbf p_0)\),
+### Laboratory system
+
+For a moving packet with mean four-momentum $p_0^\mu=(E_0,\mathbf p_0)$,
 
 $$
 \mathbf v_0=\frac{\mathbf p_0}{E_0},
@@ -476,9 +405,24 @@ A^{(1)\mu}(x)
 }.
 $$
 
-## Self-Phase
+### Animation
 
-The \(O(q^2)\) scalar correction obeys
+```{=html}
+<video class="slide-video media-height-lg" data-autoplay loop muted playsinline controls>
+  <source src="media/scalar-qed-attraction-repulsion/single.mp4" type="video/mp4">
+</video>
+```
+
+::::
+
+## Second order for $\varphi$
+
+:::: {.panel-tabset}
+
+
+### Self-Phase
+
+The $O(q^2)$ scalar correction obeys
 
 $$
 (\partial^2+m^2)\varphi^{(2)}
@@ -503,7 +447,7 @@ $$
 \int_0^t d\lambda\,V_{s_p(\lambda)}(r).
 $$
 
-## Phase Interpretation
+### Phase Interpretation
 
 To this order,
 
@@ -535,426 +479,92 @@ $$
 At this level, the self-interaction is primarily a local phase shift.
 :::
 
+::::
+
+## A lonely packet has no opinion
+
+:::: {.columns}
+
+::: {.column width="55%"}
+
+::::: incremental
+
+- For one packet, the correction knows only
+$$
+q^2 .
+$$
+
+- So the packet can acquire a self-phase, but it cannot decide whether the world is attractive or repulsive.
+$$
+q \to -q
+\qquad\Rightarrow\qquad
+q^2 \to q^2 .
+$$
+- To ask about attraction or repulsion, we need a second packet.
+
+:::::
+
+:::
+
+::: {.column width="45%"}
+
+![](media/scalar-qed-attraction-repulsion/lonely_packets.png){.fragment .image-uncover .from-left .slide-image-center .nostretch style="--uncover-amount: 36%; --uncover-width: 92%; --uncover-max-height: 430px;" fig-align="center" fig-alt="A single lonely Gaussian packet first, then the full picture with two interacting packets"}
+
+:::
+
+::::
+
+
 # Two Packets
 
-## Two Separated Wave Packets
+## Eikonal form and 2D animations
 
-Let
+:::: {.panel-tabset}
 
-$$
-\varphi^{(0)}(x)
-=
-c_1\Phi_1^{(0)}(x)
-+c_2\Phi_2^{(0)}(x),
-\qquad
-(\partial^2+m^2)\Phi_a^{(0)}=0.
-$$
+### What changes?
 
-The sign variable
+- We now take **two well separated Gaussian packets**.
+- Each packet is the same object we have just constructed: a free wave packet
+  plus the smooth electromagnetic field it sources.
+- The only new label is the sign of its charge.
 
 $$
-\eta_a=\pm1
+Q_a=\pm |Q_a|,\qquad a=1,2.
 $$
 
-labels the particle or antiparticle branch:
+### First approximation
+
+- At first order, the electromagnetic fields simply add:
 
 $$
-\eta_a=+1 \quad\text{particle},
-\qquad
-\eta_a=-1 \quad\text{antiparticle}.
+A^\mu \simeq A_1^\mu+A_2^\mu.
 $$
 
-::: {.notes}
-This is the first place where attraction and repulsion can enter through a
-relative sign, not through a new dynamical assumption.
-:::
+- This is not yet a Newtonian force.
+- It is the background in which each wave accumulates phase.
 
-## Geometry of the Encounter
+### Where the physics sits
 
-Each packet has a center
+For packet $a$,
 
 $$
-\mathbf X_a(t)=\mathbf b_a+\mathbf v_at,
-\qquad
-\mathbf v_a=\frac{\mathbf p_a}{E_a},
-\qquad
-\gamma_a=\frac{E_a}{m}.
-$$
-
-Choose the impact parameter by
-
-$$
-\mathbf b_1=-\frac{\mathbf b}{2},
-\qquad
-\mathbf b_2=+\frac{\mathbf b}{2},
-\qquad
-\mathbf b\cdot(\mathbf v_1-\mathbf v_2)=0.
-$$
-
-Then
-
-$$
-d_{12}^2(t)
-=
-|\mathbf X_1(t)-\mathbf X_2(t)|^2
-=
-b^2+|\mathbf v_1-\mathbf v_2|^2t^2.
-$$
-
-## Nonoverlap Condition
-
-The packet density is
-
-$$
-n_a(x)
-=
-\left(\frac{2s_a^2(x)}{\pi}\right)^{3/2}
-\exp[-2s_a^2(x)r_{a*}^2(x)].
-$$
-
-For separated packets,
-
-$$
-b\gg\sigma_{x1}(t)+\sigma_{x2}(t).
-$$
-
-Then interference terms are suppressed as
-
-$$
-\exp\!\left[
--\frac{d_{12}^2(t)}
-{4(\sigma_{x1}^2(t)+\sigma_{x2}^2(t))}
-\right].
+\Phi_a
+\simeq
+\Phi_a^{(0)}
+\exp[-iq^2\Theta_a].
 $$
 
 ::: {.takeaway}
-This is the regime where talking about two packet centers is meaningful.
+In the first non-trivial approximation, attraction and repulsion live in the
+phase of the wave packet.
 :::
 
-## Charge of a Packet
-
-Define the physical charge of packet \(a\) by
-
-$$
-Q_a=q\int_{\Omega_a(t)}d^3x\,J^0(x).
-$$
-
-For a separated narrow packet,
-
-$$
-Q_a
-=
-2\eta_amq\,|c_a|^2.
-$$
-
-Therefore
-
-$$
-|Q_a|=2mq|c_a|^2,
-\qquad
-\eta_a=\operatorname{sgn}Q_a.
-$$
-
-::: {.fragment}
-Particle versus antiparticle is now the sign of the packet charge.
-:::
-
-## Field of Two Packets
-
-The current splits:
-
-$$
-J^\mu(x)\approx J_1^\mu(x)+J_2^\mu(x),
-\qquad
-J_a^\mu(x)
-\approx
-2\eta_a|c_a|^2p_a^\mu n_a(x).
-$$
-
-The electromagnetic field coefficient also splits:
-
-$$
-A_\mu^{(1)}(x)
-\approx
-A_{1\mu}^{(1)}(x)+A_{2\mu}^{(1)}(x),
-$$
-
-$$
-\boxed{
-A_{a\mu}^{(1)}(x)
-=
-\frac{Q_a}{mq}\,
-p_{a\mu}
-V_{s_a(x)}(r_{a*}(x))
-}.
-$$
-
-## Mutual Potential Energy
-
-In the leading quasistatic approximation,
-
-$$
-\boxed{
-U_{12}(t)
-=
-\int d^3x\,d^3y\,
-\frac{\rho_1(t,\mathbf x)\rho_2(t,\mathbf y)}
-{4\pi|\mathbf x-\mathbf y|}
-}.
-$$
-
-If both charge clouds are spherical Gaussians,
-
-$$
-U_{12}(t)
-=
-Q_1Q_2\,V_{s_{12}(t)}(d_{12}(t)),
-$$
-
-$$
-s_{12}(t)
-=
-\frac{s_1(t)s_2(t)}
-{\sqrt{s_1^2(t)+s_2^2(t)}}.
-$$
-
-## The Sign Is the Physics
-
-At large separation,
-
-$$
-U_{12}(t)
-\sim
-\frac{Q_1Q_2}{4\pi d_{12}(t)}.
-$$
-
-At zero separation of the centers,
-
-$$
-U_{12}(t)\big|_{d_{12}=0}
-=
-\frac{Q_1Q_2s_{12}(t)}
-{\sqrt{2}\pi^{3/2}}.
-$$
-
-::: incremental
-- \(Q_1Q_2>0\): positive energy decreases when packets separate.
-- \(Q_1Q_2<0\): negative energy decreases when packets approach.
-- The Gaussian width removes the point singularity.
-:::
-
-## One Formula for Both Cases
-
-::: {.question}
-What changes between attraction and repulsion?
-:::
-
-Only the sign of one packet charge:
-
-$$
-Q_a\longrightarrow -Q_a,
-\qquad
-\eta_a\longrightarrow -\eta_a.
-$$
-
-The kernel \(V_s(r)\), the transport equation, and the eikonal construction are the same.
-
-::: {.takeaway}
-In scalar QED, attraction and repulsion are not two mechanisms. They are two signs of the same field-theoretic mechanism.
-:::
-
-# Eikonal Form
-
-## Phase Ansatz
-
-For each packet write
-
-$$
-\varphi_a(x)
-\approx
-\varphi_a^{(0)}(x)
-\exp[-i\eta_aq^2\Theta_a(x)].
-$$
-
-Linearizing,
-
-$$
-\varphi_a^{(2)}(x)
-=
--i\eta_a\Theta_a(x)\varphi_a^{(0)}(x).
-$$
-
-The eikonal phase obeys
-
-$$
-\boxed{
-p_a^\mu\partial_\mu\Theta_a(x)
-=
-\sum_{b=1}^2
-\frac{Q_b}{mq}
-(p_a\cdot p_b)
-V_{s_b(x)}(r_{b*}(x))
-}.
-$$
-
-## Self and Mutual Parts
-
-Split
-
-$$
-\Theta_a(x)
-=
-\Theta_a^{\rm self}(x)
-+\Theta_a^{\rm int}(x).
-$$
-
-::: {.compact}
-- \(\Theta_a^{\rm self}\): phase from the packet's own smooth Coulomb field.
-- \(\Theta_a^{\rm int}\): phase accumulated in the field of the other packet.
-- The center deflection comes from the mutual part.
-:::
-
-For packet \(a\), with \(b\neq a\),
-
-$$
-\Theta_a^{\rm int}(t)
-\propto
-\int_{-\infty}^t dt'\,
-V_{s_b(t')}(r_{b*}(t',\mathbf X_a(t'))).
-$$
-
-## Transverse Kick
-
-The leading transverse momentum transfer is
-
-$$
-\boxed{
-\Delta\mathbf p_{a\perp}(b)
-=
--q^2\nabla_\perp
-\Theta_a^{\rm int}(+\infty,b)
-}.
-$$
-
-With
-
-$$
-\Pi_{a\perp}
-=
-\mathbf 1-\hat{\mathbf e}_a\hat{\mathbf e}_a^{\mathsf T},
-\qquad
-\hat{\mathbf e}_a=\frac{\mathbf p_a}{|\mathbf p_a|},
-$$
-
-the corrected center trajectory is
-
-$$
-\boxed{
-\mathbf X_a^{\rm eik}(t)
-=
-\mathbf X_a^{(0)}(t)
--\frac{q^2}{E_a}
-\int_{t_0}^{t}dt'\,
-\Pi_{a\perp}\nabla\Theta_a^{\rm int}
-(t',\mathbf X_a^{(0)}(t'))
-+O(q^4)
-}.
-$$
-
-## Center-of-Mass Kinematics
-
-For a symmetric collision,
-
-$$
-\mathbf v_1=v\hat{\mathbf z},
-\qquad
-\mathbf v_2=-v\hat{\mathbf z},
-\qquad
-\mathbf b=b\hat{\mathbf x},
-\qquad
-E_1=E_2=\gamma m.
-$$
-
-Along the opposite packet center,
-
-$$
-r_{2*}(t,\mathbf X_1(t))
-=
-r_{1*}(t,\mathbf X_2(t))
-=
-\sqrt{b^2+4\gamma^2v^2t^2}.
-$$
-
-This is the geometry behind the two animations.
-
-# Animations
-
-## What the Code Shows
-
-On a two-dimensional slice,
-
-$$
-A_a^{(1)0}(t,x,y)=\varkappa_aE_aV_a(t,x,y),
-$$
-
-$$
-A_a^{(1)x}(t,x,y)=\varkappa_ap_{ax}V_a(t,x,y),
-\qquad
-A_a^{(1)y}(t,x,y)=\varkappa_ap_{ay}V_a(t,x,y),
-$$
-
-where
-
-$$
-\varkappa_a=\frac{Q_a}{mq},
-\qquad
-V_a(t,x,y)=V_{s_a(t,x,y)}(r_{a*}(t,x,y)).
-$$
-
-The displayed fields are reconstructed after the eikonal correction to the centers.
-
-## Like Charges: Repulsion
-
-```{=html}
-<video class="scalar-qed-video" data-autoplay loop muted playsinline controls>
-  <source src="media/scalar-qed-attraction-repulsion/pp.mp4" type="video/mp4">
-</video>
-```
-
-::: {.media-caption}
-Particle-particle configuration. The signs of \(Q_1\) and \(Q_2\) are the same, so \(Q_1Q_2>0\).
-:::
-
-::: {.notes}
-Suggested narration: watch the centers bend away from each other; the field does
-not need a point-charge singularity to produce repulsion.
-:::
-
-## Opposite Charges: Attraction
-
-```{=html}
-<video class="scalar-qed-video" data-autoplay loop muted playsinline controls>
-  <source src="media/scalar-qed-attraction-repulsion/pm.mp4" type="video/mp4">
-</video>
-```
-
-::: {.media-caption}
-Particle-antiparticle configuration. The signs are opposite, so \(Q_1Q_2<0\).
-:::
-
-::: {.notes}
-Suggested narration: the code and formulas are the same as before; only one
-charge sign is changed.
-:::
-
-## Reading the Animations
-
-::: {.compact}
-- The scalar density tracks where the wave packets are.
-- \(A^{(1)0}\) tracks the smooth Coulomb-like field sourced by them.
-- The phase \(\Theta_a^{\rm int}\) is integrated along almost straight paths.
-- The trajectory correction is then computed from \(-\nabla_\perp\Theta_a^{\rm int}\).
-:::
+### How a phase bends a packet
+
+- A position-dependent phase changes the local momentum.
+- The mutual part of the phase is the part created by the other packet.
+- The center bends because the phase gradient is different on the two sides of
+  the packet.
 
 $$
 \text{field}
@@ -963,192 +573,123 @@ $$
 \longrightarrow
 \text{phase gradient}
 \longrightarrow
-\text{deflected centers}.
+\text{deflected center}.
 $$
 
-# Conceptual Payoff
+### One sign decides
 
-## What Became of the Force?
-
-In this formulation, the familiar force law is a derived approximation:
-
-$$
-\Delta\mathbf p_\perp
-=
--q^2\nabla_\perp\Theta^{\rm int}.
-$$
-
-::: incremental
-- The field equation produces \(A_\mu\).
-- The scalar equation converts \(A_\mu\) into a phase.
-- The phase gradient gives the momentum transfer.
-- The sign of \(Q_1Q_2\) determines the direction.
-:::
-
-## Why the Point Singularity Disappears
-
-The packet profile replaces
+- The construction is the same for both cases.
+- Changing one packet from particle to antiparticle changes the sign of
+  $Q_1Q_2$.
+- The phase gradient flips direction.
 
 $$
-\frac{1}{4\pi r}
-$$
-
-by
-
-$$
-V_s(r)=
-\frac{1}{4\pi r}
-\operatorname{erf}(\sqrt{2}sr).
-$$
-
-At the origin,
-
-$$
-V_s(0)=\frac{s}{\sqrt{2}\pi^{3/2}},
-$$
-
-while for \(r\gg s^{-1}\),
-
-$$
-V_s(r)\sim \frac{1}{4\pi r}.
-$$
-
-::: {.takeaway}
-The finite wave packet is a physical short-distance smearing, not a screening of the long-range tail.
-:::
-
-## What This Is Not
-
-::: {.compact}
-- It is not a claim that UV renormalization disappears from local QFT.
-- It is not a point-particle derivation with a cutoff inserted afterward.
-- It is not yet full spinor QED.
-- It is a controlled wave-packet observable in scalar QED.
-:::
-
-::: {.question}
-The useful lesson: singular point-particle intuition can be too sharp for the actual external states used in scattering.
-:::
-
-## One-Slide Summary
-
-::: incremental
-- Scalar QED gives a clean field-theoretic model of attraction and repulsion.
-- A narrow Gaussian packet sources a smoothed Coulomb field.
-- The \(O(q^2)\) effect on the scalar wave is an eikonal phase.
-- Two packets interact through the mutual part of that phase.
-- \(Q_1Q_2>0\) gives repulsion; \(Q_1Q_2<0\) gives attraction.
-- The same equations produce both animations.
-:::
-
-$$
-Q_1Q_2
-\begin{cases}
->0 & \text{repulsion},\\
-<0 & \text{attraction}.
-\end{cases}
-$$
-
-# Backup
-
-## External Static Potential
-
-For Rutherford-type scattering, introduce a fixed background
-
-$$
-\mathcal A_\mu(x)=A_\mu^{\rm ext}(x)+a_\mu(x),
-$$
-
-with
-
-$$
-A_{\rm ext}^\mu(x)=(\Phi_{\rm ext}(r),\mathbf 0),
+Q_1Q_2>0 \Rightarrow \text{repulsion},
 \qquad
-\Phi_{\rm ext}(r)
-=
-\frac{Q_{\rm ext}}{4\pi\sqrt{r^2+r_0^2}}e^{-\mu r}.
+Q_1Q_2<0 \Rightarrow \text{attraction}.
 $$
 
-The external-field covariant derivative is
+### Repulsion
 
-$$
-D_\mu^{\rm ext}
-=
-\partial_\mu+iqA_\mu^{\rm ext}.
-$$
+```{=html}
+<video class="slide-video media-height-md" data-autoplay loop muted playsinline controls>
+  <source src="media/scalar-qed-attraction-repulsion/pp.mp4" type="video/mp4">
+</video>
+```
 
-## Eikonal Scattering on a Background
-
-For a weakly deflected packet,
-
-$$
-\varphi^{(0)}(x)
-\approx
-\varphi_{\rm free}^{(0)}(x)
-\exp[-iq\Theta_{\rm ext}(x)],
-$$
-
-with
-
-$$
-p^\mu\partial_\mu\Theta_{\rm ext}(x)
-\approx
-p^\mu A_\mu^{\rm ext}(x)
-=
-E\Phi_{\rm ext}(r).
-$$
-
-On the reference trajectory
-
-$$
-\mathbf X^{(0)}(t)=\mathbf b+\mathbf vt,
-\qquad
-r(t)=\sqrt{b^2+v^2t^2},
-$$
-
-$$
-\Theta_{\rm ext}(t,b)
-\approx
-\int_{-\infty}^t dt'\,\Phi_{\rm ext}(r(t')).
-$$
-
-## Wave-Packet Rutherford Regulator
-
-For a Gaussian transverse profile,
-
-$$
-n_\perp(\boldsymbol\rho)
-=
-\frac{2s_\perp^2}{\pi}e^{-2s_\perp^2\rho^2},
-\qquad
-F_{s_\perp}(\mathbf q_\perp)
-=
-e^{-q_\perp^2/(8s_\perp^2)}.
-$$
-
-The Coulomb transverse kick becomes
-
-$$
-\boxed{
-\Delta\mathbf p_\perp^{\rm wp}(b)
-=
-\frac{qQ_{\rm ext}}{2\pi vb}
-\left(1-e^{-2s_\perp^2b^2}\right)
-\hat{\mathbf b}
-}.
-$$
-
-::: {.compact}
-- For \(s_\perp b\gg1\): ordinary \(1/b\) Rutherford behavior.
-- For \(s_\perp b\ll1\): finite response, proportional to \(\mathbf b\).
+::: {.media-caption}
+Like charges: the same eikonal construction bends the packet centers apart.
 :::
 
-## References for the Lecture
+### Attraction
 
-::: {.small}
-- V. A. Allahverdyan and D. V. Naumov, scalar QED wave-packet notes.
-- L. D. Landau and E. M. Lifshitz, *The Classical Theory of Fields*.
-- D. V. Karlovets, *Scattering of wave packets with phases*, JHEP 03 (2017) 049.
-- K. Ishikawa, K. Nishiwaki, K.-y. Oda, *Scalar scattering amplitude in the Gaussian wave-packet formalism*, PTEP 2020 (2020) 103B04.
-- Z. Bern et al., *Scalar QED as a toy model for higher-order effects in classical gravitational scattering*, JHEP 08 (2022) 131.
+```{=html}
+<video class="slide-video media-height-md" data-autoplay loop muted playsinline controls>
+  <source src="media/scalar-qed-attraction-repulsion/pm.mp4" type="video/mp4">
+</video>
+```
+
+::: {.media-caption}
+Opposite charges: only the sign changes, so the phase gradient points the other way.
 :::
+
+::::
+
+# Attraction and Repulsion in Quantum Field Theory. Once More in Pictures
+
+## The chain of ideas
+
+:::: {.panel-tabset .story-tabs}
+
+### The question
+
+:::: {.story-question-grid}
+
+::: {}
+```{=html}
+<video class="slide-video media-height-sm" data-autoplay loop muted playsinline controls>
+  <source src="media/scalar-qed-attraction-repulsion/ElectronElectronScattering.mp4" type="video/mp4">
+</video>
+```
+:::
+
+::: {}
+{{< include media/scalar-qed-attraction-repulsion/_story-scattering-animation.qmd >}}
+:::
+
+::::
+
+::: {.media-caption}
+The exchange picture is familiar. The question is sharper: where does the sign
+of attraction or repulsion enter?
+:::
+
+### The false analogy
+
+:::: {.story-picture-pair}
+::: {}
+![](media/boats.jpg){fig-alt="Qualitative boat picture for repulsion"}
+:::
+
+::: {}
+![](media/boats2.jpg){fig-alt="Qualitative boat picture for attraction"}
+:::
+::::
+
+::: {.media-caption}
+The analogy changes the mechanism between the two cases. Scalar QED does not.
+:::
+
+### The one-dimensional clue
+
+{{< include media/scalar-qed-attraction-repulsion/_story-interference-clue.qmd >}}
+
+### Scalar QED packets
+
+:::: {.story-video-pair}
+::: {}
+```{=html}
+<video class="slide-video media-height-sm" data-autoplay loop muted playsinline controls>
+  <source src="media/scalar-qed-attraction-repulsion/pp.mp4" type="video/mp4">
+</video>
+```
+
+::: {.media-caption}
+Like charges: the centers bend apart.
+:::
+:::
+
+::: {}
+```{=html}
+<video class="slide-video media-height-sm" data-autoplay loop muted playsinline controls>
+  <source src="media/scalar-qed-attraction-repulsion/pm.mp4" type="video/mp4">
+</video>
+```
+
+::: {.media-caption}
+Opposite charges: the same construction bends them together.
+:::
+:::
+::::
+
+::::

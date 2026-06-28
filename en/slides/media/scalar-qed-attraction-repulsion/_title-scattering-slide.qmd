@@ -1,0 +1,82 @@
+## {.title-scattering-slide}
+
+```{=html}
+<div class="title-scattering-layout">
+  <div class="title-scattering-copy">
+    <h1>How QFT describes the attraction and repulsion of particles?</h1>
+  </div>
+
+  <div class="scattering-stage" aria-label="Two-particle scattering with repulsion and attraction">
+    <svg viewBox="0 0 920 520" role="img">
+      <defs>
+        <filter id="particle-glow" x="-60%" y="-60%" width="220%" height="220%">
+          <feGaussianBlur stdDeviation="7" result="blur"/>
+          <feMerge>
+            <feMergeNode in="blur"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
+
+        <!-- Hyperbolic Coulomb-scattering paths: eta=0.38, equal masses, center-of-mass frame. -->
+        <path id="repel-one" d="M 44.9 212.7 L 74 212.3 L 95.3 211.8 L 111.7 211.3 L 124.8 210.9 L 135.5 210.3 L 144.4 209.8 L 152.1 209.3 L 158.7 208.7 L 164.6 208.1 L 169.8 207.5 L 174.6 206.9 L 178.9 206.2 L 182.9 205.5 L 186.6 204.8 L 190.1 204.1 L 193.4 203.3 L 196.5 202.4 L 199.6 201.5 L 202.5 200.6 L 205.4 199.5 L 208.2 198.5 L 211.1 197.3 L 213.9 196.1 L 216.8 194.7 L 219.7 193.2 L 222.7 191.6 L 225.8 189.9 L 229.1 188 L 232.5 185.9 L 236.2 183.5 L 240.1 180.8 L 244.5 177.8 L 249.2 174.3 L 254.6 170.3 L 260.7 165.6 L 267.7 160.1 L 276.1 153.4 L 286.1 145.1 L 298.7 134.5 L 315 120.7 L 337 101.8"/>
+        <path id="repel-two" d="M 415.1 307.3 L 386 307.7 L 364.7 308.2 L 348.3 308.7 L 335.2 309.1 L 324.5 309.7 L 315.6 310.2 L 307.9 310.7 L 301.3 311.3 L 295.4 311.9 L 290.2 312.5 L 285.4 313.1 L 281.1 313.8 L 277.1 314.5 L 273.4 315.2 L 269.9 315.9 L 266.6 316.7 L 263.5 317.6 L 260.4 318.5 L 257.5 319.4 L 254.6 320.5 L 251.8 321.5 L 248.9 322.7 L 246.1 323.9 L 243.2 325.3 L 240.3 326.8 L 237.3 328.4 L 234.2 330.1 L 230.9 332 L 227.5 334.1 L 223.8 336.5 L 219.9 339.2 L 215.5 342.2 L 210.8 345.7 L 205.4 349.7 L 199.3 354.4 L 192.3 359.9 L 183.9 366.6 L 173.9 374.9 L 161.3 385.5 L 145 399.3 L 123 418.2"/>
+        <path id="attract-one" d="M 521.8 217.1 L 567.3 217.7 L 595.2 218.3 L 614.2 219 L 628.1 219.6 L 638.8 220.2 L 647.3 220.8 L 654.4 221.4 L 660.3 222 L 665.5 222.7 L 670 223.3 L 674 223.9 L 677.7 224.6 L 681 225.2 L 684.1 225.9 L 687 226.6 L 689.8 227.3 L 692.4 228.1 L 695 228.9 L 697.4 229.7 L 699.8 230.5 L 702.2 231.4 L 704.6 232.4 L 707 233.4 L 709.4 234.5 L 711.9 235.7 L 714.4 237 L 717 238.4 L 719.8 240 L 722.8 241.7 L 725.9 243.6 L 729.4 245.8 L 733.2 248.4 L 737.4 251.3 L 742.3 254.8 L 747.9 259 L 754.7 264.3 L 763.1 270.9 L 773.9 279.6 L 788.5 291.8 L 809.8 309.8 L 844.3 339.6"/>
+        <path id="attract-two" d="M 858.2 302.9 L 812.7 302.3 L 784.8 301.7 L 765.8 301 L 751.9 300.4 L 741.2 299.8 L 732.7 299.2 L 725.6 298.6 L 719.7 298 L 714.5 297.3 L 710 296.7 L 706 296.1 L 702.3 295.4 L 699 294.8 L 695.9 294.1 L 693 293.4 L 690.2 292.7 L 687.6 291.9 L 685 291.1 L 682.6 290.3 L 680.2 289.5 L 677.8 288.6 L 675.4 287.6 L 673 286.6 L 670.6 285.5 L 668.1 284.3 L 665.6 283 L 663 281.6 L 660.2 280 L 657.2 278.3 L 654.1 276.4 L 650.6 274.2 L 646.8 271.6 L 642.6 268.7 L 637.7 265.2 L 632.1 261 L 625.3 255.7 L 616.9 249.1 L 606.1 240.4 L 591.5 228.2 L 570.2 210.2 L 535.7 180.4"/>
+      </defs>
+
+      <rect x="0" y="0" width="920" height="520" rx="24" fill="#050505"/>
+      <line x1="460" y1="56" x2="460" y2="464" class="center-line"/>
+
+      <g transform="translate(0 10)">
+        <text x="52" y="46" class="scattering-panel-title">Repulsion</text>
+        <text x="52" y="76" class="scattering-panel-subtitle">like charges bend away</text>
+        <circle cx="230" cy="260" r="118" class="field-ring field-pulse"/>
+        <circle cx="230" cy="260" r="74" class="field-ring field-pulse"/>
+        <use href="#repel-one" class="trajectory"/>
+        <use href="#repel-two" class="trajectory"/>
+
+        <g class="charge-orbit" filter="url(#particle-glow)">
+          <circle r="18" class="charge-positive"/>
+          <text y="1">+</text>
+          <animateMotion dur="5s" repeatCount="indefinite" rotate="0">
+            <mpath href="#repel-one"/>
+          </animateMotion>
+        </g>
+
+        <g class="charge-orbit" filter="url(#particle-glow)">
+          <circle r="18" class="charge-positive"/>
+          <text y="1">+</text>
+          <animateMotion dur="5s" repeatCount="indefinite" rotate="0">
+            <mpath href="#repel-two"/>
+          </animateMotion>
+        </g>
+      </g>
+
+      <g transform="translate(0 10)">
+        <text x="512" y="46" class="scattering-panel-title">Attraction</text>
+        <text x="512" y="76" class="scattering-panel-subtitle">opposite charges bend toward each other</text>
+        <circle cx="690" cy="260" r="118" class="field-ring field-pulse"/>
+        <circle cx="690" cy="260" r="74" class="field-ring field-pulse"/>
+        <use href="#attract-one" class="trajectory"/>
+        <use href="#attract-two" class="trajectory"/>
+
+        <g class="charge-orbit" filter="url(#particle-glow)">
+          <circle r="18" class="charge-positive"/>
+          <text y="1">+</text>
+          <animateMotion dur="5s" repeatCount="indefinite" rotate="0">
+            <mpath href="#attract-one"/>
+          </animateMotion>
+        </g>
+
+        <g class="charge-orbit" filter="url(#particle-glow)">
+          <circle r="18" class="charge-negative"/>
+          <text y="1">-</text>
+          <animateMotion dur="5s" repeatCount="indefinite" rotate="0">
+            <mpath href="#attract-two"/>
+          </animateMotion>
+        </g>
+      </g>
+    </svg>
+  </div>
+</div>
+```

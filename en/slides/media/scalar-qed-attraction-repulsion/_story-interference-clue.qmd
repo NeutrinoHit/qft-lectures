@@ -1,0 +1,107 @@
+::: {.story-formula-card}
+$$
+\Psi(p,t)=\Phi(p)e^{-ipR}+\Delta\Psi(p,t)
+$$
+
+$$
+|\Psi|^2
+=
+|\Phi|^2
++2\,\mathrm{Re}\!\left[\Phi^*(p)e^{ipR}\Delta\Psi(p,t)\right]
++|\Delta\Psi|^2
+$$
+:::
+
+:::: {.story-interference-grid}
+
+::: {.story-interference-picture}
+```{=html}
+<svg class="story-interference-svg" viewBox="0 0 760 430" role="img" aria-label="One-dimensional interference picture for repulsion">
+  <defs>
+    <marker id="story-repulsion-arrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 9 4.5 L 0 9 Z" fill="#d7dde8"/>
+    </marker>
+    <filter id="story-repulsion-glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="430" rx="16" class="interference-bg"/>
+  <text x="34" y="42" class="interference-title">Repulsion</text>
+  <text x="34" y="72" class="interference-subtitle">constructive on the left, destructive on the right</text>
+
+  <rect x="44" y="104" width="300" height="170" class="interference-panel"/>
+  <line x1="44" y1="242" x2="358" y2="242" class="interference-axis" marker-end="url(#story-repulsion-arrow)"/>
+  <line x1="194" y1="274" x2="194" y2="90" class="interference-axis" marker-end="url(#story-repulsion-arrow)"/>
+  <text x="268" y="306" class="interference-axis-label">velocity v</text>
+  <text x="210" y="128" class="interference-axis-label">amplitude</text>
+  <path d="M 44 242 C 84 242, 112 144, 194 144 C 276 144, 304 242, 344 242" class="interference-curve interference-ghost"/>
+  <path d="M 44 242 C 92 242, 118 186, 166 186 C 186 186, 190 226, 194 242 C 204 280, 246 300, 286 268 C 306 252, 324 242, 344 242" class="interference-curve interference-interaction"/>
+  <path d="M 44 242 C 84 242, 104 136, 164 136 C 230 136, 270 242, 344 242" class="interference-curve interference-final" filter="url(#story-repulsion-glow)"/>
+  <text x="62" y="116" class="interference-label">incoming + produced</text>
+
+  <rect x="426" y="104" width="290" height="170" class="interference-panel"/>
+  <line x1="426" y1="264" x2="730" y2="264" class="interference-axis" marker-end="url(#story-repulsion-arrow)"/>
+  <line x1="571" y1="274" x2="571" y2="90" class="interference-axis" marker-end="url(#story-repulsion-arrow)"/>
+  <text x="632" y="306" class="interference-axis-label">position x</text>
+  <text x="590" y="128" class="interference-axis-label">amplitude</text>
+  <path d="M 426 264 C 472 264, 500 146, 571 146 C 642 146, 670 264, 716 264" class="interference-curve interference-ghost"/>
+  <path d="M 426 264 C 470 264, 490 126, 540 126 C 600 126, 640 264, 716 264" class="interference-curve interference-final" filter="url(#story-repulsion-glow)"/>
+  <line x1="571" y1="202" x2="542" y2="202" class="interference-arrow" marker-end="url(#story-repulsion-arrow)"/>
+  <text x="454" y="190" class="interference-label">&lt;v&gt; shifts left</text>
+
+  <text x="48" y="372" class="interference-summary">The force is not inserted as a Newtonian push. It appears as a phase-sensitive sum of waves.</text>
+</svg>
+```
+:::
+
+::: {.story-interference-picture}
+```{=html}
+<svg class="story-interference-svg" viewBox="0 0 760 430" role="img" aria-label="One-dimensional interference picture for attraction">
+  <defs>
+    <marker id="story-attraction-arrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 9 4.5 L 0 9 Z" fill="#d7dde8"/>
+    </marker>
+    <filter id="story-attraction-glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="430" rx="16" class="interference-bg"/>
+  <text x="34" y="42" class="interference-title">Attraction</text>
+  <text x="34" y="72" class="interference-subtitle">destructive on the left, constructive on the right</text>
+
+  <rect x="44" y="104" width="300" height="170" class="interference-panel"/>
+  <line x1="44" y1="242" x2="358" y2="242" class="interference-axis" marker-end="url(#story-attraction-arrow)"/>
+  <line x1="194" y1="274" x2="194" y2="90" class="interference-axis" marker-end="url(#story-attraction-arrow)"/>
+  <text x="268" y="306" class="interference-axis-label">velocity v</text>
+  <text x="210" y="128" class="interference-axis-label">amplitude</text>
+  <path d="M 44 242 C 84 242, 112 144, 194 144 C 276 144, 304 242, 344 242" class="interference-curve interference-ghost"/>
+  <path d="M 44 242 C 82 242, 112 274, 154 296 C 186 312, 194 242, 194 242 C 206 206, 240 184, 278 188 C 306 192, 324 242, 344 242" class="interference-curve interference-interaction"/>
+  <path d="M 44 242 C 108 242, 148 136, 214 136 C 274 136, 304 242, 344 242" class="interference-curve interference-final" filter="url(#story-attraction-glow)"/>
+  <text x="62" y="116" class="interference-label">incoming + produced</text>
+
+  <rect x="426" y="104" width="290" height="170" class="interference-panel"/>
+  <line x1="426" y1="264" x2="730" y2="264" class="interference-axis" marker-end="url(#story-attraction-arrow)"/>
+  <line x1="571" y1="274" x2="571" y2="90" class="interference-axis" marker-end="url(#story-attraction-arrow)"/>
+  <text x="632" y="306" class="interference-axis-label">position x</text>
+  <text x="590" y="128" class="interference-axis-label">amplitude</text>
+  <path d="M 426 264 C 472 264, 500 146, 571 146 C 642 146, 670 264, 716 264" class="interference-curve interference-ghost"/>
+  <path d="M 426 264 C 472 264, 512 126, 602 126 C 652 126, 672 264, 716 264" class="interference-curve interference-final" filter="url(#story-attraction-glow)"/>
+  <line x1="571" y1="202" x2="600" y2="202" class="interference-arrow" marker-end="url(#story-attraction-arrow)"/>
+  <text x="606" y="190" class="interference-label">&lt;v&gt; shifts right</text>
+
+  <text x="48" y="372" class="interference-summary">Changing the sign of the interaction flips the interference pattern and the drift.</text>
+</svg>
+```
+:::
+
+::::

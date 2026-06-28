@@ -1,0 +1,57 @@
+## The same idea in formulas
+
+::: {.interference-formulas}
+::: {.formula-step}
+**Wave after interaction**
+
+$$
+\Psi(\mathbf p,t)=
+\Phi(\mathbf p)e^{-i\mathbf p\cdot\mathbf R}
++\Delta\Psi(\mathbf p,t)
+$$
+:::
+
+::: {.formula-step}
+**Probability is not a sum of probabilities**
+
+$$
+|\Psi|^2=
+|\Phi|^2
++2\,\operatorname{Re}
+\left[
+\Phi^*(\mathbf p)e^{i\mathbf p\cdot\mathbf R}
+\Delta\Psi(\mathbf p,t)
+\right]
++|\Delta\Psi|^2
+$$
+:::
+
+::: {.formula-step}
+**The force sits in the interference term**
+
+$$
+\Delta G(\mathbf p,t)=
+2\,\operatorname{Re}
+\left[
+\Phi^*(\mathbf p)e^{i\mathbf p\cdot\mathbf R}
+\Delta\Psi(\mathbf p,t)
+\right]
+$$
+:::
+
+::: {.formula-step}
+**Changing the sign of the interaction flips the redistribution**
+
+$$
+q_1q_2\to -q_1q_2
+\quad\Rightarrow\quad
+\Delta\Psi\to-\Delta\Psi,
+\qquad
+\Delta G\to-\Delta G
+$$
+:::
+:::
+
+::: {.formula-takeaway}
+The packet moves because interference increases probability on one side of the momentum distribution and decreases it on the other.
+:::
