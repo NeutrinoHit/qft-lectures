@@ -17,7 +17,12 @@ website:
 format:
   html:
     theme: cosmo
-    css: styles.css
+    css:
+      - https://neutrinohit.github.io/assets/site/neutrinohit-tokens.css
+      - https://neutrinohit.github.io/assets/site/neutrinohit-base.css
+      - https://neutrinohit.github.io/assets/site/neutrinohit-components.css
+      - https://neutrinohit.github.io/assets/site/neutrinohit-projects.css
+      - styles.css
     toc: false
     page-layout: full
     include-after-body: analytics/cloudflare-web-analytics.html
