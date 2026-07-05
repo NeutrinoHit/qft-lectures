@@ -17,5 +17,5 @@ format:
     toc-title: "План лекции"
     include-after-body:
       - text: |
-          <script data-external="1" data-context-home="../../index.html" data-context-home-label="Главная страница курса КТП" src="../../shared/reveal/neutrinohit-reveal-footer.js"></script>
+          <script data-external="1" data-context-home="https://neutrinohit.github.io/ru/education.html#qft" data-context-home-label="Карта курса КТП" src="../../shared/reveal/neutrinohit-reveal-footer.js"></script>
       - ../../analytics/cloudflare-web-analytics.html

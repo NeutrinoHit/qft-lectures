@@ -17,5 +17,5 @@ format:
     toc-title: "Lecture map"
     include-after-body:
       - text: |
-          <script data-external="1" data-context-home="../../index.html" data-context-home-label="QFT lectures home" src="../../shared/reveal/neutrinohit-reveal-footer.js"></script>
+          <script data-external="1" data-context-home="https://neutrinohit.github.io/en/education.html#qft" data-context-home-label="QFT course map" src="../../shared/reveal/neutrinohit-reveal-footer.js"></script>
       - ../../analytics/cloudflare-web-analytics.html
