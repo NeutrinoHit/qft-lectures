@@ -64,12 +64,12 @@ data-autoplay loop muted playsinline controls>
 ```
 
 ## Repulsion picture: looks reasonable?
-![](media/boats.jpg){.slide-image-center .nostretch width=80% fig-align="center" fig-alt="A qualitative picture for the repulsion"}
+![](media/scalar-qed-attraction-repulsion/boats.jpg){.slide-image-center .nostretch width=80% fig-align="center" fig-alt="A qualitative picture for the repulsion"}
 
 # How to explain the attraction?
 
 ## Attraction picture: looks reasonable too?
-![](media/boats2.jpg){.slide-image-center .nostretch width=80% fig-align="center" fig-alt="A qualitative picture for the attraction"}
+![](media/scalar-qed-attraction-repulsion/boats2.jpg){.slide-image-center .nostretch width=80% fig-align="center" fig-alt="A qualitative picture for the attraction"}
 
 ## Summary so far
 
@@ -648,11 +648,11 @@ of attraction or repulsion enter?
 
 :::: {.story-picture-pair}
 ::: {}
-![](media/boats.jpg){fig-alt="Qualitative boat picture for repulsion"}
+![](media/scalar-qed-attraction-repulsion/boats.jpg){fig-alt="Qualitative boat picture for repulsion"}
 :::
 
 ::: {}
-![](media/boats2.jpg){fig-alt="Qualitative boat picture for attraction"}
+![](media/scalar-qed-attraction-repulsion/boats2.jpg){fig-alt="Qualitative boat picture for attraction"}
 :::
 ::::
 
