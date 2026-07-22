@@ -23,7 +23,7 @@ toc: false
   </section>
 
   <section class="course-accordion" aria-label="Лекции мини-курса">
-    <details class="course-row" open>
+    <details class="course-row">
       <summary>
         <span class="course-row-kind">01</span>
         <span>Релятивистское ускорение и координаты Риндлера</span>

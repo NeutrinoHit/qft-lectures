@@ -27,7 +27,7 @@ toc: false
   </section>
 
   <section class="course-accordion" aria-label="Материалы лекции">
-    <details class="course-row" open>
+    <details class="course-row">
       <summary>
         <span class="course-row-kind">Slides</span>
         <span>Wave packets in scalar QED</span>
