@@ -1,0 +1,21 @@
+lang: ru-RU
+
+format:
+  revealjs:
+    theme: [dark, ../../../shared/styles/neutrinohit-reveal.scss]
+    width: 1600
+    height: 900
+    margin: 0.03
+    html-math-method: mathjax
+    slide-number: true
+    chalkboard: true
+    preview-links: auto
+    transition: none
+    background-transition: none
+    toc: true
+    toc-depth: 1
+    toc-title: "План лекции"
+    include-after-body:
+      - text: |
+          <script data-external="1" data-context-home="https://neutrinohit.github.io/qft-lectures/unruh/" data-context-home-label="Мини-курс: эффект Унру" src="../../../shared/reveal/neutrinohit-reveal-footer.js"></script>
+      - ../../../analytics/cloudflare-web-analytics.html

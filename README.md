@@ -8,25 +8,32 @@ HTML-страницы курсов и отдельных лекций лежат
 
 ```text
 index.qmd
-unruh.qmd
 scalar-qed-attraction-repulsion.qmd
 ```
 
-RevealJS-слайды лежат в языковых папках:
+Самостоятельные мини-курсы получают собственную папку с `index.qmd`. Например:
 
 ```text
-ru/slides/
+unruh/index.qmd
+unruh/ru/slides/
+```
+
+Одиночные RevealJS-лекции лежат в языковых папках, а слайды мини-курса —
+внутри его папки:
+
+```text
 en/slides/
+unruh/ru/slides/
 ```
 
 Общие настройки RevealJS задаются в metadata-файлах соответствующего языка:
 
 ```text
-ru/slides/_metadata.yml
 en/slides/_metadata.yml
+unruh/ru/slides/_metadata.yml
 ```
 
-Новые слайды нужно добавлять как `<lang>/slides/<LectureName>.qmd`, не копируя
+Новые слайды нужно добавлять как `<course>/<lang>/slides/<NN_slug>.qmd`, не копируя
 в каждый файл тему, footer, MathJax, размеры слайда и базовые параметры
 RevealJS. Локальные настройки в самом `.qmd` допустимы только для специфики
 конкретной лекции: заголовок, язык, короткий CSS для особых блоков, параметры
@@ -35,8 +42,12 @@ execute.
 Медиафайлы конкретной лекции кладутся в:
 
 ```text
-<lang>/slides/media/<lecture-slug>/
+<course>/<lang>/slides/assets/<NN_lecture_slug>/
 ```
+
+Крупные OJS-, JavaScript-, HTML- и CSS-фрагменты также хранятся в этой папке
+и подключаются в лекцию через `{{< include ... >}}`, чтобы основной QMD
+оставался конспектом слайдов.
 
 После добавления лекции обновите `index.qmd` и, если нужна отдельная страница
 курса или лекции, добавьте корневой `<lecture-slug>.qmd`.

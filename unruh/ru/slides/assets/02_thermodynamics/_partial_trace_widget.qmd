@@ -1,0 +1,141 @@
+::: {.partial-trace-widget}
+```{ojs}
+//| echo: false
+viewof entanglement_controls = {
+  const control = html`<div class="entanglement-controls">
+    <button type="button" aria-label="Запустить анимацию запутывания">▶</button>
+    <label>
+      <span>p</span>
+      <input name="probability" type="range" min="0" max="0.5" step="0.005" value="0.28">
+      <output></output>
+    </label>
+  </div>`;
+
+  const slider = control.querySelector("input");
+  const output = control.querySelector("output");
+  const button = control.querySelector("button");
+  let timer = null;
+  let direction = 1;
+
+  function update(dispatch = true) {
+    const probability = Number(slider.value);
+    control.value = probability;
+    output.textContent = probability.toFixed(3);
+    if (dispatch) control.dispatchEvent(new Event("input", {bubbles: true}));
+  }
+
+  function stop() {
+    if (timer !== null) clearInterval(timer);
+    timer = null;
+    button.textContent = "▶";
+    button.setAttribute("aria-label", "Запустить анимацию запутывания");
+  }
+
+  button.addEventListener("click", () => {
+    if (timer !== null) {
+      stop();
+      return;
+    }
+    button.textContent = "❚❚";
+    button.setAttribute("aria-label", "Остановить анимацию запутывания");
+    timer = setInterval(() => {
+      let next = Number(slider.value) + direction * 0.005;
+      if (next >= 0.5 || next <= 0) {
+        direction *= -1;
+        next = Math.max(0, Math.min(0.5, next));
+      }
+      slider.value = next;
+      update();
+    }, 45);
+  });
+  slider.addEventListener("input", () => update());
+  update(false);
+  return control;
+}
+```
+
+```{ojs}
+//| echo: false
+{
+  const p = entanglement_controls;
+  const q = 1 - p;
+  const entropyTerm = (x) => x <= 0 ? 0 : -x * Math.log(x);
+  const entropy = entropyTerm(p) + entropyTerm(q);
+  const fmt = (x) => x.toFixed(3);
+
+  const ns = "http://www.w3.org/2000/svg";
+  const width = 940;
+  const height = 390;
+  const svg = document.createElementNS(ns, "svg");
+  svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
+  svg.setAttribute("role", "img");
+  svg.setAttribute("aria-label", "Частичный след превращает чистое запутанное состояние в смешанное");
+
+  function add(name, attrs = {}, parent = svg) {
+    const node = document.createElementNS(ns, name);
+    for (const [key, value] of Object.entries(attrs)) {
+      if (key === "text") node.textContent = value;
+      else node.setAttribute(key, value);
+    }
+    parent.append(node);
+    return node;
+  }
+
+  add("rect", {x: 0, y: 0, width, height, rx: 14, fill: "#070a0f", stroke: "#243244"});
+  add("rect", {x: 28, y: 38, width: 360, height: 300, rx: 12, fill: "#101722", stroke: "#334155"});
+  add("rect", {x: 552, y: 38, width: 360, height: 300, rx: 12, fill: "#101722", stroke: "#334155"});
+
+  add("text", {x: 50, y: 76, fill: "#fff", "font-size": 22, "font-weight": 700, text: "Вся система L + R"});
+  add("text", {x: 574, y: 76, fill: "#fff", "font-size": 22, "font-weight": 700, text: "Доступна только R"});
+
+  add("text", {x: 50, y: 114, fill: "#d7dde8", "font-size": 17, text: "|Ψ〉 = √(1−p)|00〉 + √p |11〉"});
+  add("text", {x: 50, y: 148, fill: "#8ae6c1", "font-size": 18, "font-weight": 700, text: "чистое состояние: S(LR) = 0"});
+
+  const barX = 56;
+  const barW = 292;
+  for (const [y, value, color, label] of [
+    [190, q, "#58a6ff", `|00〉   ${fmt(q)}`],
+    [250, p, "#ffb86c", `|11〉   ${fmt(p)}`]
+  ]) {
+    add("rect", {x: barX, y, width: barW, height: 28, rx: 6, fill: "#1b2636"});
+    add("rect", {x: barX, y, width: Math.max(2, barW * value), height: 28, rx: 6, fill: color});
+    add("text", {x: barX, y: y - 8, fill: "#d7dde8", "font-size": 15, text: label});
+  }
+
+  add("line", {x1: 470, y1: 48, x2: 470, y2: 330, stroke: "#f2c94c", "stroke-width": 3, "stroke-dasharray": "10 8"});
+  add("text", {x: 470, y: 360, fill: "#f2c94c", "font-size": 17, "text-anchor": "middle", text: "горизонт"});
+  add("path", {d: "M 404 178 C 438 178 496 178 532 178", fill: "none", stroke: "#d7dde8", "stroke-width": 2.5});
+  add("path", {d: "M 522 170 L 536 178 L 522 186 Z", fill: "#d7dde8"});
+  add("text", {x: 470, y: 154, fill: "#d7dde8", "font-size": 16, "text-anchor": "middle", text: "Trₗ"});
+
+  add("text", {x: 574, y: 114, fill: "#d7dde8", "font-size": 17, text: "ρᴿ = (1−p)|0〉〈0| + p|1〉〈1|"});
+  add("text", {x: 574, y: 148, fill: "#ff9fb0", "font-size": 18, "font-weight": 700, text: `смешанное: S(R) = ${fmt(entropy)}`});
+
+  const rightX = 580;
+  const rightW = 292;
+  for (const [y, value, color, label] of [
+    [190, q, "#58a6ff", `0 частиц   ${fmt(q)}`],
+    [250, p, "#ffb86c", `1 частица   ${fmt(p)}`]
+  ]) {
+    add("rect", {x: rightX, y, width: rightW, height: 28, rx: 6, fill: "#1b2636"});
+    add("rect", {x: rightX, y, width: Math.max(2, rightW * value), height: 28, rx: 6, fill: color});
+    add("text", {x: rightX, y: y - 8, fill: "#d7dde8", "font-size": 15, text: label});
+  }
+
+  add("text", {x: 574, y: 316, fill: "#9fb0c7", "font-size": 15, text: "Максимум при p = 1/2:  S(R) = ln 2"});
+
+  const wrap = document.createElement("div");
+  wrap.className = "partial-trace-board";
+  wrap.append(svg);
+  return html`<style>
+    .entanglement-controls { display:flex; gap:.65rem; align-items:center; justify-content:center; margin:0 0 .35rem; }
+    .entanglement-controls button { width:2.35rem; height:2rem; border:1px solid #52647a; border-radius:7px; background:#101722; color:#fff; cursor:pointer; }
+    .entanglement-controls label { display:grid; grid-template-columns:1.2rem 16rem 4rem; gap:.55rem; align-items:center; color:#f2f2f2; font-size:.48em; }
+    .entanglement-controls input { width:16rem; accent-color:#ffb86c; }
+    .entanglement-controls output { padding:.08rem .3rem; border:1px solid #334155; border-radius:6px; background:#101722; text-align:right; font-variant-numeric:tabular-nums; }
+    .partial-trace-board { width:min(100%,940px); margin:0 auto; }
+    .partial-trace-board svg { display:block; width:100%; height:auto; font-family:system-ui,-apple-system,"Segoe UI",sans-serif; }
+  </style>${wrap}`;
+}
+```
+:::

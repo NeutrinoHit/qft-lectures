@@ -4,8 +4,13 @@ project:
   resources:
     - "assets/**"
     - "shared/reveal/**"
-    - "ru/slides/media/**"
+    - "unruh/ru/slides/assets/**"
     - "en/slides/media/**"
+  render:
+    - "*.qmd"
+    - "unruh/index.qmd"
+    - "unruh/ru/slides/*.qmd"
+    - "en/slides/*.qmd"
 
 lang: ru-RU
 
@@ -13,6 +18,19 @@ website:
   title: "Квантовая теория поля"
   site-url: "https://neutrinohit.github.io/qft-lectures/"
   repo-url: "https://github.com/NeutrinoHit/qft-lectures"
+  navbar:
+    left:
+      - href: https://neutrinohit.github.io/
+        text: NeutrinoHit
+      - href: https://neutrinohit.github.io/ru/education.html#qft
+        text: Карта КТП
+      - href: index.qmd
+        text: Раздел КТП
+      - href: unruh/index.qmd
+        text: Эффект Унру
+  page-footer:
+    left: "© NeutrinoHit"
+    right: "Built with Quarto"
 
 format:
   html:

@@ -1,0 +1,147 @@
+::: {.fermion-thermal-widget}
+```{ojs}
+//| echo: false
+viewof fermion_thermal_controls = {
+  const control = html`<div class="fermion-thermal-controls">
+    <button type="button" aria-label="Запустить изменение ускорения">▶</button>
+    <label>
+      <span>x = 2πΩ/a</span>
+      <input name="x" type="range" min="0.1" max="8" step="0.02" value="2">
+      <output></output>
+    </label>
+  </div>`;
+
+  const slider = control.querySelector("input");
+  const output = control.querySelector("output");
+  const button = control.querySelector("button");
+  let timer = null;
+  let direction = -1;
+
+  function update(dispatch = true) {
+    const x = Number(slider.value);
+    control.value = x;
+    output.textContent = x.toFixed(2);
+    if (dispatch) control.dispatchEvent(new Event("input", {bubbles: true}));
+  }
+
+  function stop() {
+    if (timer !== null) clearInterval(timer);
+    timer = null;
+    button.textContent = "▶";
+    button.setAttribute("aria-label", "Запустить изменение ускорения");
+  }
+
+  button.addEventListener("click", () => {
+    if (timer !== null) {
+      stop();
+      return;
+    }
+    button.textContent = "❚❚";
+    button.setAttribute("aria-label", "Остановить изменение ускорения");
+    timer = setInterval(() => {
+      let next = Number(slider.value) + direction * 0.04;
+      if (next <= 0.1 || next >= 8) {
+        direction *= -1;
+        next = Math.max(0.1, Math.min(8, next));
+      }
+      slider.value = next;
+      update();
+    }, 40);
+  });
+  slider.addEventListener("input", () => update());
+  update(false);
+  return control;
+}
+```
+
+```{ojs}
+//| echo: false
+{
+  const x = fermion_thermal_controls;
+  const n = 1 / (Math.exp(x) + 1);
+  const p0 = 1 - n;
+  const entropyTerm = (p) => p <= 0 ? 0 : -p * Math.log(p);
+  const entropy = entropyTerm(n) + entropyTerm(p0);
+  const entropyFraction = entropy / Math.log(2);
+  const r = Math.asin(Math.sqrt(n));
+  const fmt = (value) => value.toFixed(3);
+
+  const ns = "http://www.w3.org/2000/svg";
+  const width = 980;
+  const height = 420;
+  const svg = document.createElementNS(ns, "svg");
+  svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
+  svg.setAttribute("role", "img");
+  svg.setAttribute("aria-label", "Связь ускорения, запутанности, распределения Ферми–Дирака и энтропии");
+
+  function add(name, attrs = {}, parent = svg) {
+    const node = document.createElementNS(ns, name);
+    for (const [key, value] of Object.entries(attrs)) {
+      if (key === "text") node.textContent = value;
+      else node.setAttribute(key, value);
+    }
+    parent.append(node);
+    return node;
+  }
+
+  add("rect", {x: 0, y: 0, width, height, rx: 14, fill: "#070a0f", stroke: "#243244"});
+  add("rect", {x: 28, y: 32, width: 430, height: 334, rx: 12, fill: "#101722", stroke: "#334155"});
+  add("rect", {x: 522, y: 32, width: 430, height: 334, rx: 12, fill: "#101722", stroke: "#334155"});
+
+  add("text", {x: 50, y: 70, fill: "#fff", "font-size": 22, "font-weight": 700, text: "Чистый вакуум L + R"});
+  add("text", {x: 544, y: 70, fill: "#fff", "font-size": 22, "font-weight": 700, text: "Тепловая мода в R"});
+  add("text", {x: 50, y: 106, fill: "#d7dde8", "font-size": 17, text: "|0ᴹ〉 = cos r |00〉 + sin r |11〉"});
+  add("text", {x: 50, y: 132, fill: "#9fb0c7", "font-size": 15, text: `r = ${fmt(r)} рад,   tan r = exp(−x/2)`});
+
+  const leftX = 58;
+  const leftW = 360;
+  for (const [y, value, color, label] of [
+    [184, p0, "#58a6ff", `|00〉   cos²r = ${fmt(p0)}`],
+    [254, n, "#ffb86c", `|11〉   sin²r = ${fmt(n)}`]
+  ]) {
+    add("text", {x: leftX, y: y - 10, fill: "#d7dde8", "font-size": 16, text: label});
+    add("rect", {x: leftX, y, width: leftW, height: 32, rx: 7, fill: "#1b2636"});
+    add("rect", {x: leftX, y, width: Math.max(2, leftW * value), height: 32, rx: 7, fill: color});
+  }
+  add("text", {x: 50, y: 332, fill: "#8ae6c1", "font-size": 17, "font-weight": 700, text: "S(LR) = 0"});
+
+  add("line", {x1: 490, y1: 54, x2: 490, y2: 342, stroke: "#f2c94c", "stroke-width": 3, "stroke-dasharray": "10 8"});
+  add("path", {d: "M 464 202 L 516 202", stroke: "#d7dde8", "stroke-width": 2.5});
+  add("path", {d: "M 506 194 L 520 202 L 506 210 Z", fill: "#d7dde8"});
+  add("text", {x: 490, y: 181, fill: "#d7dde8", "font-size": 16, "text-anchor": "middle", text: "Trₗ"});
+
+  add("text", {x: 544, y: 108, fill: "#d7dde8", "font-size": 17, text: "ρᴿ = diag(1−nꜰ, nꜰ)"});
+  add("text", {x: 544, y: 140, fill: "#ffb86c", "font-size": 19, "font-weight": 700, text: `nꜰ = 1/(eˣ+1) = ${fmt(n)}`});
+
+  const rightX = 552;
+  const rightW = 360;
+  for (const [y, value, color, label] of [
+    [190, p0, "#58a6ff", `P(0) = ${fmt(p0)}`],
+    [252, n, "#ffb86c", `P(1) = ${fmt(n)}`]
+  ]) {
+    add("text", {x: rightX, y: y - 9, fill: "#d7dde8", "font-size": 16, text: label});
+    add("rect", {x: rightX, y, width: rightW, height: 28, rx: 7, fill: "#1b2636"});
+    add("rect", {x: rightX, y, width: Math.max(2, rightW * value), height: 28, rx: 7, fill: color});
+  }
+
+  add("text", {x: 544, y: 322, fill: "#ff9fb0", "font-size": 18, "font-weight": 700, text: `sꜰ = ${fmt(entropy)} = ${fmt(entropyFraction)} ln 2`});
+  add("rect", {x: 544, y: 338, width: 368, height: 12, rx: 6, fill: "#1b2636"});
+  add("rect", {x: 544, y: 338, width: 368 * entropyFraction, height: 12, rx: 6, fill: "#ff5d73"});
+
+  add("text", {x: 490, y: 400, fill: "#9fb0c7", "font-size": 15, "text-anchor": "middle", text: "Меньше x означает большее ускорение: растут запутанность, заполнение и энтропия."});
+
+  const wrap = document.createElement("div");
+  wrap.className = "fermion-thermal-board";
+  wrap.append(svg);
+  return html`<style>
+    .fermion-thermal-controls { display:flex; gap:.7rem; align-items:center; justify-content:center; margin:0 0 .3rem; }
+    .fermion-thermal-controls button { width:2.35rem; height:2rem; border:1px solid #52647a; border-radius:7px; background:#101722; color:#fff; cursor:pointer; }
+    .fermion-thermal-controls label { display:grid; grid-template-columns:6.4rem 17rem 4rem; gap:.55rem; align-items:center; color:#f2f2f2; font-size:.46em; }
+    .fermion-thermal-controls input { width:17rem; accent-color:#ffb86c; }
+    .fermion-thermal-controls output { padding:.08rem .3rem; border:1px solid #334155; border-radius:6px; background:#101722; text-align:right; font-variant-numeric:tabular-nums; }
+    .fermion-thermal-board { width:min(100%,980px); margin:0 auto; }
+    .fermion-thermal-board svg { display:block; width:100%; height:auto; font-family:system-ui,-apple-system,"Segoe UI",sans-serif; }
+  </style>${wrap}`;
+}
+```
+:::

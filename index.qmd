@@ -97,12 +97,12 @@ toc: false
     <details class="course-row">
       <summary>
         <span class="course-row-kind">Мини-курс</span>
-        <span>Ускоренные системы отсчета и эффект Унру</span>
+        <span>Ускоренные системы отсчёта и эффект Унру</span>
       </summary>
       <div class="course-row-body">
-        <p>HTML-слайды по релятивистскому ускорению, статистической механике и эффекту Унру.</p>
+        <p>Пять HTML-лекций: релятивистское ускорение, квантовая статистика и эффект Унру для скалярного и фермионного полей.</p>
         <div class="course-links">
-          <a href="unruh.html">Открыть мини-курс</a>
+          <a href="unruh/">Открыть мини-курс</a>
         </div>
       </div>
     </details>

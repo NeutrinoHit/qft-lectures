@@ -1,0 +1,103 @@
+---
+title: "Ускоренные системы отсчёта и эффект Унру"
+toc: false
+aliases:
+  - /unruh.html
+---
+
+```{=html}
+<style>
+  .quarto-title-block {
+    display: none;
+  }
+</style>
+
+<div class="course-index course-subpage">
+  <nav class="course-profile-links" aria-label="Навигация мини-курса">
+    <a href="../index.html">Раздел КТП</a>
+    <a href="https://neutrinohit.github.io/">NeutrinoHit</a>
+    <a href="https://neutrinohit.github.io/ru/education.html#unruh-course">Карта мини-курса</a>
+  </nav>
+
+  <section class="course-intro">
+    <p class="course-kicker">Мини-курс</p>
+    <h1>Ускоренные системы отсчёта и эффект Унру</h1>
+    <p>
+      Пять последовательных лекций: от релятивистского ускорения и горизонта
+      Риндлера до температуры, энтропии запутанности и различия бозонного и
+      фермионного вакуума для ускоренного наблюдателя.
+    </p>
+    <p class="course-author-note">
+      Автор: Дмитрий Наумов. Другие курсы и материалы собраны на
+      <a href="https://neutrinohit.github.io/ru/">NeutrinoHit</a>.
+    </p>
+  </section>
+
+  <section class="course-accordion" aria-label="Лекции мини-курса">
+    <details class="course-row">
+      <summary>
+        <span class="course-row-kind">01</span>
+        <span>Релятивистское ускорение и координаты Риндлера</span>
+      </summary>
+      <div class="course-row-body">
+        <p>Собственное ускорение, гиперболическая мировая линия, координаты и горизонт Риндлера.</p>
+        <div class="course-links">
+          <a href="ru/slides/01_rindler.html">Открыть лекцию</a>
+        </div>
+      </div>
+    </details>
+
+    <details class="course-row">
+      <summary>
+        <span class="course-row-kind">02</span>
+        <span>Введение в квантовую статистическую механику</span>
+      </summary>
+      <div class="course-row-body">
+        <p>Матрица плотности, канонический ансамбль и первый мост от частичного следа к энтропии.</p>
+        <div class="course-links">
+          <a href="ru/slides/02_thermodynamics.html">Открыть лекцию</a>
+        </div>
+      </div>
+    </details>
+
+    <details class="course-row">
+      <summary>
+        <span class="course-row-kind">03</span>
+        <span>Эффект Унру для плоской волны</span>
+      </summary>
+      <div class="course-row-body">
+        <p>Экспоненциальный доплеровский chirp и кинематическая тень теплового спектра.</p>
+        <div class="course-links">
+          <a href="ru/slides/03_unruh_wave.html">Открыть лекцию</a>
+        </div>
+      </div>
+    </details>
+
+    <details class="course-row">
+      <summary>
+        <span class="course-row-kind">04</span>
+        <span>Эффект Унру для скалярного поля</span>
+      </summary>
+      <div class="course-row-body">
+        <p>Корреляторы, бозе-эйнштейновский спектр и тепловое состояние после частичного следа.</p>
+        <div class="course-links">
+          <a href="ru/slides/04_unruh_scalar_field.html">Открыть лекцию</a>
+        </div>
+      </div>
+    </details>
+
+    <details class="course-row">
+      <summary>
+        <span class="course-row-kind">05</span>
+        <span>Фермионное поле и эффект Унру</span>
+      </summary>
+      <div class="course-row-body">
+        <p>Антикоммутация, принцип Паули, распределение Ферми–Дирака и энтропия одной фермионной моды.</p>
+        <div class="course-links">
+          <a href="ru/slides/05_unruh_fermion_field.html">Открыть лекцию</a>
+        </div>
+      </div>
+    </details>
+  </section>
+</div>
+```
