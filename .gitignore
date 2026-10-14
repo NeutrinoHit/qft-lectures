@@ -1,6 +1,7 @@
 /_site/
 /.quarto/
 /.make-tmp/
+/.work/
 .DS_Store
 .ipynb_checkpoints/
 __pycache__/
