@@ -109,6 +109,19 @@ toc: false
 
     <details class="course-row">
       <summary>
+        <span class="course-row-kind">Мини-курс</span>
+        <span>Вакуум квантового поля</span>
+      </summary>
+      <div class="course-row-body">
+        <p>От волнового функционала свободного поля и вакуумных корреляций до электромагнитного, взаимодействующего и КХД-вакуума.</p>
+        <div class="course-links">
+          <a href="vacuum/">Открыть мини-курс</a>
+        </div>
+      </div>
+    </details>
+
+    <details class="course-row">
+      <summary>
         <span class="course-row-kind">Отдельная лекция</span>
         <span>Attraction and Repulsion in Quantum Field Theory</span>
       </summary>

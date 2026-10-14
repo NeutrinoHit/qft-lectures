@@ -1,0 +1,21 @@
+lang: ru-RU
+
+format:
+  revealjs:
+    theme: [black, ../../../shared/styles/neutrinohit-reveal.scss]
+    width: 1600
+    height: 900
+    margin: 0.03
+    html-math-method: mathjax
+    slide-number: true
+    slide-level: 2
+    chalkboard: true
+    preview-links: auto
+    transition: fade
+    background-transition: none
+    center: false
+    toc: false
+    include-after-body:
+      - text: |
+          <script data-external="1" data-context-home="https://neutrinohit.github.io/qft-lectures/vacuum/" data-context-home-label="Мини-курс: вакуум КТП" src="../../../shared/reveal/neutrinohit-reveal-footer.js"></script>
+      - ../../../analytics/cloudflare-web-analytics.html

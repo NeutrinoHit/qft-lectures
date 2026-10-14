@@ -1,0 +1,61 @@
+```{=html}
+<div class="vacuum-noise-lab" data-vacuum-noise-lab>
+  <div class="vacuum-lab-controls">
+    <label class="vacuum-mass-control">
+      <span>Масса вакуумного поля</span>
+      <input type="range" min="0.35" max="2.00" step="0.05" value="0.70" data-mass>
+      <output data-mass-value>0.70</output>
+    </label>
+    <button type="button" data-regenerate>Новая реализация</button>
+    <button type="button" class="vacuum-answer-button" data-reveal>Показать ответ</button>
+  </div>
+
+  <div class="vacuum-lab-tabs" role="tablist" aria-label="Этап анализа">
+    <button type="button" role="tab" aria-selected="true" data-view-button="fields">Поля</button>
+    <button type="button" role="tab" aria-selected="false" data-view-button="histogram">Гистограммы</button>
+    <button type="button" role="tab" aria-selected="false" data-view-button="correlation">Коррелятор</button>
+    <button type="button" role="tab" aria-selected="false" data-view-button="spectrum">Спектр</button>
+  </div>
+
+  <div class="vacuum-lab-view" data-view="fields">
+    <div class="vacuum-field-grid">
+      <figure>
+        <canvas width="420" height="420" data-field-a aria-label="Поле A"></canvas>
+        <figcaption data-label-a>Поле A</figcaption>
+      </figure>
+      <figure>
+        <canvas width="420" height="420" data-field-b aria-label="Поле B"></canvas>
+        <figcaption data-label-b>Поле B</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="vacuum-lab-view" data-view="histogram" hidden>
+    <canvas width="1120" height="470" data-histogram aria-label="Одноточечные распределения полей A и B"></canvas>
+    <p class="vacuum-lab-prompt">Обе одноточечные гистограммы должны быть близки к одной гауссиане.</p>
+  </div>
+
+  <div class="vacuum-lab-view" data-view="correlation" hidden>
+    <canvas width="1120" height="470" data-correlation aria-label="Нормированные корреляторы полей A и B"></canvas>
+    <p class="vacuum-lab-prompt">Для белого шума корреляция должна исчезнуть уже при первом ненулевом расстоянии.</p>
+  </div>
+
+  <div class="vacuum-lab-view" data-view="spectrum" hidden>
+    <canvas width="1120" height="470" data-spectrum aria-label="Средняя мощность одной фурье-моды для полей A и B"></canvas>
+    <p class="vacuum-lab-prompt">Белый спектр плоский; вакуумный спектр меняется как 1/(2ω<sub>k</sub>).</p>
+  </div>
+
+  <div class="vacuum-lab-result" data-result>
+    Сначала сравните поля и гистограммы, затем перейдите к коррелятору и спектру.
+  </div>
+
+  <p class="vacuum-lab-method">
+    Периодическая решётка 32 × 32, a = 1. Обе модели нормированы на
+    E[φ²] = 1. Гистограммы содержат 128 конфигураций и 112 бинов;
+    коррелятор и спектр усреднены по 64 конфигурациям. Для вакуума используется решёточная дисперсия
+    ω<sub>k</sub>² = m² + 4 Σ<sub>j</sub> sin²(k<sub>j</sub>a/2).
+  </p>
+</div>
+
+<script src="assets/01_free_scalar_field/vacuum-white-noise-lab.js"></script>
+```

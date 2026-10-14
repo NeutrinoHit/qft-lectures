@@ -1,0 +1,100 @@
+---
+title: "Вакуум квантового поля"
+toc: false
+---
+
+```{=html}
+<style>
+  .quarto-title-block {
+    display: none;
+  }
+</style>
+
+<div class="course-index course-subpage">
+  <nav class="course-profile-links" aria-label="Навигация мини-курса">
+    <a href="../index.html">Раздел КТП</a>
+    <a href="https://neutrinohit.github.io/">NeutrinoHit</a>
+    <a href="https://neutrinohit.github.io/ru/education.html#qft-vacuum-course">Карта мини-курса</a>
+  </nav>
+
+  <section class="course-intro">
+    <p class="course-kicker">Мини-курс · русский язык · 1 лекция готова</p>
+    <h1>Вакуум квантового поля</h1>
+    <p>
+      Последовательный рассказ о вакууме квантовой теории поля: от основного
+      состояния свободного скалярного поля до калибровочных и взаимодействующих
+      теорий. В центре курса — состояния, наблюдаемые и корреляторы, а не образ
+      пустого пространства, заполненного короткоживущими частицами.
+    </p>
+    <p class="course-author-note">
+      Автор: Дмитрий Наумов. Другие курсы и материалы собраны на
+      <a href="https://neutrinohit.github.io/ru/">NeutrinoHit</a>.
+    </p>
+  </section>
+
+  <section class="course-accordion" aria-label="Лекции мини-курса">
+    <details class="course-row" open>
+      <summary>
+        <span class="course-row-kind">01</span>
+        <span>Вакуум свободного скалярного поля</span>
+      </summary>
+      <div class="course-row-body">
+        <p>От координатной волновой функции к волновому функционалу, нормальные моды поля и гауссов вакуум. Интерактивная проверка: белый шум или коррелированное поле?</p>
+        <div class="course-links">
+          <a href="ru/slides/01_free_scalar_field.html">Открыть лекцию</a>
+        </div>
+      </div>
+    </details>
+
+    <details class="course-row">
+      <summary>
+        <span class="course-row-kind">02 · готовится</span>
+        <span>Вакуум в пространстве-времени</span>
+      </summary>
+      <div class="course-row-body">
+        <p>Стационарность вакуума, корреляторы в разные моменты времени, коммутатор и причинность.</p>
+      </div>
+    </details>
+
+    <details class="course-row">
+      <summary>
+        <span class="course-row-kind">03 · готовится</span>
+        <span>Частицы поверх вакуума</span>
+      </summary>
+      <div class="course-row-body">
+        <p>Фоковские состояния, волновые пакеты, когерентные состояния и вопрос о том, что именно можно локализовать.</p>
+      </div>
+    </details>
+
+    <details class="course-row">
+      <summary>
+        <span class="course-row-kind">04 · готовится</span>
+        <span>Электромагнитный вакуум</span>
+      </summary>
+      <div class="course-row-body">
+        <p>Поперечные моды электромагнитного поля, калибровочная избыточность и физические корреляторы.</p>
+      </div>
+    </details>
+
+    <details class="course-row">
+      <summary>
+        <span class="course-row-kind">05 · готовится</span>
+        <span>Взаимодействующий вакуум</span>
+      </summary>
+      <div class="course-row-body">
+        <p>Чем взаимодействующий вакуум отличается от гауссова: связанные корреляторы, перенормировка и перестройка основного состояния.</p>
+      </div>
+    </details>
+
+    <details class="course-row">
+      <summary>
+        <span class="course-row-kind">06 · готовится</span>
+        <span>Вакуум Хиггса и КХД</span>
+      </summary>
+      <div class="course-row-body">
+        <p>Вакуумное среднее, нарушение симметрии, калибровочные конфигурации, конденсаты и топологическая структура.</p>
+      </div>
+    </details>
+  </section>
+</div>
+```

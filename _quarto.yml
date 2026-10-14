@@ -5,11 +5,14 @@ project:
     - "assets/**"
     - "shared/reveal/**"
     - "unruh/ru/slides/assets/**"
+    - "vacuum/ru/slides/assets/**"
     - "en/slides/media/**"
   render:
     - "*.qmd"
     - "unruh/index.qmd"
     - "unruh/ru/slides/*.qmd"
+    - "vacuum/index.qmd"
+    - "vacuum/ru/slides/*.qmd"
     - "en/slides/*.qmd"
 
 lang: ru-RU
@@ -28,6 +31,8 @@ website:
         text: Раздел КТП
       - href: unruh/index.qmd
         text: Эффект Унру
+      - href: vacuum/index.qmd
+        text: Вакуум КТП
   page-footer:
     left: "© NeutrinoHit"
     right: "Built with Quarto"
