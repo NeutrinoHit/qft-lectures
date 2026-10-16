@@ -6,7 +6,6 @@ format:
     width: 1600
     height: 900
     margin: 0.03
-    html-math-method: mathjax
     slide-number: true
     slide-level: 2
     chalkboard: true
