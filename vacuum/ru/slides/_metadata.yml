@@ -16,5 +16,5 @@ format:
     toc: false
     include-after-body:
       - text: |
-          <script data-external="1" data-context-home="https://neutrinohit.github.io/qft-lectures/vacuum/" data-context-home-label="Мини-курс: вакуум КТП" src="../../../shared/reveal/neutrinohit-reveal-footer.js"></script>
+          <script data-external="1" data-context-home="https://neutrinohit.github.io/ru/courses/qft-vacuum.html" data-context-home-label="Страница курса" src="../../../shared/reveal/neutrinohit-reveal-footer.js"></script>
       - ../../../analytics/cloudflare-web-analytics.html

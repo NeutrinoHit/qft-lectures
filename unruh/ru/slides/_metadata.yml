@@ -16,5 +16,5 @@ format:
     toc-title: "План лекции"
     include-after-body:
       - text: |
-          <script data-external="1" data-context-home="https://neutrinohit.github.io/qft-lectures/unruh/" data-context-home-label="Мини-курс: эффект Унру" src="../../../shared/reveal/neutrinohit-reveal-footer.js"></script>
+          <script data-external="1" data-context-home="https://neutrinohit.github.io/ru/courses/unruh.html" data-context-home-label="Страница курса" src="../../../shared/reveal/neutrinohit-reveal-footer.js"></script>
       - ../../../analytics/cloudflare-web-analytics.html
