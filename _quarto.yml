@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: _site
+  post-render:
+    - _extensions/neutrinohit-media/prune.py   # removes copies of shared films from _site
   resources:
     - "assets/**"
     - "shared/reveal/**"

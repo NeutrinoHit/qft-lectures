@@ -56,11 +56,7 @@ execute:
 ## How does QFT describe attraction and repulsion?
 
 ```{=html}
-<video class="slide-video"
-style="--media-width: 90%; --media-max-height: 772px;"
-data-autoplay loop muted playsinline controls>
-  <source src="media/scalar-qed-attraction-repulsion/ElectronElectronScattering.mp4" type="video/mp4">
-</video>
+{{< nh-video feynman-scattering variant="film-electron-electron" class="slide-video" style="--media-width: 90%; --media-max-height: 772px;" data-autoplay=true loop=true muted=true playsinline=true controls=true >}}
 ```
 
 ## Repulsion picture: looks reasonable?
@@ -408,9 +404,7 @@ $$
 ### Animation
 
 ```{=html}
-<video class="slide-video media-height-lg" data-autoplay loop muted playsinline controls>
-  <source src="media/scalar-qed-attraction-repulsion/single.mp4" type="video/mp4">
-</video>
+{{< nh-video scalar-qed variant="film-single" class="slide-video media-height-lg" data-autoplay=true loop=true muted=true playsinline=true controls=true >}}
 ```
 
 ::::
@@ -592,9 +586,7 @@ $$
 ### Repulsion
 
 ```{=html}
-<video class="slide-video media-height-md" data-autoplay loop muted playsinline controls>
-  <source src="media/scalar-qed-attraction-repulsion/pp.mp4" type="video/mp4">
-</video>
+{{< nh-video scalar-qed variant="film-pp" class="slide-video media-height-md" data-autoplay=true loop=true muted=true playsinline=true controls=true >}}
 ```
 
 ::: {.media-caption}
@@ -604,9 +596,7 @@ Like charges: the same eikonal construction bends the packet centers apart.
 ### Attraction
 
 ```{=html}
-<video class="slide-video media-height-md" data-autoplay loop muted playsinline controls>
-  <source src="media/scalar-qed-attraction-repulsion/pm.mp4" type="video/mp4">
-</video>
+{{< nh-video scalar-qed variant="film-pm" class="slide-video media-height-md" data-autoplay=true loop=true muted=true playsinline=true controls=true >}}
 ```
 
 ::: {.media-caption}
@@ -627,9 +617,7 @@ Opposite charges: only the sign changes, so the phase gradient points the other 
 
 ::: {}
 ```{=html}
-<video class="slide-video media-height-sm" data-autoplay loop muted playsinline controls>
-  <source src="media/scalar-qed-attraction-repulsion/ElectronElectronScattering.mp4" type="video/mp4">
-</video>
+{{< nh-video feynman-scattering variant="film-electron-electron" class="slide-video media-height-sm" data-autoplay=true loop=true muted=true playsinline=true controls=true >}}
 ```
 :::
 
@@ -669,9 +657,7 @@ The analogy changes the mechanism between the two cases. Scalar QED does not.
 :::: {.story-video-pair}
 ::: {}
 ```{=html}
-<video class="slide-video media-height-sm" data-autoplay loop muted playsinline controls>
-  <source src="media/scalar-qed-attraction-repulsion/pp.mp4" type="video/mp4">
-</video>
+{{< nh-video scalar-qed variant="film-pp" class="slide-video media-height-sm" data-autoplay=true loop=true muted=true playsinline=true controls=true >}}
 ```
 
 ::: {.media-caption}
@@ -681,9 +667,7 @@ Like charges: the centers bend apart.
 
 ::: {}
 ```{=html}
-<video class="slide-video media-height-sm" data-autoplay loop muted playsinline controls>
-  <source src="media/scalar-qed-attraction-repulsion/pm.mp4" type="video/mp4">
-</video>
+{{< nh-video scalar-qed variant="film-pm" class="slide-video media-height-sm" data-autoplay=true loop=true muted=true playsinline=true controls=true >}}
 ```
 
 ::: {.media-caption}

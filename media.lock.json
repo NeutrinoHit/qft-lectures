@@ -1,0 +1,46 @@
+{
+ "schema": 1,
+ "generated_by": "neutrinohit-map/scripts/nh_media.py lock",
+ "media": [
+  {
+   "id": "feynman-scattering",
+   "variant": "film-electron-electron",
+   "version": 1,
+   "url": "/media-neutrino/feynman-scattering/film-electron-electron-v1.mp4",
+   "sha256": "6f09afa8274a2bc08d44f16c794b03e47df7070301136b87d4074cdd2919134a",
+   "bytes": 286813,
+   "status": "published",
+   "fallback": "en/slides/media/scalar-qed-attraction-repulsion/ElectronElectronScattering.mp4"
+  },
+  {
+   "id": "scalar-qed",
+   "variant": "film-pm",
+   "version": 1,
+   "url": "/media-qft-lectures/scalar-qed/film-pm-v1.mp4",
+   "sha256": "75732fbc952594f4b4f38a637527f8cacdf26d8343cac347af6abb5175adc108",
+   "bytes": 974802,
+   "status": "published",
+   "fallback": "en/slides/media/scalar-qed-attraction-repulsion/pm.mp4"
+  },
+  {
+   "id": "scalar-qed",
+   "variant": "film-pp",
+   "version": 1,
+   "url": "/media-qft-lectures/scalar-qed/film-pp-v1.mp4",
+   "sha256": "054f9db3cd0fb5745448d179bc0f327891e7a0e9a3eff8e0c5998cb52925adcf",
+   "bytes": 684012,
+   "status": "published",
+   "fallback": "en/slides/media/scalar-qed-attraction-repulsion/pp.mp4"
+  },
+  {
+   "id": "scalar-qed",
+   "variant": "film-single",
+   "version": 1,
+   "url": "/media-qft-lectures/scalar-qed/film-single-v1.mp4",
+   "sha256": "45d0f9339093bd18788faa881df061cbda52fae36d5f84454a719a0a5a5a3e6b",
+   "bytes": 400507,
+   "status": "published",
+   "fallback": "en/slides/media/scalar-qed-attraction-repulsion/single.mp4"
+  }
+ ]
+}
